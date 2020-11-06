@@ -1,0 +1,160 @@
+#===============================================================#
+#
+# preind.inp
+#
+# LOSCAR Model: Long-term Ocean-atmosphere-Sediment 
+#                 CArbon cycle Reservoir Model
+# 
+# *** LOSCAR comes with ABSOLUTELY NO WARRANTY ***		 
+# *** Use at your own risk. DO NOT DISTRIBUTE  ***
+#
+# Model parameter (control) input file
+# example: preindustrial default
+# 
+# When using LOSCAR, cite as:
+# 
+# Zeebe, R. E., Zachos, J. C., and Dickens, G. R. Carbon dioxide
+# forcing alone insufficient to explain Paleocene-Eocene Thermal
+# Maximum warming. Nature Geoscience, doi:10.1038/NGEO578 (2009)
+#
+# Richard E. Zeebe
+# School of Ocean and Earth 
+# Science and Technology 
+# Department of Oceanography 
+# University of Hawaii at Manoa
+# 1000 Pope Road, MSB 504
+# Honolulu, HI 96822, USA
+# email: loscar.model@gmail.com
+# 
+#
+# NOTES 
+# 
+# Input line format: 
+#
+# PARAMETER VALUE1 VALUE2 ... 
+# (delimited by spaces)
+# 
+# *** Do not change input format of a single line
+#     (yields errors)
+#
+# - Parameter sequence (order of lines) can be random.
+# - If parameters are omitted, internal default values 
+#   are used.
+# - Lines starting with '#' are ignored.
+# - Generally the following convention is used: 
+#        TRUE  = ON  = 1 
+#        FALSE = OFF = 0
+#
+# *** Change one parameter in small increments at a time
+#     (not all at once in big steps). 
+#
+# - New steady-state: If a large parameter change is needed 
+#   for a new steady-state (but the model aborts), you may 
+#   try applying a series of small changes and running the 
+#   model into a new steady-state between each increment
+#   (restart from there).
+#      
+#
+#   parameter  def.value unit      note
+#   ---------------------------------------------------------
+#   RESTART    dat/y0preind-2.x.dat load restart file
+#   SVSTART    dat/y0preind-2.x.dat save file for restart
+#   #EMSFILE  dat/Emss/1000_0500.dat load fossil fuel emission file
+#   TSTART     1700.     years     >= 0.0
+#   TFINAL     3000.     years     >  TSTART
+#   CINP       1000.     Pg C/y    Carbon input (into atmosphere)
+#   D13CIN     -55.      per mil   d13C Carbon input
+#   TCIN0      0.        years     time start C input
+#   TCSPAN     6.e3      years     time span C input (duration)
+#   EPSLV      1.e-4     -         solver accuracy (1.e-4 ~sloppy)
+#   FCSML      0.05      -         numerics: linear f_calcite drop
+#                                  during dissolution if fc < FCSML.
+#   KMAX       1000      -         approximate # output values.  
+#                                   (range 2 to MAXSTP+1, see below)
+#   TSNS       0         -         switch Temp sensitivity to pCO2 ON/OFF (1/0)
+#   SCLIM      3.0       deg C     T-sensitivity (2.0-? C), requires TSNS 1
+#   TEMP       20. 20. 20. 10. 10. 10. 2. 2. 2. 2.             
+#                        deg C     temp. boxes (3low,3int,3deep,1high)
+#   SAL        34.72 ... -         salinity boxes
+#   PCO2SI     280.0     ppmv      Final steady-state pCO2, balancing
+#                                  long-term Si weath fluxes (> 200 ppmv)
+#   FDICI      00.00     %         change init. DIC all boxes (range +- x%)
+#   FALKI      00.00     %         change init. ALK all boxes (range +- x%)
+#   FPO4I      00.00     %         change init. PO4 all boxes (range +- x%)
+#   THC        20.       Sv        conveyor transport
+#   FBIOL      0.80      -         Efficiency Low-Lat Corg Biopump 
+#                                  (useful range 0.70 to 0.95)
+#   CBIOH      1.8      mol C/m2/y Export High-Lat Corg Biopump
+#   RRAIN      6.1       -         rain ratio (Corg/CaCO3)
+#   FSHLF      1.0       -         raise shelf relative deep rain, see below 
+#                                  (arbitrary factor, useful range: 1.0-6.0)
+#   FINC       12.0e12  mol C/y    Initial CaCO3 riverine flux
+#   CALC       10.3e-3  mol/kg     Seawater [Ca2+]
+#   MAGN       53.0e-3  mol/kg     Seawater [Mg2+]
+#   ---------------------------------------------------------
+#
+# More notes
+#
+#   KMAX: Solver stores the solution during integration at
+#         approximate time intervals (TFINAL-TSTART)/KMAX. 
+#         KMAX may be set larger than nstep, the actual #steps 
+#         taken, yet #output <= nstep. MAXSTP is the max number
+#         of steps allowed. MAXSTP=100000 (V 2.0.3).
+#
+#   TSNS: default = 0 (recommended). Set to 1 to obtain results of 
+#         Zeebe et al., Science (2008). For other runs, be careful 
+#         when setting TSNS=1 (can lead to surprises e.g. when pCO2
+#         drops below initial pCO2 value). 
+# 
+#   FINC: Initial (!) CaCO3 riverine flux. The riverine flux 
+#         during the run can change depending on pCO2.
+#
+#  FSHLF: Raising FSHLF increases shelf CaCO3 rain to shallow
+#         water sediments relative to pelagic CaCO3 rain to deep 
+#         sea sediments (basin to shelf partitioning at constant
+#         total rain). For example, FSHLF = 4.5 in the Paleo setup 
+#         reduces pelagic rain by 22% (relative to FSHLF = 1.0) 
+#         on average in Atl, Ind, Pac.
+#
+#
+#===============================================================#
+# input starts below this line
+
+RESTART dat/y0preind-2.0.4.dat
+#SVSTART dat/y0preind-2.0.4.dat
+
+#EMSFILE dat/Emss/1000_0500.dat
+
+TSTART  1700.
+TFINAL  3000.
+
+#CINP    1000.
+#D13CIN  -55.
+#TCIN0   0.
+#TCSPAN  6.e3
+
+EPSLV   1.e-4
+FCSML   0.05
+KMAX    1000
+
+TSNS    0
+SCLIM   3.0
+
+TEMP    20. 20. 20. 10. 10. 10. 2. 2. 2. 2.
+SAL     34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72
+
+PCO2SI  280.0
+FDICI   00.00
+FALKI   00.00
+FPO4I  -60.00
+
+THC     20.
+
+FBIOL   0.80
+CBIOH   1.8
+RRAIN   6.1
+FSHLF   1.0
+FINC    12.e12
+
+CALC    10.3e-3
+MAGN    53.0e-3
