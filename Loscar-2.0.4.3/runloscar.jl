@@ -1,9 +1,9 @@
 ## run loscar ac.gr@ 11/12
-function runloscar(timevals,CO2vals,Svals)
+function runloscar(timevals,CO2vals,Svals,co2doubling)
     # takes an array of timevals with associated CO2 and SO2 emissions,
     # runs loscar, and return the output times, pC02, and temperature 
     # given a user-specified CO2 doubling rate.
-    cd("Loscar-2.0.4.3")
+    #cd("Loscar-2.0.4.3")
     # remove the previous emissions file
     rm("dat/Emss/deccan_CO2emss.dat");
     rm("dat/Emss/deccan_Semss.dat");
@@ -93,7 +93,7 @@ function runloscar(timevals,CO2vals,Svals)
 
     open("dat/Emss/deccan_Semss.dat", "a+") do io
         for i in 1:length(Svals)
-        write(io, string(Svals[i])*" "*string(timevals[i])*'\n')
+        write(io, string(timevals[i])*" "*string(Svals[i])*'\n')
         end
     end;
     
@@ -114,8 +114,8 @@ function runloscar(timevals,CO2vals,Svals)
     temp = (pco2./600) .- 1;
     temp = co2doubling .*temp;
 
-    loscarcleanup = `./cleanup`;
-    run(loscarcleanup);
+    #loscarcleanup = `./cleanup`;
+    #run(loscarcleanup);
 
     return time_vals, pco2, temp
 

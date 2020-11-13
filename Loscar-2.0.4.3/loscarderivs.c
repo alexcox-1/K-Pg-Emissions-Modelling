@@ -587,8 +587,8 @@ if(NCCATM == 1){
     
     double ExpReduction = 1.;
     
-    if(t>390.e3 && t<2160.e3)
-        ExpReduction=0.5+((t-390.e3)*0.5/1770.e3);
+    if(t>497.e3 && t<2160.e3)
+        ExpReduction=0.5+((t-497.e3)*0.5/1663.e3);
     else ExpReduction = 1.;
     
     
@@ -597,8 +597,8 @@ if(NCCATM == 1){
     eplv[3]=ExpReduction*1.39160302612395453125e14; /*Pacific*/
     eplv[4]=ExpReduction*6.4594032486555375e13; /*Tethys*/
     
-    if(t > 390.e3 && t < 2160.e3) {
-        rrain = 5.8-((t-390.e3)*(5.8-6.7)/1770.e3);
+    if(t > 497.e3 && t < 2160.e3) {
+        rrain = 5.8-((t-497.e3)*(5.8-6.7)/1663.e3);
     }
     else {
         rrain = 6.7;
@@ -659,8 +659,8 @@ if(NCCATM == 1){
         }
     }
     
-    if (t>390.e3 && t<2160.e3)
-        frei=0.95-((t-390.e3)/1770.e3*(0.95-0.78));
+    if (t>497.e3 && t<2160.e3)
+        frei=0.95-((t-497.e3)/1663.e3*(0.95-0.78));
     else
         frei=0.78;
     
