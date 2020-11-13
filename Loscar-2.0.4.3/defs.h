@@ -223,6 +223,7 @@ void falpha(double *alpdb,double *alpdg,double *alpcb,
             double *alpu,double *tcb, int *kksv, int ntsl);
 /* emiss.c */
 void reademiss();
+void readSemiss();
 /* initfree.c */
 void initfree(int flag);
 /* initstart.c */

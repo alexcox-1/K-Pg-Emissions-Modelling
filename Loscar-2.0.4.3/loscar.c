@@ -204,7 +204,7 @@
   #define TIMESTEP 5000
 #endif 
 
-int index;
+int emisIndex;
 
 /*============================================================*/
 /*====== function declarations and global variables ==========*/
@@ -244,11 +244,19 @@ int main(int argc, char **argv)
 	
  /* optional: run fossil fuel scenario, load emissions */ 
  if(ffflag == 1){
-   printf("\n@ Loading emissions: '%s'\n",ffldstr);
+   printf("\n@ Loading CO2 emissions: '%s'\n",ffldstr);
    reademiss();
  }
  else{
-   printf("\n@ Emissions loaded: none\n");
+   printf("\n@ CO2 Emissions loaded: none\n");
+ }
+
+ if(sflag == 1){
+   printf("\n@ Loading S emissions: '%s'\n",sldstr);
+   readSemiss();
+ }
+ else{
+   printf("\n@ S Emissions loaded: none\n");
  }	
 
  /* initialize y-start values (default or load) */

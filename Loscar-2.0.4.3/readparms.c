@@ -36,7 +36,7 @@
 /*
 
    updates:
-
+   11/11/20 Added new Semss file input
    09/03/18 new K* corrections (ZeebeTyrrell18)
    10/31/11 added sclim
    10/28/11 added d13C carbon input, tcin0, tcspan
@@ -113,6 +113,14 @@ void readparms(char *fparmstr)
  getparms(fparm,varstr,&ffound,&np,pval,pstr);
  /*setpstr: set arguments 1 and 2 */	
  setpstr(&ffflag,ffldstr,varstr,ffound,np,npok,pstr,ntxt);
+
+ /*=========== load S  emission file ======================*/	
+ varstr = "SEMSFILE";	/* name of parameter     */
+ npok   = 1;	        /* # par values expected */
+ ntxt   = "none.";
+ getparms(fparm,varstr,&ffound,&np,pval,pstr);
+ /*setpstr: set arguments 1 and 2 */	
+ setpstr(&sflag,sldstr,varstr,ffound,np,npok,pstr,ntxt);
 
 	
  /*===================== time start =======================*/	

@@ -122,12 +122,12 @@
 # input starts below this line
 
 RESTART dat/y0prepetm-2.0.4.dat
-#SVSTART dat/y0prepetm-2.0.4.dat
+SVSTART dat/steadystate-2.0.4.dat
 
 #EMSFILE dat/Emss/1000_0500.dat
 
 TSTART  0.
-TFINAL  200.e3
+TFINAL  2000.e3
 
 CINP    1000.
 D13CIN  -55.
@@ -144,7 +144,7 @@ SCLIM   3.0
 TEMP    25. 25. 25. 16. 16. 16. 12. 12. 12. 12. 18. 14. 12.
 SAL     34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72
 
-PCO2SI  1000.0
+PCO2SI  600.0
 FDICI   00.00
 FALKI   00.00
 FPO4I   00.00

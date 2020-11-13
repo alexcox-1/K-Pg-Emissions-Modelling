@@ -32,7 +32,7 @@
 /*============================================================*/
 /*
  updates: 
-
+  11/12/20 Add readSemiss()
   04/03/11 deleted femiss() (replaced by finterp())
   03/26/11 new file
 	  
@@ -96,6 +96,67 @@ void reademiss()
 	
  free_dvector(tmp1,1,NEMSMAX);
  free_dvector(tmp2,1,NEMSMAX);
+	
+}
+
+void readSemiss()
+{
+ double *tSmp1,*tSmp2;
+ int i=1,rdflag=0;
+ char mssg[BUFSIZ];	
+
+ FILE *Spems;
+
+ ltSem = 0;
+ tSmp1 = dvector(1,NEMSMAX);
+ tSmp2 = dvector(1,NEMSMAX);
+	 
+ /* open emission file */
+ Spems = fopen(sldstr,"r");
+ if(Spems == NULL){ 
+    sprintf(mssg,"reademiss(): Can't open emission file '%s'",sldstr);
+	ferrx(mssg);
+ } 
+
+ /* read emissions */
+ while(rdflag != EOF){
+    rdflag = fscanf(Spems,"%le %le",&tSmp1[i],&tSmp2[i]);
+    if(rdflag == 1)
+         ferrx("reademiss(): S Emission file: #values/line read = 1. need 2.");		 
+    if(rdflag  > 2)
+         ferrx("reademiss(): S Emission file: #values/line read > 2. need 2.");		 
+    if(rdflag == 2){
+	  ltSem = i;
+      /*printf("%d %e %e\n",ltem,tmp1[i],tmp2[i]);*/
+	  if(ltSem > NEMSMAX)
+         ferrx("reademiss(): Too many emission values. Increase NEMSMAX?");
+      i += 1;
+	} else { /* EOF */ 
+		 /* printf("%d %d",rdflag,EOF); */
+	     break;
+	}
+ }
+	 
+ /* close emission file */
+ fclose(Spems);
+
+ if(ltSem == 0)
+    ferrx("reademiss(): No. of emission values = 0?");
+
+ /* allocate time and emission vectors */	 
+ tSems  = dvector(1,ltSem);
+ ySems  = dvector(1,ltSem);
+ /* free: see initfree() */
+
+ /* copy numbers read from file to time and emission vectors */	 
+ for(i=1;i<=ltSem;i++){
+	 tSems[i] = tSmp1[i];
+	 ySems[i] = tSmp2[i];
+     /*printf("%e %e\n",tems[i],yems[i]);*/
+ }
+	
+ free_dvector(tSmp1,1,NEMSMAX);
+ free_dvector(tSmp2,1,NEMSMAX);
 	
 }
 /*============================================================*/

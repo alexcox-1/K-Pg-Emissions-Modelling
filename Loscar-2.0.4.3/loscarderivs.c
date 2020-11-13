@@ -193,6 +193,13 @@ void derivs(double t,double *y, double *yp)
     femscc = remscc*fems;
  }
 
+ if(sflag == 1){
+      fso4 = finterp(t,tSems,ySems,ltSem,0);
+	    fso4 *= 3.125e13; /* Pg C/y => mol C/y   */ 
+      fso4 /= AOC;
+ }
+ 
+
  /* rename variable: y => dic,alk,po4,tcb ... 
 	avoids index counting disaster */
 
@@ -1050,21 +1057,6 @@ if(NCCATM == 1){
     /* multiply Gt by 3.125e13 */
  /* index = (int) floor((t-t0)/TIMESTEP);
  fso4 = so4array[index]; */
- 
-     if(t > 390.e3 && t < 390001.) {
-        fso4 = 1.015625e16/AOC; /*Boundary emissions*/
-    }
-    else if(t > 32.e3 && t < 172.e3) {
-        fso4 = 1.650670e12/AOC; /* 1st pulse, 7395GtS = 2.31094E+17molS over 140kyr in molS/m2/y*/
-    }
-    
-    else if(t > 390001. && t < 745.e3) {
-        fso4 = 9.727113e10/AOC; /*2nd pulse, 1105GtS = 3.45313E+16molS over 355kyr*/
-    }
-    else {
-        fso4 = 0;
-    }
-
 
     
  /*=========== Long C-Cycle fluxes 13C ===========*/
