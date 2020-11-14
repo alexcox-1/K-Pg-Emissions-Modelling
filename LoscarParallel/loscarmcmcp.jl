@@ -18,7 +18,7 @@ loscdir = "/dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel"
 system("mkdir -p $prefix")
 system("cp -r $loscdir $prefix")
 cd(prefix)
-bsrtemps = importdataset("/LoscarParallel/tempdatabsr.csv",',');
+bsrtemps = importdataset("LoscarParallel/tempdatabsr.csv",',');
 timev = bsrtemps["time"];
 temp = bsrtemps["temp"];
 temperror = bsrtemps["temperror"];
