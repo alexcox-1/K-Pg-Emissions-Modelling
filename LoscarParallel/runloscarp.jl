@@ -7,11 +7,11 @@ function runloscarp(timevals,CO2vals,Svals,co2doubling)
     #cd("Loscar-2.0.4.3")
     # remove the previous emissions file
     
-    if isfile("dat/Emss/deccan_CO2emss.dat")
-        rm("dat/Emss/deccan_CO2emss.dat");
+    if isfile("LoscarParallel/deccan_CO2emss.dat")
+        rm("LoscarParallel/deccan_CO2emss.dat");
     end
-    if isfile("dat/Emss/deccan_Semss.dat")
-        rm("dat/Emss/deccan_Semss.dat");
+    if isfile("LoscarParallel/deccan_Semss.dat")
+        rm("LoscarParallel/deccan_Semss.dat");
     end
     if isfile("deccan.inp")
         rm("deccan.inp")
@@ -22,11 +22,11 @@ function runloscarp(timevals,CO2vals,Svals,co2doubling)
     timevals = timevals;
     # the values for the input file ("deccan.inp")
 
-    RESTART = "dat/deccanrestart.dat";
-    SVSTART = "dat/deccanrestart.dat";
+    RESTART = "LoscarParallel/deccanrestart.dat";
+    SVSTART = "LoscarParallel/deccanrestart.dat";
 
-    EMSFILE = "dat/Emss/deccan_CO2emss.dat";
-    SEMSFILE = "dat/Emss/deccan_Semss.dat";
+    EMSFILE = "LoscarParallel/deccan_CO2emss.dat";
+    SEMSFILE = "LoscarParallel/deccan_Semss.dat";
     TSTART  = 0;
     TFINAL  = last(timevals);
     CINP    = 0;
@@ -92,13 +92,13 @@ function runloscarp(timevals,CO2vals,Svals,co2doubling)
         write(io, inputstring)
     end;
 
-    open("dat/Emss/deccan_CO2emss.dat", "a+") do io
+    open("LoscarParallel/deccan_CO2emss.dat", "a+") do io
         for i in 1:length(CO2vals)
         write(io, string(timevals[i])*" "*string(CO2vals[i])*'\n')
         end
     end;
 
-    open("dat/Emss/deccan_Semss.dat", "a+") do io
+    open("LoscarParallel/deccan_Semss.dat", "a+") do io
         for i in 1:length(Svals)
         write(io, string(timevals[i])*" "*string(Svals[i])*'\n')
         end
@@ -109,15 +109,15 @@ function runloscarp(timevals,CO2vals,Svals,co2doubling)
 
     run(loscarmake)
 
-    loscarrun = `./loscar.x deccan.inp`;
+    loscarrun = `./LoscarParallel/loscar.x deccan.inp`;
 
     run(loscarrun);
 
     # use the co2 doubling to turn pco2 into temperatures.
     co2doubling = co2doubling;
 
-    time_vals = readdlm("tmv.dat", '\t', Float64, '\n')  
-    pco2 = readdlm("pco2a.dat", '\t', Float64, '\n')
+    time_vals = readdlm("LoscarParallel/tmv.dat", '\t', Float64, '\n')  
+    pco2 = readdlm("LoscarParallel/pco2a.dat", '\t', Float64, '\n')
     temp = (pco2./600) .- 1;
     temp = co2doubling .*temp;
 
