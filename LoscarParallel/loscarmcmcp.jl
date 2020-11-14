@@ -13,7 +13,7 @@ rank = MPI.Comm_rank(comm)
 # Test stdout
 print("Hello from $rank of $ntasks processors!\n")
 # make scratch folder for each task
-prefix = "/scratch/loscar$rank"
+prefix = "/dartfs-hpc/scratch/alex/loscar$rank"
 loscdir = "/dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel"
 system("mkdir -p $prefix")
 system("cp -r $loscdir $prefix")
