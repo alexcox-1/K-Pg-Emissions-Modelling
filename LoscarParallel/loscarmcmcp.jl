@@ -1,6 +1,19 @@
 ## do the loscar mcmc ac.gr@ 11/12/20
-using StatGeochem
-include("runloscar.jl")
+using StatGeochem, MPI
+MPI.Init()
+
+include("runloscarp.jl")
+include("fillnans.jl")
+cd("LoscarParallel")
+
+# Get MPI properties
+comm = MPI.COMM_WORLD
+ntasks = MPI.Comm_size(comm)
+rank = MPI.Comm_rank(comm)
+# Test stdout
+print("Hello from $rank of $ntasks processors!\n")
+
+
 bsrtemps = importdataset("tempdatabsr.csv",',');
 timev = bsrtemps["time"];
 temp = bsrtemps["temp"];
@@ -12,11 +25,8 @@ timev .= (timev .- minimum(timev)) .* 1000000;
 # in this time frame, time goes from 0 to 1500 kyr and
 # the kpg boundary is at 500 kyr.
 
-# we have to include a special one year bin for the 
-# so-called impact event
 
-
-# we now have a length 302 time array. let's fill it with
+# we now have a length 300 time array. let's fill it with
 # co2 and so2 emissions.
 # characteristic Pg/y will be 0.01 - 0.1
 # change these to log
@@ -29,7 +39,7 @@ co2doublingrate = 3;
 
 # do a loscar run!
 
-tmv,pco2,loscartemp = runloscar(timev,co2vals,svals,co2doublingrate);
+tmv,pco2,loscartemp = runloscarp(timev,co2vals,svals,co2doublingrate);
 
 # apply the sulfate correction
 # convert svals to pinatubos a year
@@ -50,20 +60,14 @@ mu = fillnans(mu,5);
 
 ll = normpdf_ll(temp,temperror,mu);
 
-numiter = 10;
-
+numiter = 10000;
+num_per_exchange = 100;
 ## monte carlo loop
 # perturb one of the co2 vals and one of the svals
 # work with co2 vals and svals in logspace
-# randomindex = rand(1:length(logco2vals));
-# logco2vals[randomindex] += randn()/100;
-# logsvals[randomindex] +=  randn()/100;
-# careful to not overallocate
-# svals .= exp.(logsvals)
-# runloscar(......svals.....)
-# save the log ones...? porque no los dos
-# accept or reject proposal based on ll
-# also have llprop
+# for parallel, do some number of iterations, collect answers, 
+# then continue 
+
 logco2valsᵣ = copy(logco2vals);
 logsvalsᵣ = copy(logsvals);
 lldist = Array{Float64,1}(undef,numiter);
@@ -71,13 +75,13 @@ co2dist = Array{Float64,2}(undef,length(logco2vals),numiter);
 sdist = Array{Float64,2}(undef,length(logsvals),numiter);
 tempwsulfarray = Array{Float64,2}(undef,length(mu),numiter);
 
-for i = 1:numiter
+@inbounds for i = 1:numiter
     randsindex = rand(1:300,30);
     randcindex = rand(1:300,30);
     logco2valsᵣ[randcindex] .= logco2vals[randcindex] + (randn.(30)./20);
     logsvalsᵣ[randsindex] .= logco2vals[randsindex] + (randn.(30)./20);
 
-    tmv,pco2,loscartemp = runloscar(time,exp.(logco2valsᵣ),exp.(logsvalsᵣ),co2doublingrate);
+    tmv,pco2,loscartemp = runloscarp(timev,exp.(logco2valsᵣ),exp.(logsvalsᵣ),co2doublingrate);
 
     pinatubos = exp.(logsvalsᵣ) ./ 0.009;
     sulfatecorr = -11.3 .* (1 .- exp.(-0.0466.*pinatubos));

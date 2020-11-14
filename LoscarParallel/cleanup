@@ -1,0 +1,9 @@
+#! /bin/bash
+rm *.o
+rm *.x
+rm *.exe
+rm *.log
+rm *.dat
+rm *.out
+rm *.test
+rm *~

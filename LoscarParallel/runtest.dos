@@ -1,0 +1,42 @@
+:: # dos batch file
+:: # use: runtest.bat > runtest.log 2>&1
+:: #  or: runtest.bat PALEO > runtest.log 2>&1
+:: #
+:: # check results: find "Final" runtest.log
+
+@echo off
+
+
+:: 1: modern (default)
+set str=Modern
+set dir=check\test\modern
+set JV=1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
+
+:: 2: paleo
+if [%1] neq [] (
+ if "%1"=="PALEO" (
+    set str=Paleo
+    set dir=check\test\paleo
+    set JV=1 2 3 4 5 6 7 8 9 10 11 12 13
+ )
+)
+
+echo.
+echo Running %str% tests
+echo dir=%dir%
+echo J: %JV%
+echo.
+
+
+for %%j IN (%JV%) DO ( 
+    echo. 
+    echo $================= JOB %%j start =================$
+    echo. 
+    copy %dir%\input%%j.test
+    loscar.exe input%%j.test
+    echo. 
+    echo $================= JOB %%j done =================$
+    echo. 
+)
+
+exit /B

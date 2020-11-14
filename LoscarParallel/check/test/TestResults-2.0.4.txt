@@ -1,0 +1,33 @@
+Modern
+@ Final Atm CO2: 368.33502623
+@ Final Atm CO2: 422.24781292
+@ Final Atm CO2: 761.33628461 
+@ Final Atm CO2: 1064.06172638 
+@ Final Atm CO2: 390.39519054 
+@ Final Atm CO2: 459.42491513 
+@ Final Atm CO2: 875.27821809 
+@ Final Atm CO2: 1241.78237870 
+@ Final Atm CO2: 280.00000000 
+@ Final Atm CO2:  29.24436145 
+@ Final Atm CO2:  44.60720790 
+@ Final Atm CO2: 329.70466769 
+@ Final Atm CO2: 269.04289195 
+@ Final Atm CO2: 145.62756079 
+@ Final Atm CO2: 289.99986464 
+@ Final Atm CO2: 282.93074063 
+@ Final Atm CO2: 291.35128493 
+
+PALEO
+@ Final Atm CO2: 1067.37290006 
+@ Final Atm CO2: 1153.32008723 
+@ Final Atm CO2: 2647.93298422 
+@ Final Atm CO2: 858.19210673 
+@ Final Atm CO2: 4093.24039476 
+@ Final Atm CO2: 1177.91615830 
+@ Final Atm CO2: 1000.00000000 
+@ Final Atm CO2: 103.15315185 
+@ Final Atm CO2: 439.29372050 
+@ Final Atm CO2: 1009.99993146 
+@ Final Atm CO2: 1018.88408721 
+@ Final Atm CO2: 796.06607607 
+@ Final Atm CO2: 1153.36067205

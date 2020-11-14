@@ -1,0 +1,40 @@
+#! /bin/bash
+
+# use: ./runtest >& runtest.log &
+# or
+# use: ./runtest PALEO >& runtest.log &
+#
+# check results: grep Final runtest.log
+
+
+if [ $# -eq 1 ] && [ $1 == "PALEO" ]; then
+   echo " "
+   echo "Running PALEO tests"
+   echo " "
+   #jobs="13"
+   jobs="1 2 3 4 5 6 7 8 9 10 11 12 13"
+   dir=check/test/paleo
+else 
+   echo " "
+   echo "Running MODERN tests"
+   echo " "
+   #jobs="17"
+   jobs="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17"
+   dir=check/test/modern
+fi
+
+
+for j in $jobs
+do
+   echo ""
+   echo "$================= JOB $j start =================$"
+   echo ""
+   cp    $dir/input$j.test .
+   ./loscar.x input$j.test
+   echo ""
+   echo "$================= JOB $j done   ================$"
+   echo ""
+done 
+
+
+exit

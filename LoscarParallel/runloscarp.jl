@@ -1,12 +1,12 @@
 ## run loscar ac.gr@ 11/12
 using DelimitedFiles
-function runloscar(timevals,CO2vals,Svals,co2doubling)
+function runloscarp(timevals,CO2vals,Svals,co2doubling)
     # takes an array of timevals with associated CO2 and SO2 emissions,
     # runs loscar, and return the output times, pC02, and temperature 
     # given a user-specified CO2 doubling rate.
     #cd("Loscar-2.0.4.3")
-    
     # remove the previous emissions file
+    
     if isfile("dat/Emss/deccan_CO2emss.dat")
         rm("dat/Emss/deccan_CO2emss.dat");
     end
@@ -16,7 +16,6 @@ function runloscar(timevals,CO2vals,Svals,co2doubling)
     if isfile("deccan.inp")
         rm("deccan.inp")
     end
-
     # the values for the C and S array
     CO2vals = CO2vals;
     Svals = Svals;

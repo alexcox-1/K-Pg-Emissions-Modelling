@@ -1,0 +1,8 @@
+del *.o
+del *.x
+del *.exe
+del *.log
+del *.dat
+del *.out
+del *.test
+del *~
