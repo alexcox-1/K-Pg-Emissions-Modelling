@@ -105,9 +105,9 @@ function runloscarp(timevals,CO2vals,Svals,co2doubling)
     end;
     
     #do the make and run ***CHANGE THIS
-    loscarmake = `make loscar PALEO=1`
+    #loscarmake = `make loscar PALEO=1`
 
-    run(loscarmake)
+    #run(loscarmake)
 
     loscarrun = `./LoscarParallel/loscar.x deccan.inp`;
 
