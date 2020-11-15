@@ -64,8 +64,8 @@ let
 
     ll = normpdf_ll(temp,temperror,mu);
 
-    numiter = 10;
-    num_per_exchange = 2;
+    numiter = 250;
+    num_per_exchange = 50;
     ## monte carlo loop
     # perturb one of the co2 vals and one of the svals
     # work with co2 vals and svals in logspace
