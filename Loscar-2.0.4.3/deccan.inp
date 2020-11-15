@@ -1,0 +1,29 @@
+RESTART  dat/deccanrestart.dat
+    EMSFILE dat/Emss/deccan_CO2emss.dat
+    SEMSFILE dat/Emss/deccan_Semss.dat
+    TSTART  0
+    TFINAL  1.495e6
+    CINP    0
+    D13CIN  -55
+    TCIN0   0
+    TCSPAN  0
+    EPSLV   0.0001
+    FCSML   0.05
+    KMAX    5000
+    TSNS    1
+    SCLIM   3.0
+    TEMP    25, 25, 25, 16, 16, 16, 12, 12, 12, 12, 18, 14, 12
+    SAL     34.72, 34.72, 34.72, 34.72, 34.72, 34.72, 34.72, 34.72, 34.72, 34.72, 34.72, 34.72, 34.72
+    PCO2SI  600.0
+    FDICI   0.0
+    FALKI   0.0
+    FPO4I   0.0
+    THC     25.0
+    FBIOL   0.8
+    CBIOH   1.8
+    RRAIN   6.7
+    FSHLF   4.5
+    FINC    1.583409493e13
+    CALC    0.021
+    MAGN    0.042
+    SULF    0.014

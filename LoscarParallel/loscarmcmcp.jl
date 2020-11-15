@@ -34,8 +34,16 @@ let
     # co2 and so2 emissions.
     # characteristic Pg/y will be 0.01 - 0.1
     # change these to log
-    co2vals = zeros(300) .+ 0.03;
+    co2vals = zeros(300);
+    co2vals[1:75] .= 0.045;
+    co2vals[76:125] .= 0.005;
+    co2vals[106:150] .= 0.065;
+    co2vals[151:200] .= 0.0;
+    co2vals[201:250] .= 0.075;
+    co2vals[251:300] .= 0.035;
     svals = zeros(300) .+ 0.01;
+    svals[75:125] .= 0.02;
+    svals[251:300] .= 0.02;
     logco2vals = log.(co2vals);
     logsvals = log.(svals);
 
@@ -60,12 +68,12 @@ let
     loscartempwsulf = loscartempwsulf[loscartimebin .<= 300];
     mu = Array{Float64,1}(undef,length(temp));
     nanmean!(mu,vec(tmv),loscartempwsulf,first(timev),last(timev),length(timev));
-    mu = fillnans(mu,5);
+    mu = fillnans(mu,50);
 
     ll = normpdf_ll(temp,temperror,mu);
 
-    numiter = 25;
-    num_per_exchange = 5;
+    numiter = 10;
+    num_per_exchange = 2;
     ## monte carlo loop
     # perturb one of the co2 vals and one of the svals
     # work with co2 vals and svals in logspace
@@ -94,17 +102,48 @@ let
             MPI.Allgather!(logsvals, all_log_s, comm)
             MPI.Allgather!(lldist[i:i], all_lls, comm)
             # Choose which proposal we want to adopt
-            map!(x -> x*rand(), all_lls, all_lls)
-            chosen = argmax(all_lls)
+            all_lls .-= maximum(all_lls) # rescale
+            all_lls .= exp.(all_lls) # Convert to plain (relative) likelihoods
+            lsum = sum(all_lls)
+            chosen = 1
+            cl = all_lls[chosen]
+            r = rand()
+            while r > (cl / lsum) && (chosen < length(all_lls))
+                chosen += 1
+                cl += all_lls[chosen]
+            end
             logco2valsᵣ .= view(all_log_co2, :, chosen)
             logsvalsᵣ .= view(all_log_s, :, chosen)
         end
         # choose which indices to perturb
-        randsindex = rand(1:300,30);
-        randcindex = rand(1:300,30);
-        # perturb these indices
-        logco2valsᵣ[randcindex] .+= (randn()/10);
-        logsvalsᵣ[randsindex] .+= (randn()/10);
+        randsigma = rand()*length(co2vals)/100
+        randsigma2 = rand()*length(co2vals)/100
+        randsigma3 = rand()*length(co2vals)/100
+        randmu = rand()*length(co2vals)
+        randmu2 = rand()*length(co2vals)
+        randmu3 = rand()*length(co2vals)
+        randamplitude = randn()/normpdf(randmu, randsigma, randmu)/10
+        randamplitude2 = randn()/normpdf(randmu2, randsigma2, randmu2)/10
+        randamplitude3 = randn()/normpdf(randmu3, randsigma3, randmu3)/10
+        for j=1:length(co2vals)
+            logco2valsᵣ[j] += randamplitude * normpdf(randmu, randsigma, j)
+            logco2valsᵣ[j] += randamplitude2 * normpdf(randmu2, randsigma2, j)
+            logco2valsᵣ[j] += randamplitude3 * normpdf(randmu3, randsigma3, j)
+        end
+        randsigmas = rand()*length(svals)/100
+        randsigma2s = rand()*length(svals)/100
+        randsigma3s = rand()*length(svals)/100
+        randmus = rand()*length(svals)
+        randmu2s = rand()*length(svals)
+        randmu3s = rand()*length(svals)
+        randamplitudes = randn()/normpdf(randmus, randsigmas, randmus)/10
+        randamplitude2s = randn()/normpdf(randmu2s, randsigma2s, randmu2s)/10
+        randamplitude3s = randn()/normpdf(randmu3s, randsigma3s, randmu3s)/10
+        for j=1:length(svals)
+            logsvalsᵣ[j] += randamplitudes * normpdf(randmus, randsigmas, j)
+            logsvalsᵣ[j] += randamplitude2s * normpdf(randmu2s, randsigma2s, j)
+            logsvalsᵣ[j] += randamplitude3s * normpdf(randmu3s, randsigma3s, j)
+        end
         # run loscar with the new values
         tmv,pco2,loscartemp = runloscarp(timev,exp.(logco2valsᵣ),exp.(logsvalsᵣ),co2doublingrate);
         # do the sulfate corrections
