@@ -22,17 +22,17 @@ let
     # characteristic Pg/y will be 0.01 - 0.1
     # change these to log
     co2vals = zeros(300);
-    co2vals[1:75] .= 0.045;
+    #= co2vals[1:75] .= 0.045;
     co2vals[76:125] .= 0.005;
     co2vals[106:150] .= 0.065;
     co2vals[151:200] .= 0.0;
     co2vals[201:250] .= 0.075;
-    co2vals[251:300] .= 0.035;
-    svals = zeros(300) .+ 0.01;
+    co2vals[251:300] .= 0.035; =#
+    svals = zeros(300) #= .+ 0.01;
     svals[75:125] .= 0.02;
-    svals[251:300] .= 0.02;
-    logco2vals = log.(co2vals);
-    logsvals = log.(svals);
+    svals[251:300] .= 0.02; =#
+    #= logco2vals = log.(co2vals);
+    logsvals = log.(svals); =#
 
     co2doublingrate = 3;
 
