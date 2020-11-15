@@ -145,10 +145,10 @@ let
     all_temps = MPI.Gather(tempwsulfarray, 0, comm)
 
     if rank == 0
-        writedlm(all_ll_dist,"$loscdir/all_ll_dist.csv",',')
-        writedlm(all_co2_dist,"$loscdir/all_co2_dist.csv",',')
-        writedlm(all_s_dist,"$loscdir/all_s_dist.csv",',')
-        writedlm(all_temps,"$loscdir/all_temps.csv",',')
+        writedlm("$loscdir/all_ll_dist.csv",all_ll_dist,',')
+        writedlm("$loscdir/all_co2_dist.csv",all_co2_dist,',')
+        writedlm("$loscdir/all_s_dist.csv",all_s_dist,',')
+        writedlm("$loscdir/all_temps.csv",all_temps,',')
     end  
 end       
 MPI.Finalize()
