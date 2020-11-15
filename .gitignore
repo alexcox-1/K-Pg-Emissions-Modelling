@@ -1,8 +1,4 @@
-
-*.o
-*.x
 *.out
 .DS_Store
-*.exe
 *.log
 *.test

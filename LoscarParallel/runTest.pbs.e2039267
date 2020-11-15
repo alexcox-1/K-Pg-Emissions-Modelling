@@ -1,0 +1,108 @@
+[j15.hpcc.dartmouth.edu:27103] [[59186,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 507
+--------------------------------------------------------------------------
+WARNING: There is at least non-excluded one OpenFabrics device found,
+but there are no active ports detected (or Open MPI was unable to use
+them).  This is most certainly not what you wanted.  Check your
+cables, subnet manager configuration, etc.  The openib BTL will be
+ignored for this job.
+
+  Local host: j15
+--------------------------------------------------------------------------
+[j15.hpcc.dartmouth.edu:27103] 10 more processes have sent help message help-mpi-btl-openib.txt / no active ports found
+[j15.hpcc.dartmouth.edu:27103] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[j15.hpcc.dartmouth.edu:27103] 1 more process has sent help message help-mpi-btl-openib.txt / no active ports found
+[j15.hpcc.dartmouth.edu:27103] 3 more processes have sent help message help-mpi-btl-openib.txt / no active ports found
+ERROR: ERROR: ERROR: LoadError: ERROR: LoadError: ERROR: ERROR: ERROR: ERROR: ERROR: ERROR: LoadError: LoadError: LoadError: LoadError: LoadError: LoadError: LoadError: LoadError: ERROR: ERROR: LoadError: LoadError: IOError: could not spawn `./LoscarParallel/loscar.x deccan.inp`: no such file or directory (ENOENT)
+Stacktrace:IOError: could not spawn `./LoscarParallel/loscar.x deccan.inp`: no such file or directory (ENOENT)
+Stacktrace:IOError: could not spawn `./LoscarParallel/loscar.x deccan.inp`: no such file or directory (ENOENT)
+Stacktrace:IOError: could not spawn `./LoscarParallel/loscar.x deccan.inp`: no such file or directory (ENOENT)
+Stacktrace:IOError: could not spawn `./LoscarParallel/loscar.x deccan.inp`: no such file or directory (ENOENT)
+Stacktrace:IOError: could not spawn `./LoscarParallel/loscar.x deccan.inp`: no such file or directory (ENOENT)
+Stacktrace:IOError: could not spawn `./LoscarParallel/loscar.x deccan.inp`: no such file or directory (ENOENT)
+Stacktrace:IOError: could not spawn `./LoscarParallel/loscar.x deccan.inp`: no such file or directory (ENOENT)
+Stacktrace:IOError: could not spawn `./LoscarParallel/loscar.x deccan.inp`: no such file or directory (ENOENT)
+Stacktrace:IOError: could not spawn `./LoscarParallel/loscar.x deccan.inp`: no such file or directory (ENOENT)
+Stacktrace:
+ [1] IOError: could not spawn `./LoscarParallel/loscar.x deccan.inp`: no such file or directory (ENOENT)
+Stacktrace:
+ [1] IOError: could not spawn `./LoscarParallel/loscar.x deccan.inp`: no such file or directory (ENOENT)
+Stacktrace:_spawn_primitive_spawn_primitive
+ [1] ((
+ [1] 
+ [1] 
+ [1] 
+ [1] _spawn_primitive
+ [1] ::
+ [1] 
+ [1] _spawn_primitive_spawn_primitive_spawn_primitive_spawn_primitive(::_spawn_primitive(_spawn_primitive_spawn_primitive((((((::
+ [1] ::::::String, ::Cmd, ::Array{Any,1}) at ./process.jl:99
+ [2] ::::#585 at ./process.jl:112 [inlined]
+ [3] setup_stdios(::Base.var"#585#586"{Cmd}, ::Array{Any,1}) at ./process.jl:196
+ [4] _spawn at ./process.jl:111 [inlined]
+ [5] 
+ [1] String, ::Cmd, ::Array{Any,::::1}) at ./process.jl:99
+ [2] _spawn_primitive#585 at ./process.jl:112 [inlined]
+ [3] setup_stdios(::Base.var"#585#586"{Cmd}, ::Array{Any,1}) at ./process.jl:196
+ [4] _spawn at ./process.jl:111 [inlined]
+ [5] (run(::Cmd; _spawn_primitivewait::Bool) at ./process.jl:439
+ [6] run at ./process.jl:438 [inlined]
+ [7] runloscarp(::Array{Float64,1}, ::Array{Float64,1}, ::Array{Float64,1}, ::Int64) at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:114
+ [8] top-level scope at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:46
+ [9] include(::Function, ::Module, ::String) at ./Base.jl:380
+ [10] include(::Module, ::String) at ./Base.jl:368
+ [11] exec_options(::Base.JLOptions) at ./client.jl:296
+ [12] _start() at ./client.jl:506
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:46
+run(::Cmd; wait::Bool) at ./process.jl:439
+ [6] run at ./process.jl:438 [inlined]
+ [7] runloscarp(::Array{Float64,1}, ::Array{Float64,1}, ::Array{Float64,1}, ::Int64) at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:114
+ [8] top-level scope at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:46
+ [9] include(::Function, ::Module, ::String) at ./Base.jl:380
+ [10] include(::Module, ::String) at ./Base.jl:368
+ [11] exec_options(::Base.JLOptions) at ./client.jl:296
+ [12] _start() at ./client.jl:506
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:46
+String, ::Cmd, ::Array{Any,1}) at ./process.jl:99
+ [2] String, ::Cmd, ::Array{Any,#585 at ./process.jl:112 [inlined]
+ [3] setup_stdios(::Base.var"#585#586"{Cmd}, ::Array{Any,1})( at ./process.jl:196
+ [4] _spawn at ./process.jl:111 [inlined]
+ [5] String, ::Cmd, ::Array{Any,1}) at ./process.jl:99
+ [2] 1--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+}) at ./process.jl:99
+ [2] 
+signal (15): Terminated
+in expression starting at none:0
+_ZNK4llvm11Instruction8isAtomicEv at /dartfs-hpc/scratch/alex/julia-1.5.3/bin/../lib/julia/libLLVM-9jl.so (unknown line)
+String, ::Cmd, ::Array{Any,1}) at ./process.jl:99
+ [2] 
+signal (15): Terminated
+in expression starting at none:0
+_ZNK4llvm5APInt7compareERKS0_ at /dartfs-hpc/scratch/alex/julia-1.5.3/bin/../lib/julia/libLLVM-9jl.so (unknown line)
+unknown function (ip: 0x7f)
+unknown function (ip: (nil))
+Allocations: 34962601 (Pool: 34949397; Big: 13204); GC: 34
+
+signal (15): Terminated
+in expression starting at none:0
+#585 at ./process.jl:112 [inlined]
+ [3] setup_stdios(::Base.var"#585#586"{Cmd}, ::Array{Any,1}) at ./process.jl:196
+ [4] _spawn at ./process.jl:111 [inlined]
+ [5] 
+signal (15): Terminated
+in expression starting at none:0
+#585 at ./process.jl:112 [inlined]
+ [3] setup_stdios(::Base.var"#585#586"{Cmd}, ::Array{Any,1}) at ./process.jl:196
+ [4] _spawn at ./process.jl:111 [inlined]
+ [5] 
+signal (15): Terminated
+in expression starting at none:0
+--------------------------------------------------------------------------
+mpiexec detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[59186,1],7]
+  Exit code:    1
+--------------------------------------------------------------------------

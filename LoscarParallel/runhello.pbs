@@ -1,10 +1,10 @@
 #!/bin/bash
-#PBS -l nodes=1:ppn=16
-#PBS -l walltime=4:00:00
+#PBS -l nodes=2:ppn=16
+#PBS -l walltime=0:30:00
 #PBS -m bea
 #PBS -M ac.gr@dartmouth.edu
 # Prepare working directory
 cd $PBS_O_WORKDIR
 module load openmpi/4.0.1-gnu4.8.5
 # Run the file
-mpiexec -np 16 -machinefile $PBS_NODEFILE ./runloscarmcmc.bash
+mpiexec -np 32 -machinefile $PBS_NODEFILE ./runhelloworld.bash
