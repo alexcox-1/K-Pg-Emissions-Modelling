@@ -103,8 +103,8 @@ all_lls = Array{Float64}(undef,ntasks);
     randsindex = rand(1:300,30);
     randcindex = rand(1:300,30);
     # perturb these indices
-    logco2valsᵣ[randcindex] .+= (randn/20);
-    logsvalsᵣ[randsindex] .+= (randn/20);
+    logco2valsᵣ[randcindex] .+= (randn()/20);
+    logsvalsᵣ[randsindex] .+= (randn()/20);
     # run loscar with the new values
     tmv,pco2,loscartemp = runloscarp(timev,exp.(logco2valsᵣ),exp.(logsvalsᵣ),co2doublingrate);
     # do the sulfate corrections
