@@ -34,7 +34,7 @@ let
     # co2 and so2 emissions.
     # characteristic Pg/y will be 0.01 - 0.1
     # change these to log
-    co2vals = zeros(300) .+ 0.01;
+    co2vals = zeros(300) .+ 0.03;
     svals = zeros(300) .+ 0.01;
     logco2vals = log.(co2vals);
     logsvals = log.(svals);
@@ -64,8 +64,8 @@ let
 
     ll = normpdf_ll(temp,temperror,mu);
 
-    numiter = 250;
-    num_per_exchange = 50;
+    numiter = 25;
+    num_per_exchange = 5;
     ## monte carlo loop
     # perturb one of the co2 vals and one of the svals
     # work with co2 vals and svals in logspace
@@ -103,8 +103,8 @@ let
         randsindex = rand(1:300,30);
         randcindex = rand(1:300,30);
         # perturb these indices
-        logco2valsᵣ[randcindex] .+= (randn()/20);
-        logsvalsᵣ[randsindex] .+= (randn()/20);
+        logco2valsᵣ[randcindex] .+= (randn()/10);
+        logsvalsᵣ[randsindex] .+= (randn()/10);
         # run loscar with the new values
         tmv,pco2,loscartemp = runloscarp(timev,exp.(logco2valsᵣ),exp.(logsvalsᵣ),co2doublingrate);
         # do the sulfate corrections
