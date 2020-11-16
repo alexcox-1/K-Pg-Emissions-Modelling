@@ -56,7 +56,7 @@ function runloscarp(timevals,CO2vals,Svals,co2doubling)
     SULF    = 14.0e-3;
 
 
-    inputstring = "RESTART  $RESTART
+    inputstring = "
     EMSFILE $EMSFILE
     SEMSFILE $SEMSFILE
     TSTART  $TSTART
