@@ -108,7 +108,7 @@ function runloscarp(timevals,CO2vals,Svals,co2doubling)
 
     #run(loscarmake)
 
-    loscarrun = `./LoscarParallel/loscar.x LoscarParallel/deccan.inp`;
+    loscarrun = `./LoscarParallel/loscar.x deccan.inp`;
 
     run(loscarrun);
 
