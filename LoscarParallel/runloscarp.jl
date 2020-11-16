@@ -13,8 +13,8 @@ function runloscarp(timevals,CO2vals,Svals,co2doubling)
     if isfile("LoscarParallel/deccan_Semss.dat")
         rm("LoscarParallel/deccan_Semss.dat");
     end
-    if isfile("deccan.inp")
-        rm("deccan.inp")
+    if isfile("LoscarParallel/deccan.inp")
+        rm("LoscarParallel/deccan.inp")
     end
     # the values for the C and S array
     CO2vals = CO2vals;
@@ -108,7 +108,7 @@ function runloscarp(timevals,CO2vals,Svals,co2doubling)
 
     #run(loscarmake)
 
-    loscarrun = `./LoscarParallel/loscar.x deccan.inp`;
+    loscarrun = `./LoscarParallel/loscar.x .LoscarParallel/deccan.inp`;
 
     run(loscarrun);
 
