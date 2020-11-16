@@ -36,7 +36,7 @@ let
     # change these to log
     co2vals = zeros(300);
     co2vals[1:75] .= 0.045;
-    co2vals[76:125] .= 0.005;
+    co2vals[76:125] .= 0.025;
     co2vals[106:150] .= 0.065;
     co2vals[151:200] .= 0.0;
     co2vals[201:250] .= 0.075;
