@@ -22,8 +22,8 @@ function runloscarp(timevals,CO2vals,Svals,co2doubling)
     timevals = timevals;
     # the values for the input file ("deccan.inp")
 
-    RESTART = "LoscarParallel/deccanrestart.dat";
-    SVSTART = "LoscarParallel/deccanrestart.dat";
+    RESTART = "LoscarParallel/dat/deccanrestart.dat";
+    SVSTART = "LoscarParallel/dat/deccanrestart.dat";
 
     EMSFILE = "LoscarParallel/deccan_CO2emss.dat";
     SEMSFILE = "LoscarParallel/deccan_Semss.dat";
