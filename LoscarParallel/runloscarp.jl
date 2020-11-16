@@ -115,8 +115,8 @@ function runloscarp(timevals,CO2vals,Svals,co2doubling)
     # use the co2 doubling to turn pco2 into temperatures.
     co2doubling = co2doubling;
 
-    time_vals = readdlm("LoscarParallel/tmv.dat", '\t', Float64, '\n')  
-    pco2 = readdlm("LoscarParallel/pco2a.dat", '\t', Float64, '\n')
+    time_vals = readdlm("tmv.dat", '\t', Float64, '\n')  
+    pco2 = readdlm("pco2a.dat", '\t', Float64, '\n')
     temp = (pco2./600) .- 1;
     temp = co2doubling .*temp;
 
