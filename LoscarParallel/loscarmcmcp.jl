@@ -41,9 +41,9 @@ let
     co2vals[151:200] .= 0.0;
     co2vals[201:250] .= 0.075;
     co2vals[251:300] .= 0.035;
-    svals = zeros(300) .+ 0.01;
+    svals = zeros(300) #= .+ 0.01;
     svals[75:125] .= 0.02;
-    svals[251:300] .= 0.02;
+    svals[251:300] .= 0.02; =#
     logco2vals = log.(co2vals);
     logsvals = log.(svals);
 
@@ -72,8 +72,8 @@ let
 
     ll = normpdf_ll(temp,temperror,mu);
 
-    numiter = 10;
-    num_per_exchange = 2;
+    numiter = 2;
+    num_per_exchange = 1;
     ## monte carlo loop
     # perturb one of the co2 vals and one of the svals
     # work with co2 vals and svals in logspace
