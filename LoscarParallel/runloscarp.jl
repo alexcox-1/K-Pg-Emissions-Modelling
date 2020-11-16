@@ -4,9 +4,8 @@ function runloscarp(timevals,CO2vals,Svals,co2doubling)
     # takes an array of timevals with associated CO2 and SO2 emissions,
     # runs loscar, and return the output times, pC02, and temperature 
     # given a user-specified CO2 doubling rate.
-    #cd("Loscar-2.0.4.3")
-    # remove the previous emissions file
     
+    # remove the previous emissions file
     if isfile("LoscarParallel/deccan_CO2emss.dat")
         rm("LoscarParallel/deccan_CO2emss.dat");
     end
@@ -16,6 +15,7 @@ function runloscarp(timevals,CO2vals,Svals,co2doubling)
     if isfile("deccan.inp")
         rm("deccan.inp")
     end
+
     # the values for the C and S array
     CO2vals = CO2vals;
     Svals = Svals;
@@ -106,22 +106,32 @@ function runloscarp(timevals,CO2vals,Svals,co2doubling)
     #do the make and run ***CHANGE THIS
     #loscarmake = `make loscar PALEO=1`
 
-    #run(loscarmake)
+    #system(loscarmake)
 
-    loscarrun = `./LoscarParallel/loscar.x deccan.inp`;
-
-    run(loscarrun);
+    loscarrun = "./LoscarParallel/loscar.x deccan.inp"
+    system(loscarrun)
 
     # use the co2 doubling to turn pco2 into temperatures.
     co2doubling = co2doubling;
+    
+    if isfile("tmv.dat")
+        time_vals = readdlm("tmv.dat", '\t', Float64, '\n')
+    else
+        @warn "LOSCAR output file tmv.dat not found"
+        time_vals = [NaN]
+    end
+    if isfile("pco2a.dat")
+        pco2 = readdlm("pco2a.dat", '\t', Float64, '\n')
+    else
+        @warn "LOSCAR output file pco2a.dat not found"
+        pco2 = [NaN]
+    end
 
-    time_vals = readdlm("tmv.dat", '\t', Float64, '\n')  
-    pco2 = readdlm("pco2a.dat", '\t', Float64, '\n')
     temp = (pco2./600) .- 1;
     temp = co2doubling .*temp;
 
     #loscarcleanup = `./cleanup`;
-    #run(loscarcleanup);
+    #system(loscarcleanup);
 
     return time_vals, pco2, temp
 
