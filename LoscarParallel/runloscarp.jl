@@ -109,24 +109,24 @@ function runloscarp(timevals,CO2vals,Svals,co2doubling)
     #system(loscarmake)
 
     loscarrun = "./LoscarParallel/loscar.x deccan.inp"
-    system(loscarrun)
-
-    # use the co2 doubling to turn pco2 into temperatures.
-    co2doubling = co2doubling;
-    
-    if isfile("tmv.dat")
+    loscarstatus = system(loscarrun)
+ 
+    # If LOSCAR ran, read in the output files
+    if isfile("tmv.dat") && (loscarstatus == 0)
         time_vals = readdlm("tmv.dat", '\t', Float64, '\n')
     else
-        @warn "LOSCAR output file tmv.dat not found"
+        @warn "LOSCAR may have failed, or tmv.dat not found"
         time_vals = [NaN]
     end
-    if isfile("pco2a.dat")
+    if isfile("pco2a.dat") && (loscarstatus == 0)
         pco2 = readdlm("pco2a.dat", '\t', Float64, '\n')
     else
-        @warn "LOSCAR output file pco2a.dat not found"
+        @warn "LOSCAR may have failed, or pco2a.dat not found"
         pco2 = [NaN]
     end
 
+    # use the co2 doubling to turn pco2 into temperatures.
+    co2doubling = co2doubling;
     temp = (pco2./600) .- 1;
     temp = co2doubling .*temp;
 
