@@ -3,8 +3,10 @@
 #PBS -l walltime=35:00:00
 #PBS -m bea
 #PBS -M ac.gr@dartmouth.edu
-# Prepare working directory
+
+# Prepare
 cd $PBS_O_WORKDIR
 module load openmpi/4.0.1-gnu4.8.5
-# Run the file
+
+# Run
 mpiexec -np 1024 -machinefile $PBS_NODEFILE ./runloscarmcmc.bash
