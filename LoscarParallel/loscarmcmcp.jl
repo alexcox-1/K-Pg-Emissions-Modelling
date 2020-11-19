@@ -72,7 +72,7 @@ let
 
     ll = normpdf_ll(temp,temperror,mu);
 
-    numiter = 2;
+    numiter = 200;
     num_per_exchange = 1;
     ## monte carlo loop
     # perturb one of the co2 vals and one of the svals
