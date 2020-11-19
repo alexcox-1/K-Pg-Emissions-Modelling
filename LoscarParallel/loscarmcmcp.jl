@@ -52,27 +52,29 @@ let
     # do a loscar run!
 
     tmv,pco2,loscartemp = runloscarp(timev,co2vals,svals,co2doublingrate);
-
+    if isnan(tmv[1])
+        ll = NaN
+    else
     # apply the sulfate correction
     # convert svals to pinatubos a year
-    pinatubos = svals ./ 0.009;
-    sulfatecorr = -11.3 .* (1 .- exp.(-0.0466.*pinatubos));
-    loscartimebin = Int.(floor.(tmv ./ 5000) .+ 1);
-    loscartempwsulf = similar(loscartemp);
-    for i = 1:length(loscartemp)
-        loscartempwsulf[i] = loscartemp[i] .+ sulfatecorr[loscartimebin[i]];
+        pinatubos = svals ./ 0.009;
+        sulfatecorr = -11.3 .* (1 .- exp.(-0.0466.*pinatubos));
+        loscartimebin = Int.(floor.(tmv ./ 5000) .+ 1);
+        loscartempwsulf = similar(loscartemp);
+        for i = 1:length(loscartemp)
+            loscartempwsulf[i] = loscartemp[i] .+ sulfatecorr[loscartimebin[i]];
+        end
+        # put the output temp into bins 
+
+        # discard the last time val which is outside the range
+        loscartempwsulf = loscartempwsulf[loscartimebin .<= 300];
+        mu = Array{Float64,1}(undef,length(temp));
+        nanmean!(mu,vec(tmv),loscartempwsulf,first(timev),last(timev),length(timev));
+        mu = fillnans(mu,50);
+
+        ll = normpdf_ll(temp,temperror,mu);
     end
-    # put the output temp into bins 
-
-    # discard the last time val which is outside the range
-    loscartempwsulf = loscartempwsulf[loscartimebin .<= 300];
-    mu = Array{Float64,1}(undef,length(temp));
-    nanmean!(mu,vec(tmv),loscartempwsulf,first(timev),last(timev),length(timev));
-    mu = fillnans(mu,50);
-
-    ll = normpdf_ll(temp,temperror,mu);
-
-    numiter = 200;
+    numiter = 100;
     num_per_exchange = 1;
     ## monte carlo loop
     # perturb one of the co2 vals and one of the svals
@@ -146,23 +148,27 @@ let
         end
         # run loscar with the new values
         tmv,pco2,loscartemp = runloscarp(timev,exp.(logco2valsᵣ),exp.(logsvalsᵣ),co2doublingrate);
+        if isnan(tmv[1])
+            llᵣ = NaN
+        else
         # do the sulfate corrections
-        pinatubos = exp.(logsvalsᵣ) ./ 0.009;
-        sulfatecorr = -11.3 .* (1 .- exp.(-0.0466.*pinatubos));
-        loscartimebin = Int.(floor.(tmv ./ 5000) .+ 1);
-        loscartempwsulf = similar(loscartemp);
-        for i = 1:length(loscartemp)
-            loscartempwsulf[i] = loscartemp[i] .+ sulfatecorr[loscartimebin[i]];
+            pinatubos = exp.(logsvalsᵣ) ./ 0.009;
+            sulfatecorr = -11.3 .* (1 .- exp.(-0.0466.*pinatubos));
+            loscartimebin = Int.(floor.(tmv ./ 5000) .+ 1);
+            loscartempwsulf = similar(loscartemp);
+            for i = 1:length(loscartemp)
+                loscartempwsulf[i] = loscartemp[i] .+ sulfatecorr[loscartimebin[i]];
+            end
+            # put the output temp into bins 
+
+            # discard the last time val which is outside the range
+            loscartempwsulf = loscartempwsulf[loscartimebin .<= 300];
+            mu = Array{Float64,1}(undef,length(temp));
+            nanmean!(mu,vec(tmv),loscartempwsulf,first(timev),last(timev),length(timev));
+            mu = fillnans(mu,5);
+
+            llᵣ = normpdf_ll(temp,temperror,mu);
         end
-        # put the output temp into bins 
-
-        # discard the last time val which is outside the range
-        loscartempwsulf = loscartempwsulf[loscartimebin .<= 300];
-        mu = Array{Float64,1}(undef,length(temp));
-        nanmean!(mu,vec(tmv),loscartempwsulf,first(timev),last(timev),length(timev));
-        mu = fillnans(mu,5);
-
-        llᵣ = normpdf_ll(temp,temperror,mu);
 
         # is this allowed?
         if log(rand()) < (llᵣ-ll)
