@@ -148,7 +148,7 @@ let
         end
         # run loscar with the new values
         tmv,pco2,loscartemp = runloscarp(timev,exp.(logco2valsᵣ),exp.(logsvalsᵣ),co2doublingrate);
-        if isnan(tmv[1])
+        if all(isnan.(tmv))
             llᵣ = NaN
         else
         # do the sulfate corrections
