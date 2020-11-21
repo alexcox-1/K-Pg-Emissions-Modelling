@@ -20,16 +20,8 @@ using StatGeochem
     # co2 and so2 emissions.
     # characteristic Pg/y will be 0.01 - 0.1
     # change these to log
-    co2vals = zeros(300);
-    co2vals[1:75] .= 0.045;
-    co2vals[76:125] .= 0.005;
-    co2vals[106:150] .= 0.065;
-    co2vals[151:200] .= 0.0;
-    co2vals[201:250] .= 0.075;
-    co2vals[251:300] .= 0.035; 
+    co2vals = zeros(300) .+ 0.04; 
     svals = zeros(300) .+ 0.01;
-    svals[75:125] .= 0.02;
-    svals[251:300] .= 0.02;
     logco2vals = log.(co2vals);
     logsvals = log.(svals);
 
@@ -58,7 +50,7 @@ using StatGeochem
 
     ll = normpdf_ll(temp,temperror,mu);
 
-    numiter = 2;
+    numiter = 5;
 
     ## monte carlo loop
     # perturb one of the co2 vals and one of the svals
@@ -78,7 +70,8 @@ using StatGeochem
     co2dist = Array{Float64,2}(undef,length(logco2vals),numiter);
     sdist = Array{Float64,2}(undef,length(logsvals),numiter);
     tempwsulfarray = Array{Float64,2}(undef,length(mu),numiter);
-
+    co2_step_sigma = 0.1;
+    so2_step_sigma = 0.1;
     for i = 1:numiter
         copyto!(logco2valsᵣ,logco2vals);
         copyto!(logsvalsᵣ,logsvals);
@@ -88,9 +81,9 @@ using StatGeochem
         randmu = rand()*length(co2vals)
         randmu2 = rand()*length(co2vals)
         randmu3 = rand()*length(co2vals)
-        randamplitude = randn()/normpdf(randmu, randsigma, randmu)/10
-        randamplitude2 = randn()/normpdf(randmu2, randsigma2, randmu2)/10
-        randamplitude3 = randn()/normpdf(randmu3, randsigma3, randmu3)/10
+        randamplitude = randn()*co2_step_sigma*2.9
+        randamplitude2 = randn()*co2_step_sigma*2.9
+        randamplitude3 = randn()*co2_step_sigma*2.9
         for j=1:length(co2vals)
             logco2valsᵣ[j] += randamplitude * normpdf(randmu, randsigma, j)
             logco2valsᵣ[j] += randamplitude2 * normpdf(randmu2, randsigma2, j)
@@ -102,9 +95,9 @@ using StatGeochem
         randmus = rand()*length(svals)
         randmu2s = rand()*length(svals)
         randmu3s = rand()*length(svals)
-        randamplitudes = randn()/normpdf(randmus, randsigmas, randmus)/10
-        randamplitude2s = randn()/normpdf(randmu2s, randsigma2s, randmu2s)/10
-        randamplitude3s = randn()/normpdf(randmu3s, randsigma3s, randmu3s)/10
+        randamplitudes = randn()*so2_step_sigma*2.9
+        randamplitude2s = randn()*so2_step_sigma*2.9
+        randamplitude3s = randn()*so2_step_sigma*2.9
         for j=1:length(svals)
             logsvalsᵣ[j] += randamplitudes * normpdf(randmus, randsigmas, j)
             logsvalsᵣ[j] += randamplitude2s * normpdf(randmu2s, randsigma2s, j)
@@ -135,6 +128,8 @@ using StatGeochem
             ll = llᵣ
             logco2vals .= logco2valsᵣ  
             logsvals .= logsvalsᵣ  
+            co2_step_sigma = (randamplitude+randamplitude2+randamplitude3)/3
+            so2_step_sigma = (randamplitudes+randamplitude2s+randamplitude3s)/3
         end
         lldist[i] = ll;
         co2dist[:,i] = logco2vals;

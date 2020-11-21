@@ -66,7 +66,7 @@ let
 
         ll = normpdf_ll(temp,temperror,mu);
     end
-    numiter = 200;
+    numiter = 250;
     num_per_exchange = 1;
     ## monte carlo loop
     # perturb one of the co2 vals and one of the svals
@@ -85,6 +85,9 @@ let
     all_log_s = Array{Float64}(undef, length(logsvals), ntasks);
     all_lls = Array{Float64}(undef,ntasks);
     # do the mcmc
+    # set the std of the proposal amplitude distribution
+    co2_step_sigma = 0.15;
+    so2_step_sigma = 0.15;
     @inbounds for i = 1:numiter
         # update current prediction
         copyto!(logco2valsᵣ,logco2vals);
@@ -116,9 +119,9 @@ let
         randmu = rand()*length(co2vals)
         randmu2 = rand()*length(co2vals)
         randmu3 = rand()*length(co2vals)
-        randamplitude = randn()/normpdf(randmu, randsigma, randmu)/10
-        randamplitude2 = randn()/normpdf(randmu2, randsigma2, randmu2)/10
-        randamplitude3 = randn()/normpdf(randmu3, randsigma3, randmu3)/10
+        randamplitude = randn()*2.9*co2_step_sigma
+        randamplitude2 = randn()*2.9*co2_step_sigma
+        randamplitude3 = randn()*2.9*co2_step_sigma
         for j=1:length(co2vals)
             logco2valsᵣ[j] += randamplitude * normpdf(randmu, randsigma, j)
             logco2valsᵣ[j] += randamplitude2 * normpdf(randmu2, randsigma2, j)
@@ -130,9 +133,9 @@ let
         randmus = rand()*length(svals)
         randmu2s = rand()*length(svals)
         randmu3s = rand()*length(svals)
-        randamplitudes = randn()/normpdf(randmus, randsigmas, randmus)/10
-        randamplitude2s = randn()/normpdf(randmu2s, randsigma2s, randmu2s)/10
-        randamplitude3s = randn()/normpdf(randmu3s, randsigma3s, randmu3s)/10
+        randamplitudes = randn()*2.9*so2_step_sigma # multiplied by some value related to the last perturbation (2.9*last amplitude)
+        randamplitude2s = randn()*2.9*so2_step_sigma
+        randamplitude3s = randn()*2.9*so2_step_sigma
         for j=1:length(svals)
             logsvalsᵣ[j] += randamplitudes * normpdf(randmus, randsigmas, j)
             logsvalsᵣ[j] += randamplitude2s * normpdf(randmu2s, randsigma2s, j)
@@ -167,6 +170,8 @@ let
             ll = llᵣ
             logco2vals .= logco2valsᵣ  
             logsvals .= logsvalsᵣ  
+            co2_step_sigma = (randamplitude + randamplitude2 + randamplitude3) / 3;
+            so2_step_sigma = (randamplitudes + randamplitudes2 + randamplitudes3) / 3;
         end
         # update the latest values
         lldist[i] = ll;
