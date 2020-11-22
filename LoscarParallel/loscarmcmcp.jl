@@ -171,7 +171,7 @@ let
             logco2vals .= logco2valsᵣ  
             logsvals .= logsvalsᵣ  
             co2_step_sigma = (randamplitude + randamplitude2 + randamplitude3) / 3;
-            so2_step_sigma = (randamplitudes + randamplitude2s + randamplitudes3s) / 3;
+            so2_step_sigma = (randamplitudes + randamplitude2s + randamplitude3s) / 3;
         end
         # update the latest values
         lldist[i] = ll;
