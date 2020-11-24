@@ -125,7 +125,7 @@ let
         randmus = rand()*length(svals)
         randamplitudes = randn()*2.9*so2_step_sigma # multiplied by some value related to the last perturbation (2.9*last amplitude)
         for j=1:length(svals)
-            logsvalsᵣ[j] += randamplitudes * normpdf(randmus, randsigmas, j))
+            logsvalsᵣ[j] += randamplitudes * normpdf(randmus, randsigmas, j)
         end
         # run loscar with the new values
         tmv,pco2,loscartemp = runloscarp(timev,exp.(logco2valsᵣ),exp.(logsvalsᵣ),co2doublingrate);
