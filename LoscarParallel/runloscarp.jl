@@ -124,7 +124,13 @@ function runloscarp(timevals,CO2vals,Svals,co2doubling)
         @warn "LOSCAR may have failed, or pco2a.dat not found"
         pco2 = [NaN]
     end
-
+    if isfile("d13c.dat") && (loscarstatus == 0)
+        d13c = readdlm("d13c.dat")
+        d13csa = d13c[:,1];
+    else
+        @warn "LOSCAR may have failed, or d13c.dat not found"
+        d13c = [NaN]
+    end
     # use the co2 doubling to turn pco2 into temperatures.
     co2doubling = co2doubling;
     temp = (pco2./600) .- 1;
@@ -133,6 +139,6 @@ function runloscarp(timevals,CO2vals,Svals,co2doubling)
     #loscarcleanup = `./cleanup`;
     #system(loscarcleanup);
 
-    return time_vals, pco2, temp
+    return time_vals, pco2, temp, d13csa
 
 end

@@ -22,7 +22,10 @@ let
     timev = bsrtemps["time"];
     temp = bsrtemps["temp"];
     temperror = bsrtemps["temperror"];
-
+    # import the bootstrap resampled surface Atl d13C.
+    bsrd13c = importdataset("LoscarParallel/d13cdatabsr.csv",',')
+    d13cvals = bsrd13c["d13cval"];
+    d13cerror = bsrd13c["d13cerror"]
     # get the time to start at zero, and be in years
     timev .= (timev .- minimum(timev)) .* 1000000;
 
@@ -43,7 +46,7 @@ let
 
     # do a loscar run!
 
-    tmv,pco2,loscartemp = runloscarp(timev,co2vals,svals,co2doublingrate);
+    tmv,pco2,loscartemp, d13csa = runloscarp(timev,co2vals,svals,co2doublingrate);
     if isnan(tmv[1])
         ll = NaN
     else
@@ -63,8 +66,10 @@ let
         mu = Array{Float64,1}(undef,length(temp));
         nanmean!(mu,vec(tmv),loscartempwsulf,first(timev),last(timev),length(timev));
         mu = fillnans(mu,50);
-
-        ll = normpdf_ll(temp,temperror,mu);
+        d13cmu = Array{Float64,1}(undef,length(temp));
+        nanmean!(d13cmu,vec(tmv),d13csa,first(timev),last(timev),length(timev));
+        d13cmu = fillnans(mu,50);
+        ll = normpdf_ll(temp,temperror,mu) + normpdf_ll(d13cvals,d13cerror,d13cmu);
     end
     numiter = 25;
     num_per_exchange = 1;
@@ -80,6 +85,7 @@ let
     co2dist = Array{Float64,2}(undef,length(logco2vals),numiter);
     sdist = Array{Float64,2}(undef,length(logsvals),numiter);
     tempwsulfarray = Array{Float64,2}(undef,length(mu),numiter);
+    d13carray = Array{Float64,2}(undef,length(mu),numiter);
     # create a record of what other MPI tasks have right now
     all_log_co2 = Array{Float64}(undef, length(logco2vals), ntasks);
     all_log_s = Array{Float64}(undef, length(logsvals), ntasks);
@@ -128,7 +134,7 @@ let
             logsvalsᵣ[j] += randamplitudes * normpdf(randmus, randsigmas, j)
         end
         # run loscar with the new values
-        tmv,pco2,loscartemp = runloscarp(timev,exp.(logco2valsᵣ),exp.(logsvalsᵣ),co2doublingrate);
+        tmv,pco2,loscartemp, d13csa = runloscarp(timev,exp.(logco2valsᵣ),exp.(logsvalsᵣ),co2doublingrate);
         if all(isnan.(tmv))
             llᵣ = NaN
         else
@@ -147,8 +153,11 @@ let
             mu = Array{Float64,1}(undef,length(temp));
             nanmean!(mu,vec(tmv),loscartempwsulf,first(timev),last(timev),length(timev));
             mu = fillnans(mu,5);
-
-            llᵣ = normpdf_ll(temp,temperror,mu);
+            # include log likelihood of d13C
+            d13cmu = Array{Float64,1}(undef,length(temp));
+            nanmean!(d13cmu,vec(tmv),d13csa,first(timev),last(timev),length(timev));
+            d13cmu = fillnans(mu,50);
+            ll = normpdf_ll(temp,temperror,mu) + normpdf_ll(d13cvals,d13cerror,d13cmu);
         end
 
         # is this allowed?
@@ -156,25 +165,28 @@ let
             ll = llᵣ
             logco2vals .= logco2valsᵣ  
             logsvals .= logsvalsᵣ  
-            co2_step_sigma = randamplitude
-            so2_step_sigma = randamplitudes
+            co2_step_sigma = min(abs(randamplitude),1);
+            so2_step_sigma = min(abs(randamplitudes),1)
         end
         # update the latest values
         lldist[i] = ll;
         co2dist[:,i] = logco2vals;
         sdist[:,i] = logsvals;
         tempwsulfarray[:,i] = mu;
+        d13carray[:,1] = d13cmu;
         step_sigma_co2_array[i] = co2_step_sigma;
         step_sigma_so2_array[i] = so2_step_sigma;
     end
 
+    # collate all the final values
     all_ll_dist = MPI.Gather(lldist, 0, comm)
     all_co2_dist = MPI.Gather(co2dist, 0, comm)
     all_s_dist = MPI.Gather(sdist, 0, comm)
     all_temps = MPI.Gather(tempwsulfarray, 0, comm)
+    all_d13c = MPI.Gather(d13carray,0,comm)
     all_co2_step = MPI.Gather(step_sigma_co2_array,0,comm)
     all_so2_step = MPI.Gather(step_sigma_so2_array,0,comm)
-
+    # write them to csv files
     if rank == 0
         writedlm("$loscdir/all_ll_dist.csv",all_ll_dist,',')
         writedlm("$loscdir/all_co2_dist.csv",all_co2_dist,',')
@@ -182,6 +194,7 @@ let
         writedlm("$loscdir/all_temps.csv",all_temps,',')
         writedlm("$loscdir/all_co2_step.csv",all_co2_step,',')
         writedlm("$loscdir/all_so2_step.csv",all_so2_step,',')
+        writedlm("$loscdir/all_d13c.csv",all_d13c,',')
     end  
 end       
 MPI.Finalize()
