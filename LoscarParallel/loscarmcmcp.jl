@@ -157,7 +157,7 @@ let
             d13cmu = Array{Float64,1}(undef,length(temp));
             nanmean!(d13cmu,vec(tmv),d13csa,first(timev),last(timev),length(timev));
             d13cmu = fillnans(mu,50);
-            ll = normpdf_ll(temp,temperror,mu) + normpdf_ll(d13cvals,d13cerror,d13cmu);
+            llᵣ = normpdf_ll(temp,temperror,mu) + normpdf_ll(d13cvals,d13cerror,d13cmu);
         end
 
         # is this allowed?
