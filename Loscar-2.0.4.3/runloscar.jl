@@ -121,10 +121,18 @@ function runloscar(timevals,CO2vals,Svals,co2doubling)
     pco2 = readdlm("pco2a.dat", '\t', Float64, '\n')
     temp = (pco2./600) .- 1;
     temp = co2doubling .*temp;
+    if isfile("d13c.dat")
+        d13c = readdlm("d13c.dat")
+        d13csa = d13c[:,1];
+    else
+        @warn "LOSCAR may have failed, or d13c.dat not found"
+        d13c = [NaN]
+        d13csa = [NaN]
+    end
 
     #loscarcleanup = `./cleanup`;
     #run(loscarcleanup);
 
-    return time_vals, pco2, temp
+    return time_vals, pco2, temp, d13csa
 
 end

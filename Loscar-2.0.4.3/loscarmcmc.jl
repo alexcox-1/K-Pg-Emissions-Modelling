@@ -5,7 +5,11 @@ using StatGeochem
     timev = bsrtemps["time"];
     temp = bsrtemps["temp"];
     temperror = bsrtemps["temperror"];
-
+    bsrd13c = importdataset("d13cdatabsr.csv",',')
+    d13cvals = bsrd13c["d13cval"];
+    d13cerror = bsrd13c["d13cerror"]
+    # add an error in quadrature given LOSCAR uncertainties (assumed 0.5)
+    d13cerror .= sqrt.((d13cerror.^2) .+ 0.3^2)
     # get the time to start at zero, and be in years
     timev .= (timev .- minimum(timev)) .* 1000000;
 
@@ -29,7 +33,7 @@ using StatGeochem
 
     # do a loscar run!
 
-    tmv,pco2,loscartemp = runloscar(timev,co2vals,svals,co2doublingrate);
+    tmv,pco2,loscartemp, d13csa = runloscar(timev,co2vals,svals,co2doublingrate);
 
     # apply the sulfate correction
     # convert svals to pinatubos a year
@@ -47,8 +51,10 @@ using StatGeochem
     mu = Array{Float64,1}(undef,length(temp));
     nanmean!(mu,vec(tmv),loscartempwsulf,first(timev),last(timev),length(timev));
     mu = fillnans(mu,50);
-
-    ll = normpdf_ll(temp,temperror,mu);
+    d13cmu = Array{Float64,1}(undef,length(temp));
+    nanmean!(d13cmu,vec(tmv),d13csa,first(timev),last(timev),length(timev));
+    d13cmu = fillnans(mu,50);
+    ll = normpdf_ll(temp,temperror,mu) + normpdf_ll(d13cvals,d13cerror,d13cmu);
 
     numiter = 5;
 
@@ -70,38 +76,30 @@ using StatGeochem
     co2dist = Array{Float64,2}(undef,length(logco2vals),numiter);
     sdist = Array{Float64,2}(undef,length(logsvals),numiter);
     tempwsulfarray = Array{Float64,2}(undef,length(mu),numiter);
+    d13carray = Array{Float64,2}(undef,length(mu),numiter);
     co2_step_sigma = 0.1;
     so2_step_sigma = 0.1;
     for i = 1:numiter
         copyto!(logco2valsᵣ,logco2vals);
         copyto!(logsvalsᵣ,logsvals);
-        randsigma = rand()*length(co2vals)/100
-        randsigma2 = rand()*length(co2vals)/100
-        randsigma3 = rand()*length(co2vals)/100
+        randhalfwidth = rand()*length(co2vals)/100
+
         randmu = rand()*length(co2vals)
-        randmu2 = rand()*length(co2vals)
-        randmu3 = rand()*length(co2vals)
         randamplitude = randn()*co2_step_sigma*2.9
-        randamplitude2 = randn()*co2_step_sigma*2.9
-        randamplitude3 = randn()*co2_step_sigma*2.9
+
         for j=1:length(co2vals)
-            logco2valsᵣ[j] += randamplitude * normpdf(randmu, randsigma, j)
-            logco2valsᵣ[j] += randamplitude2 * normpdf(randmu2, randsigma2, j)
-            logco2valsᵣ[j] += randamplitude3 * normpdf(randmu3, randsigma3, j)
+            logco2valsᵣ[j] += randamplitude * ((randmu-randhalfwidth)<j<(randmu+randhalfwidth))
+
         end
-        randsigmas = rand()*length(svals)/100
-        randsigma2s = rand()*length(svals)/100
-        randsigma3s = rand()*length(svals)/100
+        randhalfwidths = rand()*length(svals)/100
+
         randmus = rand()*length(svals)
-        randmu2s = rand()*length(svals)
-        randmu3s = rand()*length(svals)
+
         randamplitudes = randn()*so2_step_sigma*2.9
-        randamplitude2s = randn()*so2_step_sigma*2.9
-        randamplitude3s = randn()*so2_step_sigma*2.9
+
         for j=1:length(svals)
-            logsvalsᵣ[j] += randamplitudes * normpdf(randmus, randsigmas, j)
-            logsvalsᵣ[j] += randamplitude2s * normpdf(randmu2s, randsigma2s, j)
-            logsvalsᵣ[j] += randamplitude3s * normpdf(randmu3s, randsigma3s, j)
+            logsvalsᵣ[j] += randamplitudes * ((randmus-randhalfwidths)<j<(randmus+randhalfwidths))
+
         end
 
         tmv,pco2,loscartemp = runloscar(timev,exp.(logco2valsᵣ),exp.(logsvalsᵣ),co2doublingrate);
@@ -120,20 +118,22 @@ using StatGeochem
         mu = Array{Float64,1}(undef,length(temp));
         nanmean!(mu,vec(tmv),loscartempwsulf,first(timev),last(timev),length(timev));
         mu = fillnans(mu,5);
-
-        llᵣ = normpdf_ll(temp,temperror,mu);
+        d13cmu = Array{Float64,1}(undef,length(temp));
+        nanmean!(d13cmu,vec(tmv),d13csa,first(timev),last(timev),length(timev));
+        d13cmu = fillnans(d13cmu,50);
+        llᵣ = normpdf_ll(temp,temperror,mu) + normpdf_ll(d13cvals,d13cerror,d13cmu);
 
         # is this allowed?
         if log(rand()) < (llᵣ-ll)
             ll = llᵣ
             logco2vals .= logco2valsᵣ  
             logsvals .= logsvalsᵣ  
-            co2_step_sigma = (randamplitude+randamplitude2+randamplitude3)/3
-            so2_step_sigma = (randamplitudes+randamplitude2s+randamplitude3s)/3
+            co2_step_sigma = min(abs(randamplitude),1)
+            so2_step_sigma = min(abs(randamplitudes),1)
         end
         lldist[i] = ll;
         co2dist[:,i] = logco2vals;
         sdist[:,i] = logsvals;
         tempwsulfarray[:,i] = mu;
-
+        d13carray[:,i] = d13cmu;
     end

@@ -26,6 +26,8 @@ let
     bsrd13c = importdataset("LoscarParallel/d13cdatabsr.csv",',')
     d13cvals = bsrd13c["d13cval"];
     d13cerror = bsrd13c["d13cerror"]
+    # add an error in quadrature given LOSCAR uncertainties (assumed 0.5)
+    d13cerror .= sqrt.((d13cerror.^2) .+ 0.3^2)
     # get the time to start at zero, and be in years
     timev .= (timev .- minimum(timev)) .* 1000000;
 
@@ -68,7 +70,7 @@ let
         mu = fillnans(mu,50);
         d13cmu = Array{Float64,1}(undef,length(temp));
         nanmean!(d13cmu,vec(tmv),d13csa,first(timev),last(timev),length(timev));
-        d13cmu = fillnans(mu,50);
+        d13cmu = fillnans(d13cmu,50);
         ll = normpdf_ll(temp,temperror,mu) + normpdf_ll(d13cvals,d13cerror,d13cmu);
     end
     numiter = 25;
@@ -121,17 +123,24 @@ let
             logsvalsᵣ .= view(all_log_s, :, chosen)
         end
         # choose which indices to perturb
-        randsigma = rand()*length(co2vals)/100
+        randhalfwidth = rand()*length(co2vals)/100
+
         randmu = rand()*length(co2vals)
-        randamplitude = randn()*2.9*co2_step_sigma
+        randamplitude = randn()*co2_step_sigma*2.9
+
         for j=1:length(co2vals)
-            logco2valsᵣ[j] += randamplitude * normpdf(randmu, randsigma, j)
+            logco2valsᵣ[j] += randamplitude * ((randmu-randhalfwidth)<j<(randmu+randhalfwidth))
+
         end
-        randsigmas = rand()*length(svals)/100
+        randhalfwidths = rand()*length(svals)/100
+
         randmus = rand()*length(svals)
-        randamplitudes = randn()*2.9*so2_step_sigma # multiplied by some value related to the last perturbation (2.9*last amplitude)
+
+        randamplitudes = randn()*so2_step_sigma*2.9
+
         for j=1:length(svals)
-            logsvalsᵣ[j] += randamplitudes * normpdf(randmus, randsigmas, j)
+            logsvalsᵣ[j] += randamplitudes * ((randmus-randhalfwidths)<j<(randmus+randhalfwidths))
+
         end
         # run loscar with the new values
         tmv,pco2,loscartemp, d13csa = runloscarp(timev,exp.(logco2valsᵣ),exp.(logsvalsᵣ),co2doublingrate);
@@ -156,7 +165,7 @@ let
             # include log likelihood of d13C
             d13cmu = Array{Float64,1}(undef,length(temp));
             nanmean!(d13cmu,vec(tmv),d13csa,first(timev),last(timev),length(timev));
-            d13cmu = fillnans(mu,50);
+            d13cmu = fillnans(d13cmu,50);
             llᵣ = normpdf_ll(temp,temperror,mu) + normpdf_ll(d13cvals,d13cerror,d13cmu);
         end
 
@@ -173,7 +182,7 @@ let
         co2dist[:,i] = logco2vals;
         sdist[:,i] = logsvals;
         tempwsulfarray[:,i] = mu;
-        d13carray[:,1] = d13cmu;
+        d13carray[:,i] = d13cmu;
         step_sigma_co2_array[i] = co2_step_sigma;
         step_sigma_so2_array[i] = so2_step_sigma;
     end
