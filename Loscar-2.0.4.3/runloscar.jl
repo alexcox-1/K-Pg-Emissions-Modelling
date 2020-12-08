@@ -110,7 +110,7 @@ function runloscar(timevals,CO2vals,Svals,co2doubling)
 
     #run(loscarmake)
 
-    loscarrun = `./loscar.x deccan.inp`;
+    loscarrun = `./doalarm 300 command ./loscar.x deccan.inp`;
 
     run(loscarrun);
 

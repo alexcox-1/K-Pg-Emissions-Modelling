@@ -1,6 +1,7 @@
 ## do the loscar mcmc ac.gr@ 11/12/20
 using StatGeochem
     include("runloscar.jl")
+    include("fillnans.jl")
     bsrtemps = importdataset("tempdatabsr.csv",',');
     timev = bsrtemps["time"];
     temp = bsrtemps["temp"];

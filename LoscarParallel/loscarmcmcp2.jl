@@ -13,7 +13,7 @@ let
     # Test stdout
     print("Hello from $rank of $ntasks processors!\n")
     # make scratch folder for each task
-    prefix = "/dartfs-hpc/scratch/alex/loscar$rank"
+    prefix = "/dartfs-hpc/scratch/alex/run2/loscar$rank"
     loscdir = "/dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel"
     system("mkdir -p $prefix")
     system("cp -r $loscdir $prefix")
@@ -26,7 +26,7 @@ let
     bsrd13c = importdataset("LoscarParallel/d13cdatabsr.csv",',')
     d13cvals = bsrd13c["d13cval"];
     d13cerror = bsrd13c["d13cerror"]
-    # add an error in quadrature given LOSCAR uncertainties (assumed 0.3)
+    # add an error in quadrature given LOSCAR uncertainties (assumed 0.5)
     d13cerror .= sqrt.((d13cerror.^2) .+ 0.3^2)
     # get the time to start at zero, and be in years
     timev .= (timev .- minimum(timev)) .* 1000000;
@@ -73,7 +73,7 @@ let
         d13cmu = fillnans(d13cmu,50);
         ll = normpdf_ll(temp,temperror,mu) + normpdf_ll(d13cvals,d13cerror,d13cmu);
     end
-    numiter = 25;
+    numiter = 300;
     num_per_exchange = 1;
     ## monte carlo loop
     # perturb one of the co2 vals and one of the svals
@@ -99,7 +99,6 @@ let
     co2_step_sigma = 0.1;
     so2_step_sigma = 0.1;
     @inbounds for i = 1:numiter
-        print("Iteration $i")
         # update current prediction
         copyto!(logco2valsᵣ,logco2vals);
         copyto!(logsvalsᵣ,logsvals);
