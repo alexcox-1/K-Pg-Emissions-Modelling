@@ -57,6 +57,7 @@ function runloscarp(timevals,CO2vals,Svals,co2doubling)
 
 
     inputstring = "
+    RESTART $RESTART
     EMSFILE $EMSFILE
     SEMSFILE $SEMSFILE
     TSTART  $TSTART
@@ -108,7 +109,7 @@ function runloscarp(timevals,CO2vals,Svals,co2doubling)
 
     #system(loscarmake)
 
-    loscarrun = "./LoscarParallel/doalarm 360 command ./LoscarParallel/loscar.x deccan.inp"
+    loscarrun = "./LoscarParallel/doalarm 420 command ./LoscarParallel/loscar.x deccan.inp"
     loscarstatus = system(loscarrun)
  
     # If LOSCAR ran, read in the output files
