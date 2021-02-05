@@ -16,15 +16,6 @@ let
     # a sample 'temperature' distribution, 300 elements long, 0 to 5 degrees
     temp = importdataset("strongscalingtemp.csv",',')
     temp = temp["temp"]
-    temperror = zeros(300) .+ 0.3;
-    co2vals = zeros(300) .+ 0.04;
-    svals = zeros(300) .+ 0.01;
-    
-    mu = (((co2vals ./ 0.1) .+ 0.04) .* 2) .- (exp.(20 .* svals) .- 1)
-
-    ll = normpdf_ll(temp,temperror,mu) 
-    logco2vals = log.(co2vals);
-    logsvals = log.(svals);
     numiter = 10000;
     num_per_exchange = 1;
     ll_dist_array = Array{Float64,2}(undef,numiter,100);
@@ -34,7 +25,15 @@ let
         # work with co2 vals and svals in logspace
         # for parallel, do some number of iterations, collect answers, 
         # then continue 
+	temperror = zeros(300) .+ 0.3;
+    	co2vals = zeros(300) .+ 0.04;
+    	svals = zeros(300) .+ 0.01;
+    
+    	mu = (((co2vals ./ 0.1) .+ 0.04) .* 2) .- (exp.(20 .* svals) .- 1)
 
+   	 ll = normpdf_ll(temp,temperror,mu) 
+    	logco2vals = log.(co2vals);
+    	logsvals = log.(svals);
         logco2valsᵣ = copy(logco2vals);
         logsvalsᵣ = copy(logsvals);
         lldist = Array{Float64,1}(undef,numiter);
