@@ -1,5 +1,5 @@
 ## do the loscar mcmc ac.gr@ 11/12/20
-using StatGeochem, MPI
+using StatGeochem, MPI, Statistics, DelimitedFiles
 MPI.Init()
 
 
@@ -9,11 +9,13 @@ let
     comm = MPI.COMM_WORLD
     ntasks = MPI.Comm_size(comm)
     rank = MPI.Comm_rank(comm)
+    loscdir = "/dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel"
     # Test stdout
     print("Hello from $rank of $ntasks processors!\n")
     
     # a sample 'temperature' distribution, 300 elements long, 0 to 5 degrees
-    temp = importdataset("LoscarParallel/strongscalingtemp.csv",',')
+    temp = importdataset("strongscalingtemp.csv",',')
+    temp = temp["temp"]
     temperror = zeros(300) .+ 0.3;
     co2vals = zeros(300) .+ 0.04;
     svals = zeros(300) .+ 0.01;
@@ -50,7 +52,7 @@ let
         co2_step_sigma = 0.1;
         so2_step_sigma = 0.1;
         @inbounds for i = 1:numiter
-            print("Iteration $i")
+           # print("Iteration $i")
             # update current prediction
             copyto!(logco2valsᵣ,logco2vals);
             copyto!(logsvalsᵣ,logsvals);
@@ -117,17 +119,27 @@ let
         end
 
         # collate all the final values
+
+	(rank == 0) && println("Printing lldist from Rank $rank")
+	(rank == 0) && print(lldist);
         all_ll_dist = MPI.Gather(lldist, 0, comm)
-        all_co2_dist = MPI.Gather(co2dist, 0, comm)
-        all_s_dist = MPI.Gather(sdist, 0, comm)
-        all_temps = MPI.Gather(tempwsulfarray, 0, comm)
-        all_d13c = MPI.Gather(d13carray,0,comm)
-        all_co2_step = MPI.Gather(step_sigma_co2_array,0,comm)
-        all_so2_step = MPI.Gather(step_sigma_so2_array,0,comm)
-        ll_dist_array[:,:,k] = all_ll_dist
+        (rank == 0) && (all_ll_dist = reshape(all_ll_dist,numiter,ntasks))
+	(rank == 0) && (all_ll_dist = mean(all_ll_dist,dims=2))
+        (rank == 0) && (ll_dist_array[:,k] = all_ll_dist)
+	(rank == 0) && println("Printing all_ll_dist from Rank $rank")
+	(rank == 0) && print(all_ll_dist)
+       #all_co2_dist = MPI.Gather(co2dist, 0, comm)
+       #all_s_dist = MPI.Gather(sdist, 0, comm)
+        #all_temps = MPI.Gather(tempwsulfarray, 0, comm)
+        #all_d13c = MPI.Gather(d13carray,0,comm)
+        #all_co2_step = MPI.Gather(step_sigma_co2_array,0,comm)
+        #all_so2_step = MPI.Gather(step_sigma_so2_array,0,comm)
+	
     end
     # write them to csv files
     if rank == 0
+	
+        print("About to write files!")
         writedlm("$loscdir/ll_dist_$ntasks.csv",ll_dist_array,',')
         #writedlm("$loscdir/all_co2_dist.csv",all_co2_dist,',')
         #writedlm("$loscdir/all_s_dist.csv",all_s_dist,',')

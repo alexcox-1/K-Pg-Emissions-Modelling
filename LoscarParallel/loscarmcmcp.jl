@@ -15,6 +15,7 @@ let
     # make scratch folder for each task
     prefix = "/dartfs-hpc/scratch/alex/loscar$rank"
     loscdir = "/dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel"
+    system("rm -rf $prefix")
     system("mkdir -p $prefix")
     system("cp -r $loscdir $prefix")
     cd(prefix)
@@ -73,7 +74,7 @@ let
         d13cmu = fillnans(d13cmu,50);
         ll = normpdf_ll(temp,temperror,mu) + normpdf_ll(d13cvals,d13cerror,d13cmu);
     end
-    numiter = 250;
+    numiter = 200;
     num_per_exchange = 1;
     ## monte carlo loop
     # perturb one of the co2 vals and one of the svals

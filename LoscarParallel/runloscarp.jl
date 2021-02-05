@@ -15,7 +15,15 @@ function runloscarp(timevals,CO2vals,Svals,co2doubling)
     if isfile("deccan.inp")
         rm("deccan.inp")
     end
-
+    if isfile("d13c.dat")
+	rm("d13c.dat")
+    end
+    if isfile("pco2a.dat")
+	rm("pco2a.dat")
+    end
+    if isfile("tmv.dat")
+	rm("tmv.dat")
+    end
     # the values for the C and S array
     CO2vals = CO2vals;
     Svals = Svals;
@@ -108,30 +116,33 @@ function runloscarp(timevals,CO2vals,Svals,co2doubling)
     #loscarmake = `make loscar PALEO=1`
 
     #system(loscarmake)
-
-    loscarrun = "./LoscarParallel/doalarm 420 command ./LoscarParallel/loscar.x deccan.inp"
-    loscarstatus = system(loscarrun)
- 
+    
+    
+    	loscarrun = "./LoscarParallel/doalarm 420 ./LoscarParallel/loscar.x deccan.inp"
+    	loscarstatus = system(loscarrun)
+    
+	
+    
     # If LOSCAR ran, read in the output files
     if isfile("tmv.dat") && (loscarstatus == 0)
-        time_vals = readdlm("tmv.dat", '\t', Float64, '\n')
+        	time_vals = readdlm("tmv.dat", '\t', Float64, '\n')
     else
-        @warn "LOSCAR may have failed, or tmv.dat not found"
-        time_vals = [NaN]
+        	@warn "LOSCAR may have failed, or tmv.dat not found"
+        	time_vals = [NaN]
     end
     if isfile("pco2a.dat") && (loscarstatus == 0)
-        pco2 = readdlm("pco2a.dat", '\t', Float64, '\n')
+        	pco2 = readdlm("pco2a.dat", '\t', Float64, '\n')
     else
-        @warn "LOSCAR may have failed, or pco2a.dat not found"
-        pco2 = [NaN]
+        	@warn "LOSCAR may have failed, or pco2a.dat not found"
+       	        pco2 = [NaN]
     end
     if isfile("d13c.dat") && (loscarstatus == 0)
-        d13c = readdlm("d13c.dat")
-        d13csa = d13c[:,1];
+        	d13c = readdlm("d13c.dat")
+        	d13csa = d13c[:,1];
     else
-        @warn "LOSCAR may have failed, or d13c.dat not found"
-        d13c = [NaN]
-        d13csa = [NaN]
+        	@warn "LOSCAR may have failed, or d13c.dat not found"
+        	d13c = [NaN]
+        	d13csa = [NaN]
     end
     # use the co2 doubling to turn pco2 into temperatures.
     co2doubling = co2doubling;
@@ -140,7 +151,9 @@ function runloscarp(timevals,CO2vals,Svals,co2doubling)
 
     #loscarcleanup = `./cleanup`;
     #system(loscarcleanup);
-
+    if length(time_vals) != length(temp)
+	@warn "Length mismatch in LOSCAR Output!"
+    end 
     return time_vals, pco2, temp, d13csa
 
 end
