@@ -1,6 +1,6 @@
 #!/bin/bash
-#PBS -l nodes=1:ppn=16
-#PBS -l walltime=24:00:00
+#PBS -l nodes=16:ppn=16
+#PBS -l walltime=00:30:00
 #PBS -m bea
 #PBS -M ac.gr@dartmouth.edu
 
@@ -9,4 +9,4 @@ cd $PBS_O_WORKDIR
 module load openmpi/4.0.1-gnu4.8.5
 
 # Run
-mpiexec -np 16 -machinefile $PBS_NODEFILE ./runstrongscaling.bash
+mpiexec -np 256 -machinefile $PBS_NODEFILE ./runstrongscaling.bash

@@ -16,10 +16,11 @@ let
     # a sample 'temperature' distribution, 300 elements long, 0 to 5 degrees
     temp = importdataset("strongscalingtemp.csv",',')
     temp = temp["temp"]
-    numiter = 10000;
+    numiter = 1000;
     num_per_exchange = 1;
     ll_dist_array = Array{Float64,2}(undef,numiter,100);
-    for k = 1:100
+    for k = 1:20
+	(rank == 0) && println("Iteration $k")
         ## monte carlo loop
         # perturb one of the co2 vals and one of the svals
         # work with co2 vals and svals in logspace
