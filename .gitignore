@@ -4,7 +4,7 @@
 *.out
 *.log
 *.test
-
+*.csv
 # Ignore PBS error and output files
 *.pbs.e*
 *.pbs.o*
