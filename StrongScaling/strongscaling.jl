@@ -83,7 +83,7 @@ let
             randhalfwidth = rand()*length(co2vals)/100
 
             randmu = rand()*length(co2vals)
-            randamplitude = randn()*co2_step_sigma*trialnumber
+            randamplitude = randn()*co2_step_sigma*2.9
 
             for j=1:length(co2vals)
                 logco2valsᵣ[j] += randamplitude * ((randmu-randhalfwidth)<j<(randmu+randhalfwidth))
@@ -93,7 +93,7 @@ let
 
             randmus = rand()*length(svals)
 
-            randamplitudes = randn()*so2_step_sigma*trialnumber
+            randamplitudes = randn()*so2_step_sigma*2.9
 
             for j=1:length(svals)
                 logsvalsᵣ[j] += randamplitudes * ((randmus-randhalfwidths)<j<(randmus+randhalfwidths))
@@ -109,8 +109,8 @@ let
                 ll = llᵣ
                 logco2vals .= logco2valsᵣ  
                 logsvals .= logsvalsᵣ  
-                co2_step_sigma = min(abs(randamplitude),1);
-                so2_step_sigma = min(abs(randamplitudes),1)
+                co2_step_sigma = min(abs(randamplitude),trialnumber);
+                so2_step_sigma = min(abs(randamplitudes),trialnumber)
             end
             # update the latest values
             lldist[i] = ll;
