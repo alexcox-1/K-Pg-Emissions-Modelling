@@ -18,9 +18,9 @@ let
     temp = temp["temp"]
     numiter = 100000;
     num_per_exchange = 1;
-    ll_dist_array = Array{Float64,2}(undef,numiter,5);
+    ll_dist_array = Array{Float64,2}(undef,numiter,10);
     muarray = Array{Float64,2}(undef,300,numiter);
-    for k = 1:5
+    for k = 1:10
 	    (rank == 0) && println("Iteration $k")
         ## monte carlo loop
         # perturb one of the co2 vals and one of the svals
@@ -79,25 +79,27 @@ let
                 logco2valsᵣ .= view(all_log_co2, :, chosen)
                 logsvalsᵣ .= view(all_log_s, :, chosen)
             end
-            # choose which indices to perturb
-            randhalfwidth = rand()*length(co2vals)/100
-
-            randmu = rand()*length(co2vals)
-            randamplitude = randn()*co2_step_sigma*2.9
-
-            for j=1:length(co2vals)
-                logco2valsᵣ[j] += randamplitude * ((randmu-randhalfwidth)<j<(randmu+randhalfwidth))
-
+            # choose which indices to perturb, and perturb it trialnumber times
+            # initialize the amplitudes
+            randamplitude = 0
+            randamplitudes = 0
+            # modify co2 vals
+            for n = 1:trialnumber
+                randhalfwidth = rand()*length(co2vals)/100
+                randmu = rand()*length(co2vals)
+                randamplitude = randn()*co2_step_sigma*2.9
+                for j=1:length(co2vals)
+                    logco2valsᵣ[j] += randamplitude * ((randmu-randhalfwidth)<j<(randmu+randhalfwidth))
+                end
             end
-            randhalfwidths = rand()*length(svals)/100
-
-            randmus = rand()*length(svals)
-
-            randamplitudes = randn()*so2_step_sigma*2.9
-
-            for j=1:length(svals)
-                logsvalsᵣ[j] += randamplitudes * ((randmus-randhalfwidths)<j<(randmus+randhalfwidths))
-
+            # modify s vals
+            for n = 1:trialnumber
+                randhalfwidths = rand()*length(svals)/100
+                randmus = rand()*length(svals)
+                randamplitudes = randn()*so2_step_sigma*2.9
+                for j=1:length(svals)
+                    logsvalsᵣ[j] += randamplitudes * ((randmus-randhalfwidths)<j<(randmus+randhalfwidths))
+                end
             end
             # run loscar with the new values
             
