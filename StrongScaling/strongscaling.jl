@@ -84,14 +84,14 @@ let
             randamplitude = 0
             randamplitudes = 0
             # modify co2 vals
-            randhalfwidth = rand()*length(co2vals)/(10 - (trialnumber-1))
+            randhalfwidth = rand()*length(co2vals)/(100 - (trialnumber-1)*10)
             randmu = rand()*length(co2vals)
             randamplitude = randn()*co2_step_sigma*2.9
             for j=1:length(co2vals)
                 logco2valsᵣ[j] += randamplitude * ((randmu-randhalfwidth)<j<(randmu+randhalfwidth))
             end
         # modify s vals
-            randhalfwidths = rand()*length(svals)/(10 - (trialnumber-1))
+            randhalfwidths = rand()*length(svals)/(10 - (trialnumber-1)*10)
             randmus = rand()*length(svals)
             randamplitudes = randn()*so2_step_sigma*2.9
             for j=1:length(svals)
