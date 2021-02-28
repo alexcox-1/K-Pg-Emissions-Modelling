@@ -84,22 +84,18 @@ let
             randamplitude = 0
             randamplitudes = 0
             # modify co2 vals
-            for n = 1:trialnumber
-                randhalfwidth = rand()*length(co2vals)/100
-                randmu = rand()*length(co2vals)
-                randamplitude = randn()*co2_step_sigma*2.9
-                for j=1:length(co2vals)
-                    logco2valsᵣ[j] += randamplitude * ((randmu-randhalfwidth)<j<(randmu+randhalfwidth))
-                end
+            randhalfwidth = rand()*length(co2vals)/(100 - (trialnumber-1) * 10)
+            randmu = rand()*length(co2vals)
+            randamplitude = randn()*co2_step_sigma*2.9
+            for j=1:length(co2vals)
+                logco2valsᵣ[j] += randamplitude * ((randmu-randhalfwidth)<j<(randmu+randhalfwidth))
             end
-            # modify s vals
-            for n = 1:trialnumber
-                randhalfwidths = rand()*length(svals)/100
-                randmus = rand()*length(svals)
-                randamplitudes = randn()*so2_step_sigma*2.9
-                for j=1:length(svals)
-                    logsvalsᵣ[j] += randamplitudes * ((randmus-randhalfwidths)<j<(randmus+randhalfwidths))
-                end
+        # modify s vals
+            randhalfwidths = rand()*length(svals)/(100 - (trialnumber-1) * 10)
+            randmus = rand()*length(svals)
+            randamplitudes = randn()*so2_step_sigma*2.9
+            for j=1:length(svals)
+                logsvalsᵣ[j] += randamplitudes * ((randmus-randhalfwidths)<j<(randmus+randhalfwidths))
             end
             # run loscar with the new values
             
