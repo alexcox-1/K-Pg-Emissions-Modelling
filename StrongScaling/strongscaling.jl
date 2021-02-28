@@ -91,7 +91,7 @@ let
                 logco2valsᵣ[j] += randamplitude * ((randmu-randhalfwidth)<j<(randmu+randhalfwidth))
             end
         # modify s vals
-            randhalfwidths = rand()*length(svals)/(10 - (trialnumber-1)*10)
+            randhalfwidths = rand()*length(svals)/(100 - (trialnumber-1)*10)
             randmus = rand()*length(svals)
             randamplitudes = randn()*so2_step_sigma*2.9
             for j=1:length(svals)
