@@ -107,8 +107,8 @@ let
                 ll = llᵣ
                 logco2vals .= logco2valsᵣ  
                 logsvals .= logsvalsᵣ  
-                co2_step_sigma = min(abs(randamplitude),trialnumber);
-                so2_step_sigma = min(abs(randamplitudes),trialnumber)
+                co2_step_sigma = min(abs(randamplitude),1);
+                so2_step_sigma = min(abs(randamplitudes),1)
             end
             # update the latest values
             lldist[i] = ll;
