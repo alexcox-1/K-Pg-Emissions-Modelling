@@ -54,6 +54,8 @@ let
         # set the std of the proposal amplitude distribution
         co2_step_sigma = 0.1;
         so2_step_sigma = 0.1;
+        halfwidthc = 1;
+        halfwidths = 1;
         @inbounds for i = 1:numiter
            # print("Iteration $i")
             # update current prediction
@@ -84,14 +86,14 @@ let
             randamplitude = 0
             randamplitudes = 0
             # modify co2 vals
-            randhalfwidth = rand()*length(co2vals)/(100 - (trialnumber-1)*10)
+            randhalfwidth = halfwidthc * rand()*length(co2vals)
             randmu = rand()*length(co2vals)
             randamplitude = randn()*co2_step_sigma*2.9
             for j=1:length(co2vals)
                 logco2valsᵣ[j] += randamplitude * ((randmu-randhalfwidth)<j<(randmu+randhalfwidth))
             end
         # modify s vals
-            randhalfwidths = rand()*length(svals)/(100 - (trialnumber-1)*10)
+            randhalfwidths = halfwidths * rand()*length(svals)
             randmus = rand()*length(svals)
             randamplitudes = randn()*so2_step_sigma*2.9
             for j=1:length(svals)
@@ -108,7 +110,9 @@ let
                 logco2vals .= logco2valsᵣ  
                 logsvals .= logsvalsᵣ  
                 co2_step_sigma = min(abs(randamplitude),1);
-                so2_step_sigma = min(abs(randamplitudes),1)
+                so2_step_sigma = min(abs(randamplitudes),1);
+                halfwidthc = min((randhalfwidth/length(co2vals)),1)
+                halfwidths = min((randhalfwidths/length(co2vals)),1)
             end
             # update the latest values
             lldist[i] = ll;
