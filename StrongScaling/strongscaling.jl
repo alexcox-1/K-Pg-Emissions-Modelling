@@ -103,7 +103,7 @@ let
             
             mu = (((exp.(logco2valsᵣ) ./ 0.1) .+ 0.04) .* 2) .- (exp.(20 .* exp.(logsvalsᵣ)) .- 1)
             llᵣ = normpdf_ll(temp,temperror,mu)
-
+            counter = 0
             # is this allowed?
             if log(rand()) < (llᵣ-ll)
                 ll = llᵣ
@@ -111,8 +111,12 @@ let
                 logsvals .= logsvalsᵣ  
                 co2_step_sigma = min(abs(randamplitude),1);
                 so2_step_sigma = min(abs(randamplitudes),1);
-                halfwidthc = min((randhalfwidth/length(co2vals)),1)
-                halfwidths = min((randhalfwidths/length(co2vals)),1)
+            else
+                counter += 1
+            end
+            if counter >= 2
+                halfwidthc *= 0.9;
+                halfwidths *= 0.9;
             end
             # update the latest values
             lldist[i] = ll;
