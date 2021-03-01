@@ -151,7 +151,7 @@ let
         writedlm("$loscdir/ll_dist_1_$ntasks.csv",ll_dist_array,',')
         #writedlm("$loscdir/all_co2_dist.csv",all_co2_dist,',')
         #writedlm("$loscdir/all_s_dist.csv",all_s_dist,',')
-        writedlm("$loscdir/all_temps_$ntasks.csv",muarray[:,50000:100000],',')
+        writedlm("$loscdir/all_temps_$ntasks.csv",muarray,',')
         #writedlm("$loscdir/all_co2_step.csv",all_co2_step,',')
         #writedlm("$loscdir/all_so2_step.csv",all_so2_step,',')
         #writedlm("$loscdir/all_d13c.csv",all_d13c,',')
