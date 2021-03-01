@@ -114,7 +114,7 @@ let
             else
                 counter += 1
             end
-            if counter >= 2
+            if counter >= 4
                 halfwidthc *= 0.9;
                 halfwidths *= 0.9;
             end
