@@ -16,7 +16,7 @@ let
     # a sample 'temperature' distribution, 300 elements long, 0 to 5 degrees
     temp = importdataset("strongscalingtemp.csv",',')
     temp = temp["temp"]
-    numiter = 100000;
+    numiter = 15000;
     num_per_exchange = 1;
     ll_dist_array = Array{Float64,2}(undef,numiter,1);
     muarray = Array{Float64,2}(undef,300,numiter);
@@ -128,7 +128,7 @@ let
             step_sigma_co2_array[i] = co2_step_sigma;
             step_sigma_so2_array[i] = so2_step_sigma;
         end
-        @inbounds for i = 5001:100000
+        @inbounds for i = 5001:15000
             # print("Iteration $i")
              # update current prediction
              copyto!(logco2valsᵣ,logco2vals);
