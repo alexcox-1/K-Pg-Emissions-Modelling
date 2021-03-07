@@ -22,6 +22,7 @@ let
     muarray = Array{Float64,2}(undef,300,numiter);
     all_co2_dist = Array{Float64,3}(undef,300,numiter,ntasks);
     all_s_dist = Array{Float64,3}(undef,300,numiter,ntasks);
+    all_ll_dist = Array{Float64,2}(undef,numiter,ntasks)
     for k = 1:1
 	    (rank == 0) && println("Iteration $k")
         ## monte carlo loop
