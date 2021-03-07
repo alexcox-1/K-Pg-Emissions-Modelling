@@ -141,12 +141,12 @@ let
              randamplitude = 0
              randamplitudes = 0
              # modify co2 vals
-             randamplitude = randn()*co2_step_sigma*2.9
+             randamplitude = randn()*0.1
              for j=rand(1:300,10)
                  logco2valsᵣ[j] += randamplitude 
              end
          # modify s vals
-             randamplitudes = randn()*so2_step_sigma*2.9
+             randamplitudes = randn()*0.1
              for j=rand(1:300,10)
                  logsvalsᵣ[j] += randamplitudes 
              end
@@ -160,8 +160,6 @@ let
                  ll = llᵣ
                  logco2vals .= logco2valsᵣ  
                  logsvals .= logsvalsᵣ  
-                 co2_step_sigma = max(min(abs(randamplitude),1),0.01);
-                 so2_step_sigma = max(min(abs(randamplitude),1),0.01);
              end
              # update the latest values
              lldist[i] = ll;
