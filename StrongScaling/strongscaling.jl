@@ -20,6 +20,8 @@ let
     num_per_exchange = 1;
     ll_dist_array = Array{Float64,2}(undef,numiter,5);
     muarray = Array{Float64,2}(undef,300,numiter);
+    all_co2_dist = Array{Float64,2}(undef,300,numiter);
+    all_s_dist = Array{Float64,2}(undef,300,numiter);
     for k = 1:1
 	    (rank == 0) && println("Iteration $k")
         ## monte carlo loop
