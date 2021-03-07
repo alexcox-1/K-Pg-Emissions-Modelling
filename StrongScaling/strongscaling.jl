@@ -46,7 +46,7 @@ let
         #muarray = Array{Float64,2}(undef,length(mu),numiter);
         # create a record of what other MPI tasks have right now
         ll_dist = Array{Float64,1}(undef,numiter);
-        all_log_co2 = Array{Float64,1}(undef, length(logco2vals);
+        all_log_co2 = Array{Float64,1}(undef, length(logco2vals));
         all_log_s = Array{Float64,1}(undef, length(logsvals));
         all_lls = Array{Float64}(undef,ntasks);
         step_sigma_co2_array = Array{Float64,1}(undef,numiter);
