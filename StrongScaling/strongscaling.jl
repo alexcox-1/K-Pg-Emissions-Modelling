@@ -20,8 +20,8 @@ let
     num_per_exchange = 1;
     ll_dist_array = Array{Float64,2}(undef,numiter,1);
     muarray = Array{Float64,2}(undef,300,numiter);
-    all_co2_dist = Array{Float64,2}(undef,300,numiter);
-    all_s_dist = Array{Float64,2}(undef,300,numiter);
+    all_co2_dist = Array{Float64,2}(undef,300,numiter,ntasks);
+    all_s_dist = Array{Float64,2}(undef,300,numiter,ntasks);
     for k = 1:1
 	    (rank == 0) && println("Iteration $k")
         ## monte carlo loop
@@ -45,6 +45,7 @@ let
         sdist = Array{Float64,2}(undef,length(logsvals),numiter);
         #muarray = Array{Float64,2}(undef,length(mu),numiter);
         # create a record of what other MPI tasks have right now
+        ll_dist = Array{Float64}(undef,numiter,ntasks);
         all_log_co2 = Array{Float64}(undef, length(logco2vals), ntasks);
         all_log_s = Array{Float64}(undef, length(logsvals), ntasks);
         all_lls = Array{Float64}(undef,ntasks);
