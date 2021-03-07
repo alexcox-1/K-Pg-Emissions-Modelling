@@ -142,12 +142,12 @@ let
              randamplitudes = 0
              # modify co2 vals
              randamplitude = randn()*0.1
-             for j=rand(1:300,10)
+             for j=rand(1:300,2)
                  logco2valsᵣ[j] += randamplitude 
              end
          # modify s vals
              randamplitudes = randn()*0.1
-             for j=rand(1:300,10)
+             for j=rand(1:300,2)
                  logsvalsᵣ[j] += randamplitudes 
              end
              # run loscar with the new values
