@@ -174,8 +174,8 @@ let
 	    (rank == 0) && println("Printing lldist from Rank $rank")
         all_ll_dist = MPI.Gather(lldist, 0, comm)
         (rank == 0) && (all_ll_dist = reshape(all_ll_dist,numiter,ntasks))
-	    (rank == 0) && (all_ll_dist = mean(all_ll_dist,dims=2))
-        (rank == 0) && (ll_dist_array[:,k] = all_ll_dist)
+	    # (rank == 0) && (all_ll_dist = mean(all_ll_dist,dims=2))
+        # (rank == 0) && (ll_dist_array[:,k] = all_ll_dist)
 	    (rank == 0) && println("Printing all_ll_dist from Rank $rank")
 	    #(rank == 0) && print(all_ll_dist)
         all_co2_dist = MPI.Gather(co2dist, 0, comm)
@@ -190,7 +190,7 @@ let
     if rank == 0
 	
         print("About to write files!")
-        writedlm("$loscdir/ll_dist_1_$ntasks.csv",ll_dist_array,',')
+        writedlm("$loscdir/ll_dist_1_$ntasks.csv",all_ll_dist,',')
         writedlm("$loscdir/all_co2_dist_$ntasks.csv",all_co2_dist,',')
         writedlm("$loscdir/all_s_dist_$ntasks.csv",all_s_dist,',')
         writedlm("$loscdir/all_temps_$ntasks.csv",muarray,',')
