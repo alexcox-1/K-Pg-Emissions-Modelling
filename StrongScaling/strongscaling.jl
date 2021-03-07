@@ -20,6 +20,7 @@ let
     num_per_exchange = 1;
     ll_dist_array = Array{Float64,2}(undef,numiter,1);
     muarray = Array{Float64,2}(undef,300,numiter);
+    all_temps = Array{Float64,3}(undef,300,numiter,ntasks);
     all_co2_dist = Array{Float64,3}(undef,300,numiter,ntasks);
     all_s_dist = Array{Float64,3}(undef,300,numiter,ntasks);
     all_ll_dist = Array{Float64,2}(undef,numiter,ntasks)
@@ -181,6 +182,9 @@ let
         all_co2_dist = MPI.Gather(co2dist, 0, comm)
         all_s_dist = MPI.Gather(sdist, 0, comm)
         all_temps = MPI.Gather(muarray, 0, comm)
+        all_co2_dist = reshape(all_co2_dist,(300,numiter,ntasks))
+        all_s_dist = reshape(all_s_dist,(300,numiter,ntasks))
+        all_temps = reshape(all_temps,(300,numiter,ntasks))
         #all_d13c = MPI.Gather(d13carray,0,comm)
         #all_co2_step = MPI.Gather(step_sigma_co2_array,0,comm)
         #all_so2_step = MPI.Gather(step_sigma_so2_array,0,comm)
@@ -193,7 +197,7 @@ let
         writedlm("$loscdir/ll_dist_1_$ntasks.csv",all_ll_dist,',')
         writedlm("$loscdir/all_co2_dist_$ntasks.csv",all_co2_dist,',')
         writedlm("$loscdir/all_s_dist_$ntasks.csv",all_s_dist,',')
-        writedlm("$loscdir/all_temps_$ntasks.csv",muarray,',')
+        writedlm("$loscdir/all_temps_$ntasks.csv",all_temps,',')
         #writedlm("$loscdir/all_co2_step.csv",all_co2_step,',')
         #writedlm("$loscdir/all_so2_step.csv",all_so2_step,',')
         #writedlm("$loscdir/all_d13c.csv",all_d13c,',')
