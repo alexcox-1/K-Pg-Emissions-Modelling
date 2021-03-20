@@ -146,8 +146,7 @@ function runloscarp(timevals,CO2vals,Svals,co2doubling)
     end
     # use the co2 doubling to turn pco2 into temperatures.
     co2doubling = co2doubling;
-    temp = (pco2./600) .- 1;
-    temp = co2doubling .*temp;
+    temp = log.(2,(pco2 ./ 600)) .* co2doubling
 
     #loscarcleanup = `./cleanup`;
     #system(loscarcleanup);

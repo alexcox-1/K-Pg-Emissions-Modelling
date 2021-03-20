@@ -119,8 +119,7 @@ function runloscar(timevals,CO2vals,Svals,co2doubling)
 
     time_vals = readdlm("tmv.dat", '\t', Float64, '\n')  
     pco2 = readdlm("pco2a.dat", '\t', Float64, '\n')
-    temp = (pco2./600) .- 1;
-    temp = co2doubling .*temp;
+    temp = log.(2,(pco2 ./ 600)) .* 2
     if isfile("d13c.dat")
         d13c = readdlm("d13c.dat")
         d13csa = d13c[:,1];

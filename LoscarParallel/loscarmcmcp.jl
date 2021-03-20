@@ -74,7 +74,7 @@ let
         d13cmu = fillnans(d13cmu,50);
         ll = normpdf_ll(temp,temperror,mu) + normpdf_ll(d13cvals,d13cerror,d13cmu);
     end
-    numiter = 200;
+    numiter = 50;
     num_per_exchange = 1;
     ## monte carlo loop
     # perturb one of the co2 vals and one of the svals
@@ -99,6 +99,9 @@ let
     # set the std of the proposal amplitude distribution
     co2_step_sigma = 0.1;
     so2_step_sigma = 0.1;
+    halfwidthc = 1;
+    halfwidths = 1;
+    counter = 0;
     @inbounds for i = 1:numiter
         print("Iteration $i")
         # update current prediction
@@ -125,7 +128,7 @@ let
             logsvalsᵣ .= view(all_log_s, :, chosen)
         end
         # choose which indices to perturb
-        randhalfwidth = rand()*length(co2vals)/100
+        randhalfwidth = halfwidthc * rand()*length(co2vals)
 
         randmu = rand()*length(co2vals)
         randamplitude = randn()*co2_step_sigma*2.9
@@ -134,7 +137,7 @@ let
             logco2valsᵣ[j] += randamplitude * ((randmu-randhalfwidth)<j<(randmu+randhalfwidth))
 
         end
-        randhalfwidths = rand()*length(svals)/100
+        randhalfwidths = halfwidths * rand()*length(co2vals)
 
         randmus = rand()*length(svals)
 
@@ -161,23 +164,32 @@ let
 
             # discard the last time val which is outside the range
             loscartempwsulf = loscartempwsulf[loscartimebin .<= 300];
-            mu = Array{Float64,1}(undef,length(temp));
-            nanmean!(mu,vec(tmv),loscartempwsulf,first(timev),last(timev),length(timev));
-            mu = fillnans(mu,5);
+            muᵣ = Array{Float64,1}(undef,length(temp));
+            nanmean!(muᵣ,vec(tmv),loscartempwsulf,first(timev),last(timev),length(timev));
+            muᵣ = fillnans(muᵣ,5);
             # include log likelihood of d13C
-            d13cmu = Array{Float64,1}(undef,length(temp));
-            nanmean!(d13cmu,vec(tmv),d13csa,first(timev),last(timev),length(timev));
-            d13cmu = fillnans(d13cmu,50);
-            llᵣ = normpdf_ll(temp,temperror,mu) + normpdf_ll(d13cvals,d13cerror,d13cmu);
+            d13cmuᵣ = Array{Float64,1}(undef,length(temp));
+            nanmean!(d13cmuᵣ,vec(tmv),d13csa,first(timev),last(timev),length(timev));
+            d13cmuᵣ = fillnans(d13cmuᵣ,50);
+            llᵣ = normpdf_ll(temp,temperror,muᵣ) + normpdf_ll(d13cvals,d13cerror,d13cmuᵣ);
         end
 
         # is this allowed?
         if log(rand()) < (llᵣ-ll)
+            counter = 0
             ll = llᵣ
             logco2vals .= logco2valsᵣ  
             logsvals .= logsvalsᵣ  
             co2_step_sigma = min(abs(randamplitude),1);
             so2_step_sigma = min(abs(randamplitudes),1)
+            mu = muᵣ
+            d13cmu = d13cmuᵣ
+        else
+            counter += 1
+        end
+        if counter >= 5
+            halfwidthc = max(halfwidthc*0.90,0.01);
+            halfwidths = max(halfwidths*0.90,0.01);
         end
         # update the latest values
         lldist[i] = ll;
