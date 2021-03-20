@@ -103,6 +103,7 @@ let
     halfwidths = 1;
     counter = 0;
     @inbounds for i = 1:numiter
+        @warn "Iteration $i"
         print("Iteration $i")
         # update current prediction
         copyto!(logco2valsᵣ,logco2vals);
