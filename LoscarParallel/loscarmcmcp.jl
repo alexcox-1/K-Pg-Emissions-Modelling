@@ -74,7 +74,7 @@ let
         d13cmu = fillnans(d13cmu,50);
         ll = normpdf_ll(temp,temperror,mu) + normpdf_ll(d13cvals,d13cerror,d13cmu);
     end
-    numiter = 225;
+    numiter = 5;
     num_per_exchange = 1;
     ## monte carlo loop
     # perturb one of the co2 vals and one of the svals
@@ -99,8 +99,8 @@ let
     # set the std of the proposal amplitude distribution
     co2_step_sigma = 0.1;
     so2_step_sigma = 0.1;
-    halfwidthc = 1;
-    halfwidths = 1;
+    halfwidthc = 0.5;
+    halfwidths = 0.5;
     counter = 0;
     @inbounds for i = 1:numiter
         (rank == 0) && @warn "Iteration $i"
