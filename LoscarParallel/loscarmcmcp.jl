@@ -74,7 +74,7 @@ let
         d13cmu = fillnans(d13cmu,50);
         ll = normpdf_ll(temp,temperror,mu) + normpdf_ll(d13cvals,d13cerror,d13cmu);
     end
-    numiter = 5;
+    numiter = 350;
     num_per_exchange = 1;
     ## monte carlo loop
     # perturb one of the co2 vals and one of the svals
