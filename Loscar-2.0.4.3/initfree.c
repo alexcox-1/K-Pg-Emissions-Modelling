@@ -539,8 +539,8 @@ void initfree(int flag)
 #ifdef FTYS /* TETHYS */
  d13cvc  =  -4.0; /* -4.0  degas [Berner,WK92,KA99]           */    
  d13cin  =   2.0; /*  2.0  CaCO3 [Berner,Veizer]              */
- d13ckrg = -22.2; /* -23.2 kerogen [WK92/tuned]               */
- epscorg = -33.0; /* -33.0 eps(Corg-DIC) [tuned+Berner,Hayes] */
+ d13ckrg = -22.5; /* -23.2 kerogen [WK92/tuned]               */
+ epscorg = -34.5; /* -33.0 eps(Corg-DIC) [tuned+Berner,Hayes] */
 #else
  d13cvc  =  -4.0; /* -4.0  degas [Berner,WK92,KA99]           */   
  d13cin  =   1.5; /*  1.5  CaCO3 [Berner,Veizer]              */

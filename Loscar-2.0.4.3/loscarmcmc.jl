@@ -25,7 +25,7 @@ using StatGeochem
     # co2 and so2 emissions.
     # characteristic Pg/y will be 0.01 - 0.1
     # change these to log
-    co2vals = zeros(300) .+ 0.04; 
+    co2vals = zeros(300) .+ 0.02; 
     svals = zeros(300) .+ 0.01;
     logco2vals = log.(co2vals);
     logsvals = log.(svals);

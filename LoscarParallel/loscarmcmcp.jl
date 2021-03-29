@@ -40,7 +40,7 @@ let
     # co2 and so2 emissions.
     # characteristic Pg/y will be 0.01 - 0.1
     # change these to log
-    co2vals = zeros(300) .+ 0.04;
+    co2vals = zeros(300) .+ 0.02;
     svals = zeros(300) .+ 0.01;
     logco2vals = log.(co2vals);
     logsvals = log.(svals);
@@ -74,7 +74,7 @@ let
         d13cmu = fillnans(d13cmu,50);
         ll = normpdf_ll(temp,temperror,mu) + normpdf_ll(d13cvals,d13cerror,d13cmu);
     end
-    numiter = 350;
+    numiter = 200;
     num_per_exchange = 1;
     ## monte carlo loop
     # perturb one of the co2 vals and one of the svals
