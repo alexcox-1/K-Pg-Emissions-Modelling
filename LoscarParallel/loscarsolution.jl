@@ -45,7 +45,7 @@ let
         logco2vals = log.(co2vals);
         logsvals = log.(svals);
 
-        o2doublingrate = 3;
+        co2doublingrate = 3;
 
     # do a loscar run!
 
