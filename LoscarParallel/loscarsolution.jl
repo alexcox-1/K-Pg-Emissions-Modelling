@@ -40,8 +40,8 @@ let
         # co2 and so2 emissions.
         # characteristic Pg/y will be 0.01 - 0.1
         # change these to log
-        co2vals = readdlm("co2_soln.csv");
-        svals = readdlm("s_soln.csv");
+        co2vals = readdlm("LoscarParallel/co2_soln.csv");
+        svals = readdlm("LoscarParallel/s_soln.csv");
         logco2vals = log.(co2vals);
         logsvals = log.(svals);
 
