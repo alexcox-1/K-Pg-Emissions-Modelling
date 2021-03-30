@@ -168,3 +168,4 @@ let
     end  
     
 end
+MPI.Finalize()

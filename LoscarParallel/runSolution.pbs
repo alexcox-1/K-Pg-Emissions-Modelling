@@ -1,6 +1,6 @@
 #!/bin/bash
-#PBS -l nodes=64:ppn=16
-#PBS -l walltime=2:00:00
+#PBS -l nodes=1:ppn=16
+#PBS -l walltime=1:00:00
 #PBS -m bea
 #PBS -M ac.gr@dartmouth.edu
 
@@ -9,4 +9,4 @@ cd $PBS_O_WORKDIR
 module load openmpi/4.0.1-gnu4.8.5
 
 # Run
-mpiexec -np 1024 -machinefile $PBS_NODEFILE ./runloscarsolution.bash
+mpiexec -np 16 -machinefile $PBS_NODEFILE ./runloscarsolution.bash
