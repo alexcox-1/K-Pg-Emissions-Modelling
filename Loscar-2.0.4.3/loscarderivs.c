@@ -93,6 +93,9 @@ void derivs(double t,double *y, double *yp)
     
  /*DP: flux of H2SO4 from volcanic degassing*/
  double fso4;
+
+ /*AC: export reduction factor*/
+ double ExpReduction=1;
     
  double *eplvcc,*ealvcc,*eclvcc,*exlvcc,ephcc,eahcc,echcc,exhcc,
 	    *rccb,pcco2a,ccatmp;
@@ -197,6 +200,10 @@ void derivs(double t,double *y, double *yp)
       fso4 = finterp(t,tSems,ySems,ltSem,0);
 	    fso4 *= 3.125e13; /* Pg C/y => mol C/y   */ 
       fso4 /= AOC;
+ }
+
+ if(expflag == 1){
+      ExpReduction = finterp(t,tExp,yExp,ltExp,0);
  }
  
 
@@ -584,25 +591,12 @@ if(NCCATM == 1){
  /*=========== Biological Pump ==================*/
  /* Low Lat Export Corg                          */
    
+    eplv[1]=ExpReduction*0.8*8.0956926743874953125e13; /*Atlantic*/
+    eplv[2]=ExpReduction*0.8*8.2702707475210890625e13; /*Indian*/
+    eplv[3]=ExpReduction*0.8*1.39160302612395453125e14; /*Pacific*/
+    eplv[4]=ExpReduction*0.8*6.4594032486555375e13; /*Tethys*/
     
-    double ExpReduction = 1.;
-    
-    if(t>497.e3 && t<2160.e3)
-        ExpReduction=0.5+((t-497.e3)*0.5/1663.e3);
-    else ExpReduction = 1.;
-    
-    
-    eplv[1]=ExpReduction*8.0956926743874953125e13; /*Atlantic*/
-    eplv[2]=ExpReduction*8.2702707475210890625e13; /*Indian*/
-    eplv[3]=ExpReduction*1.39160302612395453125e14; /*Pacific*/
-    eplv[4]=ExpReduction*6.4594032486555375e13; /*Tethys*/
-    
-    if(t > 497.e3 && t < 2160.e3) {
-        rrain = 5.8-((t-497.e3)*(5.8-6.7)/1663.e3);
-    }
-    else {
-        rrain = 6.7;
-    }
+    rrain = 7.0*(1-0.85*(1-ExpReduction));
     
     
     /* Low Lat Export Other */
@@ -659,10 +653,8 @@ if(NCCATM == 1){
         }
     }
     
-    if (t>497.e3 && t<2160.e3)
-        frei=0.95-((t-497.e3)/1663.e3*(0.95-0.78));
-    else
-        frei=0.78;
+
+    frei=0.85;
     
     
  /* fraction EPL, remineralized in I boxes */

@@ -122,6 +122,13 @@ void readparms(char *fparmstr)
  /*setpstr: set arguments 1 and 2 */	
  setpstr(&sflag,sldstr,varstr,ffound,np,npok,pstr,ntxt);
 
+ /*========== load export reduction file ==================*/
+ varstr = "EXPFILE";
+ npok = 1;
+ ntxt = "none.";
+ getparms(fparm,varstr,&ffound,&np,pval,pstr);
+ /*setpstr: set arguments 1 and 2 */	
+ setpstr(&expflag,expldstr,varstr,ffound,np,npok,pstr,ntxt);
 	
  /*===================== time start =======================*/	
  varstr = "TSTART";	    /* name of parameter     */

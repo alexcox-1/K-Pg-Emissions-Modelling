@@ -139,6 +139,7 @@ function runloscarp(timevals,CO2vals,Svals,co2doubling)
     if isfile("d13c.dat") && (loscarstatus == 0)
         	d13c = readdlm("d13c.dat")
         	d13csa = d13c[:,1];
+            d13cba = d13c[:,7]
     else
         	@warn "LOSCAR may have failed, or d13c.dat not found"
         	d13c = [NaN]
@@ -153,6 +154,6 @@ function runloscarp(timevals,CO2vals,Svals,co2doubling)
     if length(time_vals) != length(temp)
 	@warn "Length mismatch in LOSCAR Output!"
     end 
-    return time_vals, pco2, temp, d13csa
+    return time_vals, pco2, temp, d13csa, d13cba
 
 end

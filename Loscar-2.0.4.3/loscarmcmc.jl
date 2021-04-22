@@ -9,6 +9,9 @@ using StatGeochem
     bsrd13c = importdataset("d13cdatabsr.csv",',')
     d13cvals = bsrd13c["d13cval"];
     d13cerror = bsrd13c["d13cerror"]
+    bsrd13cb = importdataset("d13cdatabenthicbsr.csv",',')
+    d13cbvals = bsrd13cb["d13cval"];
+    d13cberror = bsrd13cb["d13cerror"]
     # add an error in quadrature given LOSCAR uncertainties (assumed 0.5)
     d13cerror .= sqrt.((d13cerror.^2) .+ 0.3^2)
     # get the time to start at zero, and be in years
@@ -25,8 +28,9 @@ using StatGeochem
     # co2 and so2 emissions.
     # characteristic Pg/y will be 0.01 - 0.1
     # change these to log
-    co2vals = zeros(300) .+ 0.02; 
-    svals = zeros(300) .+ 0.01;
+    co2vals = zeros(300) .+ 0.01; 
+    svals = zeros(300);
+    Expvals = ones(300) .- 0.3;
     logco2vals = log.(co2vals);
     logsvals = log.(svals);
 
@@ -34,7 +38,7 @@ using StatGeochem
 
     # do a loscar run!
 
-    tmv,pco2,loscartemp, d13csa = runloscar(timev,co2vals,svals,co2doublingrate);
+    tmv,pco2,loscartemp, d13csa, d13cba = runloscar(timev,co2vals,svals,Expvals,co2doublingrate);
 
     # apply the sulfate correction
     # convert svals to pinatubos a year

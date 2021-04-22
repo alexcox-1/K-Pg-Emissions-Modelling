@@ -259,6 +259,14 @@ int main(int argc, char **argv)
    printf("\n@ S Emissions loaded: none\n");
  }	
 
+ if(expflag == 1){
+   printf("\n@ Loading Export Factor: '%s'\n",expldstr);
+   readExp();
+ }
+ else{
+   printf("\n@ Export Factor loaded: none\n");
+ }
+
  /* initialize y-start values (default or load) */
  initstart();
 	

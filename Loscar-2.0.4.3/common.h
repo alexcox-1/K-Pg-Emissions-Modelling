@@ -63,14 +63,14 @@ double *tmv,**yy,dxsav, /* output vars, save interval, see solver */
 
 /* model parameters/vars */	
 int *kkv,*kiv,ldrestart,svrestart,ffflag,tsnsflag,ltem,cntrfflag,
-    fconv,cinpflag,sflag,ltSem;
+    fconv,cinpflag,sflag,ltSem,ltExp,expflag;
 double *vb,*ab,*hb,thc0,thc,t0,tfinal,*ystart,*mxv,*mhd,thbra,thbri,
        fepl,rrain,nuwd,frei,eph,*gp,*hgssv,*salv,*prsv,**spm,cac,mgc,s4c,
        fvc0,finc0,fkrg,pcsi,ncc,nsi,fcsml,*tems,*yems,*tcb0,*tcb0c,
        *fdapi,rincc,rvccc,rkrgcc,tso,tto,epscorg,cinp,dccinp,rccinp,
-       tcin0,tcspan,sclim,rksp,*tSems,*ySems;
+       tcin0,tcspan,sclim,rksp,*tSems,*ySems,*tExp,*yExp;
 /* file names */
-char fpldstr[BUFSIZ],fpsvstr[BUFSIZ],ffldstr[BUFSIZ],sldstr[BUFSIZ];
+char fpldstr[BUFSIZ],fpsvstr[BUFSIZ],ffldstr[BUFSIZ],sldstr[BUFSIZ],expldstr[BUFSIZ];
 
 #ifdef FSED
 int *klid,*nlid;

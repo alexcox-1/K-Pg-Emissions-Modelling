@@ -159,6 +159,67 @@ void readSemiss()
  free_dvector(tSmp2,1,NEMSMAX);
 	
 }
+
+void readExp()
+{
+ double *tExp1,*tExp2;
+ int i=1,rdflag=0;
+ char mssg[BUFSIZ];	
+
+ FILE *Exppems;
+
+ ltExp = 0;
+ tExp1 = dvector(1,NEMSMAX);
+ tExp2 = dvector(1,NEMSMAX);
+	 
+ /* open emission file */
+ Exppems = fopen(expldstr,"r");
+ if(Exppems == NULL){ 
+    sprintf(mssg,"reademiss(): Can't open emission file '%s'",expldstr);
+	ferrx(mssg);
+ } 
+
+ /* read emissions */
+ while(rdflag != EOF){
+    rdflag = fscanf(Exppems,"%le %le",&tExp1[i],&tExp2[i]);
+    if(rdflag == 1)
+         ferrx("reademiss(): Export Reduction file: #values/line read = 1. need 2.");		 
+    if(rdflag  > 2)
+         ferrx("reademiss(): Export Reduction file: #values/line read > 2. need 2.");		 
+    if(rdflag == 2){
+	  ltExp = i;
+      /*printf("%d %e %e\n",ltem,tmp1[i],tmp2[i]);*/
+	  if(ltExp > NEMSMAX)
+         ferrx("reademiss(): Too many emission values. Increase NEMSMAX?");
+      i += 1;
+	} else { /* EOF */ 
+		 /* printf("%d %d",rdflag,EOF); */
+	     break;
+	}
+ }
+	 
+ /* close emission file */
+ fclose(Exppems);
+
+ if(ltExp == 0)
+    ferrx("reademiss(): No. of emission values = 0?");
+
+ /* allocate time and emission vectors */	 
+ tExp  = dvector(1,ltExp);
+ yExp  = dvector(1,ltExp);
+ /* free: see initfree() */
+
+ /* copy numbers read from file to time and emission vectors */	 
+ for(i=1;i<=ltExp;i++){
+	 tExp[i] = tExp1[i];
+	 yExp[i] = tExp2[i];
+     /*printf("%e %e\n",tems[i],yems[i]);*/
+ }
+	
+ free_dvector(tExp1,1,NEMSMAX);
+ free_dvector(tExp2,1,NEMSMAX);
+	
+}
 /*============================================================*/
 /*==================== reademiss() END =======================*/
 /*============================================================*/
