@@ -33,7 +33,7 @@ function runloscar(timevals,CO2vals,Svals,Expvals,co2doubling)
     EMSFILE = "dat/Emss/deccan_CO2emss.dat";
     SEMSFILE = "dat/Emss/deccan_Semss.dat";
     EXPFILE = "dat/Emss/deccan_Exp.dat"
-    TSTART  = 0;
+    TSTART  = -300000;
     TFINAL  = last(timevals);
     CINP    = 0;
     D13CIN  = -55;

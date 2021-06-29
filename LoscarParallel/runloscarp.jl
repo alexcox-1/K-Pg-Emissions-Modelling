@@ -12,6 +12,9 @@ function runloscarp(timevals,CO2vals,Svals,co2doubling)
     if isfile("LoscarParallel/deccan_Semss.dat")
         rm("LoscarParallel/deccan_Semss.dat");
     end
+    if isfile("dat/Emss/deccan_Exp.dat")
+        rm("dat/Emss/deccan_Exp.dat");
+    end
     if isfile("deccan.inp")
         rm("deccan.inp")
     end

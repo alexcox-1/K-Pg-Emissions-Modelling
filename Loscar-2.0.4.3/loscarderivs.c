@@ -596,7 +596,7 @@ if(NCCATM == 1){
     eplv[3]=ExpReduction*0.8*1.39160302612395453125e14; /*Pacific*/
     eplv[4]=ExpReduction*0.8*6.4594032486555375e13; /*Tethys*/
     
-    rrain = 7.0*(1-0.85*(1-ExpReduction));
+    rrain = 7.0*ExpReduction;
     
     
     /* Low Lat Export Other */
