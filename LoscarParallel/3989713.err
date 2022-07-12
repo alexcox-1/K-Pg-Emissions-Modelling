@@ -1,0 +1,342 @@
+ERROR: ERROR: ERROR: ERROR: ERROR: ERROR: ERROR: ERROR: ERROR: ERROR: ERROR: ERROR: ERROR: ERROR: ERROR: ERROR: LoadError: LoadError: LoadError: LoadError: LoadError: LoadError: LoadError: LoadError: LoadError: LoadError: LoadError: LoadError: LoadError: LoadError: LoadError: LoadError: SystemError: opening file "d13cdatabenthicbsr.csv": SystemError: opening file "d13cdatabenthicbsr.csv": No such file or directory
+Stacktrace:No such file or directory
+
+Stacktrace:
+ [1] [1]  SystemError: opening file "d13cdatabenthicbsr.csv": No such file or directory
+Stacktrace:
+ [1] SystemError: opening file "d13cdatabenthicbsr.csv": No such file or directorySystemError: opening file "d13cdatabenthicbsr.csv": 
+Stacktrace:
+No such file or directory 
+Stacktrace:[1] 
+ [1] SystemError: opening file "d13cdatabenthicbsr.csv": No such file or directory
+Stacktrace:
+ [1] SystemError: opening file "d13cdatabenthicbsr.csv": No such file or directory
+Stacktrace:
+ [1] SystemError: opening file "d13cdatabenthicbsr.csv": No such file or directory
+Stacktrace:
+ [1] SystemError: opening file "d13cdatabenthicbsr.csv": No such file or directory
+Stacktrace:
+ [1] SystemError: opening file "d13cdatabenthicbsr.csv": No such file or directory
+Stacktrace:
+ [1] SystemError: opening file "d13cdatabenthicbsr.csv": No such file or directory
+Stacktrace:
+ [1] SystemError: opening file "d13cdatabenthicbsr.csv": No such file or directory
+Stacktrace:
+ [1] SystemError: opening file "d13cdatabenthicbsr.csv": No such file or directory
+Stacktrace:
+ SystemError: opening file "d13cdatabenthicbsr.csv": No such file or directory[1]
+Stacktrace:
+  [1] SystemError: opening file "d13cdatabenthicbsr.csv": No such file or directory
+Stacktrace:
+ [1] SystemError: opening file "d13cdatabenthicbsr.csv": No such file or directory
+Stacktrace:
+ [1] systemerror(systemerror(systemerror(systemerror(systemerror(systemerror(systemerror(systemerror(systemerror(systemerror(systemerror(systemerror(systemerror(systemerror(systemerror(systemerror(p::pp::::p::p::p::p::p::p::p::p::p::p::p::p::String, errno::Int32; extrainfo::Nothing)
+   @ String, errno::String, errno::Int32StringInt32; extrainfo::; extrainfo::Nothing)
+   @ Nothing)
+   @ , errno::Int32; extrainfo::Nothing)
+   @ String, Stringerrno::Int32; extrainfo::Nothing)
+   @ , errno::Int32; extrainfo::Nothing)
+   @ StringString, errno::Int32; extrainfo::Nothing)
+   @ , errno::Int32; extrainfo::Nothing)
+   @ pString::, errno::Int32; extrainfo::Nothing)
+   @ String, errno::Int32; extrainfo::Nothing)
+   @ String, errno::Int32; extrainfo::Nothing)
+   @ String, errno::Int32; extrainfo::Nothing)
+   @ String, errno::Int32; extrainfo::Nothing)
+   @ String, errno::Int32; extrainfo::Nothing)
+   @ String, errno::Int32; extrainfo::Nothing)
+   @ Base String, ./errno::Int32; extrainfo::Nothing)
+   @ Base Base ./Base./ ./Base Base./ ./Base ./Base ./Base ./Base ./Base ./Base ./Base ./Base ./Base ./error.jl:174error.jl:174
+error.jl:174
+ 
+ [2] #systemerror#68
+   @ ./error.jl:173 [2]  [inlined]
+#systemerror#68
+   @  [3] ./error.jl:173systemerror
+   @  [inlined]
+./error.jl:173 [inlined]
+ [3] [4] systemerror
+    @ ./error.jl:173 [inlined]
+[2] #systemerror#68open [4] 
+   @ ./error.jl:173 [inlined]open(fname
+:: [3] String; systemerror
+lock::   @ ./Bool, error.jl:173read:: [inlined]
+Bool, write:: [4]Nothing, create:: Nothing, truncate::Nothing, append::open(error.jl:174Nothing)fname::
+   @ Base 
+./iostream.jl:293String; lock::
+Bool, read:: [5] [2] Bool, write:: Nothing, #systemerror#68
+open(   @ ./create::Nothing, truncatefname::String, mode::error.jl:173:: [inlined]
+Nothing, append::NothingString; lock::Bool)
+ [3])
+ systemerror
+   @ Base ./   @ Base ./   @ iostream.jl:293
+iostream.jl:355
+./error.jl:173 [inlined]
+ [6] [5]  [4] open
+open(fname    @ ./iostream.jl:355::String [inlined]
+, mode::Stringopen( [7]; lock:: fname::Bool)
+   @ String; lock::Base ./importdatasetiostream.jl:355Bool, read(filepath::
+String, ::Boolerror.jl:174 [6] opendelim::Char; , write::Nothing, importas::
+   @ create::./iostream.jl:355 [inlined]
+
+Symbol, standardize::BoolNothing, truncate::, floattypeNothing, ::Type, skipstart [7]  [2] #systemerror#68append::Nothing)
+   @ ::Int64
+   @ ./Base ./, skipnameless::Booliostream.jl:293importdataset, mindefinedcolumns(filepath::error.jl:173 [inlined]
+
+::Int64)
+ [5]String, delim   @ StatGeochem::Char; importas open [3] systemerror
+   @  ::Symbol(fname::./error.jl:173 [inlined], standardize::BoolString, mode, floattype
+::String [4]::Type, ; lock::Boolskipstart:: )
+Int64, skipnameless::   @ Base ./Bool, iostream.jl:355open(fnamemindefinedcolumns::Int64
+)
+:: [6]   @ StatGeochem String; lock open::
+   @ ./iostream.jl:355Bool, read [inlined]
+::Bool, write:: [7]Nothing,  create::Nothing, truncate::Nothing, append::importdataset(filepathNothing)
+   @ ::Base ./String, delim::iostream.jl:293Char; importas::
+Symbol [5] , standardize::Bool, open(fname::floattype::TypeString, , skipstartmode::String; ::Int64, skipnamelesslock::::Bool)
+Bool, mindefinedcolumns::   @ BaseInt64) ./iostream.jl:355
+   @ StatGeochem 
+ [6] open
+   @ ./iostream.jl:355 [inlined]
+ (fname::error.jl:174String; 
+lock::Bool, read ::Bool, [2] write::#systemerror#68
+Nothing, create::   @ Nothing, truncate::./Nothingerror.jl:173 [inlined], append::Nothing
+)
+ [3]   @ Base  systemerror
+   @ ./iostream.jl:293./error.jl:173 [inlined]
+
+ [4] [5]  open(fnameopen::(fname::String, mode::String; lock::String; lockBool)
+::   @ BaseBool,  ./iostream.jl:355read::Bool, write
+::Nothing, create [6]:: open
+Nothing, truncate::   @ ./Nothing, iostream.jl:355 [inlined]
+append::Nothing)
+   @ Base  [7]./iostream.jl:293 
+importdataset(filepath [7] ::String, delim::Char; importdatasetimportas::(filepath::Symbol, standardize::String, Bool, floattype::delim::CharType, skipstart::; importas::Int64Symbol, standardize::, skipnameless::Bool, Bool, floattype::mindefinedcolumns::Int64)
+Type, skipstart::   @ StatGeochem Int64, skipnameless::Bool, mindefinedcolumns::Int64)
+   @ StatGeochem [5] open(fname::String, mode::String; lock::Bool)
+   @ Base ./iostream.jl:355
+ [6] open
+   @ ./iostream.jl:355 [inlined]
+ [7] importdataset(filepath::String, delim::Char; importas::Symbol, standardize::Bool, floattype::Type, skipstart::Int64, skipnameless::Bool, mindefinedcolumns::Int64)
+   @ StatGeochem Base ./error.jl:174error.jl:174
+ [2] #systemerror#68
+   @ ./error.jl:173 [inlined]
+ 
+[3] systemerror 
+   @ ./error.jl:173 [inlined]
+ [4] [2]open(fname:: #systemerror#68
+String   @ ./error.jl:173 [inlined]
+;  [3] systemerror
+   @ ./error.jl:173 [inlined]
+ [4] lockopen(fname::::StringBool, read::Bool, write::Nothing, create::Nothing, truncate::Nothing, append::Nothing)
+   @ Base ./iostream.jl:293
+ [5] open; lock::Bool, read::Bool, write::Nothing, create::Nothing, truncate::Nothing, append::Nothing)
+   @ Base ./iostream.jl:293
+ [5] (fname::openString, mode::String; lock::Bool)
+   @ Base ./iostream.jl:355
+ (fname::String, mode::String; lock::Bool)
+   @ Base ./iostream.jl:355
+ [6] open
+   @ ./iostream.jl:355 [inlined]
+/dartfs-hpc/scratch/alex/.julia/packages/StatGeochem/65XUK/src/utilities//dartfs-hpc/scratch/alex/.julia/packages/StatGeochem/65XUK/src/utilities/[6] open
+    @ /dartfs-hpc/scratch/alex/.julia/packages/StatGeochem/65XUK/src/utilities/Import.jl:857
+Import.jl:857
+./iostream.jl:355 [inlined]
+Import.jl:857 [7]
+  [8] [8]   [8] importdataset(filepath::String, delim::Char[7] ; importdataset(filepath::String, delim::Char; importas::Symbol, standardize::Bool, floattype::Type, skipstart::Int64, skipnameless::Bool, mindefinedcolumns::Int64)
+   @ StatGeochem importaserror.jl:174
+:: [2] #systemerror#68
+   @ ./error.jl:173 [inlined]
+ [3] systemerror
+   @ ./error.jl:173 [inlined]
+ [4]/dartfs-hpc/scratch/alex/.julia/packages/StatGeochem/65XUK/src/utilities/ Import.jl:857Symbol, standardize::Bool, floattype::Typeopen(fname::String, skipstart::; lockInt64, skipnameless::Bool/dartfs-hpc/scratch/alex/.julia/packages/StatGeochem/65XUK/src/utilities/::Bool, read::, mindefinedcolumns::Bool, Int64)
+   @ write::Nothing, create::Import.jl:857
+StatGeochem Nothing, truncate::Nothing, append:: [8] Nothing)
+   @ Base ./iostream.jl:293
+ 
+[5]  open(fname::String, mode::String; lock::Bool)
+   @ Base ./iostream.jl:355
+ [8] [6] open
+   @ ./iostream.jl:355 [inlined]
+ [7] importdataset(filepath::String, delim::Char; importas::Symbol, standardize::Bool, floattype::Type, skipstart::Int64, skipnameless::Bool, mindefinedcolumns::Int64)
+   @ StatGeochem error.jl:174
+/dartfs-hpc/scratch/alex/.julia/packages/StatGeochem/65XUK/src/utilities/ [2] #systemerror#68
+   @ ./error.jl:173 [inlined]
+ Import.jl:857
+[3] [8]  systemerror
+   @ ./error.jl:173 [inlined]
+ [4] open(fname::String; lock::Bool, read::Bool, write::Nothing, create::Nothing, truncate::Nothing, append::Nothing)
+   @ Base ./iostream.jl:293
+ [5] open(fname::String, mode::String; lock::Bool)
+   @ Base ./iostream.jl:355
+ [6] open
+   @ ./iostream.jl:355 [inlined]
+ [7] importdataset(filepath::String, delim::Char; importas::Symbol, standardize::Bool, floattype::Type, skipstart::Int64, skipnameless::Bool, mindefinedcolumns::Int64)
+   @ StatGeochem error.jl:174
+ [2] #systemerror#68
+   @ ./error.jl:173 [inlined]
+ [3] systemerror
+   @ ./error.jl:173 [inlined]
+ [4] open(fname::String; lock::Bool, read::Bool, write::Nothing, create::Nothing, truncate::Nothing, append::Nothing)
+   @ Base ./iostream.jl:293
+ [5] open(fname::String, mode::String; lock::Bool)
+   @ Base ./iostream.jl:355
+ [6] open
+   @ ./error.jl:174iostream.jl:355 [inlined]
+
+ [7] importdataset [2] #systemerror#68
+   @ ./(filepath::String, delim::Char; importas::Symbol, standardize::Bool, floattype::Type, skipstart::Int64, skipnameless::Bool, mindefinedcolumns::Int64)
+   @ StatGeochem error.jl:173 [inlined]
+ [3] systemerror
+   @ ./error.jl:173 [inlined]
+ [4] open(fname::String; lock::Bool, read::Bool, write::Nothing, create::Nothing, truncate::Nothing, append::Nothing)
+   @ Base ./iostream.jl:293
+ [5] open(fname::String, mode::String; lock::Bool)
+   @ Base ./iostream.jl:355
+ [6] open
+   @ ./iostream.jl:355 [inlined]
+ [7] importdataset(filepath::String, delim::Char; importas::Symbol, standardize::Bool, floattype::Type, skipstart::Int64, skipnameless::Bool, mindefinedcolumns::Int64)
+   @ StatGeochem /dartfs-hpc/scratch/alex/.julia/packages/StatGeochem/65XUK/src/utilities//dartfs-hpc/scratch/alex/.julia/packages/StatGeochem/65XUK/src/utilities/Import.jl:857
+ Import.jl:857
+[8] [8]  error.jl:174
+ [2] #systemerror#68
+   @ ./error.jl:173 [inlined]
+ [3] systemerror
+   @ ./error.jl:173/dartfs-hpc/scratch/alex/.julia/packages/StatGeochem/65XUK/src/utilities/ [inlined]
+ [4] open(fname::StringImport.jl:857
+;  [8] lock::Bool, read::Bool, write::Nothing, create::error.jl:174Nothing, truncate::Nothing
+, append::Nothing)
+   @ Base ./iostream.jl:293
+ [5] open (fname::String, mode::String; lock::Bool)
+   @ Base ./iostream.jl:355
+[2] #systemerror#68
+    @ ./error.jl:173 [inlined]
+[6] open
+   @  ./iostream.jl:355 [inlined]
+ [7] [3]importdataset(filepath::String, delim::Char; importas::Symbol, standardize::Bool, floattype::Type, skipstart::Int64, skipnameless::Bool, mindefinedcolumns::Int64)
+   @ StatGeochem  systemerror
+   @ ./error.jl:173 [inlined]
+ [4] open(fname::String; lock::Bool, read::Bool, write::Nothing, create::Nothing, truncate::Nothing, append::Nothing)
+   @ Base ./iostream.jl:293
+ [5] open(fname::String, mode::String; lock::Bool)
+   @ Base ./iostream.jl:355
+ [6] open
+   @ ./iostream.jl:355 [inlined]
+ [7] importdataset(filepath::String, delim::Char; importas::Symbol, standardize::Bool, floattype::Type/dartfs-hpc/scratch/alex/.julia/packages/StatGeochem/65XUK/src/utilities/, Import.jl:857
+skipstart [8] ::Int64, skipnameless::Bool, mindefinedcolumns::Int64)
+   @ StatGeochem error.jl:174
+ [2] #systemerror#68
+   @ ./error.jl:173 [inlined]
+ [3] systemerror
+   @ ./error.jl:173 [inlined]
+ [4] open(/dartfs-hpc/scratch/alex/.julia/packages/StatGeochem/65XUK/src/utilities/fname::String; lock::Bool, read::Bool, write::Nothing, create::Nothing, truncate::Nothing, append::Nothing)
+   @ Base ./iostream.jl:293
+ Import.jl:857
+[5] [8]  open(fname::String, mode::String; lock::Bool)
+   @ Base ./iostream.jl:355
+ [6] open
+   @ ./iostream.jl:355 [inlined]
+ [7] importdataset(filepath::String, delim::Char; importas::Symbol, standardize::Bool, floattype::Type, skipstart::Int64, skipnameless::Bool, mindefinedcolumns::Int64)
+   @ StatGeochem /dartfs-hpc/scratch/alex/.julia/packages/StatGeochem/65XUK/src/utilities/Import.jl:857
+ [8] /dartfs-hpc/scratch/alex/.julia/packages/StatGeochem/65XUK/src/utilities/Import.jl:857
+ [8] /dartfs-hpc/scratch/alex/.julia/packages/StatGeochem/65XUK/src/utilities/Import.jl:857
+ [8] importdataset(importdatasetfilepath::String, delim::Char)
+   @ StatGeochem (/dartfs-hpc/scratch/alex/.julia/packages/StatGeochem/65XUK/src/utilities/Import.jl:857
+importdatasetfilepath:: String, (filepath::delim::Char)
+String, delim   @ ::CharStatGeochem )
+   @ StatGeochem /dartfs-hpc/scratch/alex/.julia/packages/StatGeochem/65XUK/src/utilities/Import.jl:857
+/dartfs-hpc/scratch/alex/.julia/packages/StatGeochem/65XUK/src/utilities/[9] top-level scope
+ [9] top-level scope
+Import.jl:857   @ importdataset   @ (filepath::/dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:33String
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+, delim/dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:33::Char)
+
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+   @ StatGeochem 
+/dartfs-hpc/scratch/alex/.julia/packages/StatGeochem/65XUK/src/utilities/Import.jl:857
+ importdataset [9] top-level scope
+   @ (filepath::/dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:33
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+String, delim::Char)
+   @ StatGeochem [9]/dartfs-hpc/scratch/alex/.julia/packages/StatGeochem/65XUK/src/utilities/Import.jl:857
+  [9] top-level scope
+   @ top-level scope
+   @ /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel//dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:33
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+loscarmcmcp.jl:33
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+importdataset(filepath::String, delim::Char)
+   @ StatGeochem /dartfs-hpc/scratch/alex/.julia/packages/StatGeochem/65XUK/src/utilities/Import.jl:857
+ [9] top-level scope
+   @ /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel//dartfs-hpc/scratch/alex/.julia/packages/StatGeochem/65XUK/src/utilities/loscarmcmcp.jl:33
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+Import.jl:857
+ [8] importdataset(filepath::importdataset(filepath::StringString, delim::Char)
+   @ StatGeochem , /dartfs-hpc/scratch/alex/.julia/packages/StatGeochem/65XUK/src/utilities/Import.jl:857
+delim [9] top-level scope
+   @ ::Char/dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/)
+   @ StatGeochem loscarmcmcp.jl:33/dartfs-hpc/scratch/alex/.julia/packages/StatGeochem/65XUK/src/utilities/Import.jl:857
+
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8 [9] top-level scope
+   @ /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:33
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+
+importdataset(filepath::String, delim::Char)
+   @ StatGeochem /dartfs-hpc/scratch/alex/.julia/packages/StatGeochem/65XUK/src/utilities/Import.jl:857
+ [9] top-level scope
+   @ /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:33
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+importdataset(filepath::String, delim::Char)
+   @ StatGeochem /dartfs-hpc/scratch/alex/.julia/packages/StatGeochem/65XUK/src/utilities/Import.jl:857
+ [9] top-level scope
+   @ /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:33
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+error.jl:174
+ [2] #systemerror#68
+   @ ./error.jl:173 [inlined]
+ [3] systemerror
+   @ ./error.jl:173 [inlined]
+ [4] open(fname::String; lock::Bool, read::Bool, write::Nothing, create::Nothing, truncate::Nothing, append::Nothing)
+   @ Base ./iostream.jl:293
+importdataset [5] open(fname::String, mode::String; lock::Bool)
+   @ Base ./iostream.jl:355
+ [6] open
+   @ ./iostream.jl:355 [inlined]
+ (filepath::String, delim::Char)
+   @ StatGeochem [7]/dartfs-hpc/scratch/alex/.julia/packages/StatGeochem/65XUK/src/utilities/Import.jl:857
+  [9] top-level scope
+   @ /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/importdatasetloscarmcmcp.jl:33
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+(filepath::String, delim::Char; importas::Symbol, standardize::Bool, floattype::Type, skipstart::Int64, skipnameless::Bool, mindefinedcolumns::Int64)
+   @ StatGeochem importdataset(filepath::String, delim::Char)
+   @ StatGeochem /dartfs-hpc/scratch/alex/.julia/packages/StatGeochem/65XUK/src/utilities/Import.jl:857
+ [9] top-level scope
+   @ /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:33
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+importdataset(filepath::String, delim::Char)
+   @ StatGeochem /dartfs-hpc/scratch/alex/.julia/packages/StatGeochem/65XUK/src/utilities/Import.jl:857
+ [9] top-level scope
+   @ /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:33
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+importdataset(filepath::String, delim::Char)
+   @ StatGeochem /dartfs-hpc/scratch/alex/.julia/packages/StatGeochem/65XUK/src/utilities/Import.jl:857
+ [9] top-level scope
+   @ /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:33
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+/dartfs-hpc/scratch/alex/.julia/packages/StatGeochem/65XUK/src/utilities/Import.jl:857
+ [8] importdataset(filepath::String, delim::Char)
+   @ StatGeochem /dartfs-hpc/scratch/alex/.julia/packages/StatGeochem/65XUK/src/utilities/Import.jl:857
+ [9] top-level scope
+   @ /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:33
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[14352,1],6]
+  Exit code:    1
+--------------------------------------------------------------------------
