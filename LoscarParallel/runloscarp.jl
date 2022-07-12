@@ -156,6 +156,7 @@ function runloscarp(timevals,CO2vals,Svals,Expvals,co2doubling)
         	@warn "LOSCAR may have failed, or d13c.dat not found"
         	d13c = [NaN]
         	d13csa = [NaN]
+            d13cba = [NaN]
     end
     # use the co2 doubling to turn pco2 into temperatures.
     co2doubling = co2doubling;
