@@ -75,7 +75,7 @@ let
         # discard the last time val which is outside the range
         loscartempwsulf = loscartempwsulf[loscartimebin .<= 300];
         mu = Array{Float64,1}(undef,length(temp));
-        nanmean!(mu,vec(tmv),loscartempwsulf,first(timev),last(timev),length(timev));
+        nanbinmean!(mu,vec(tmv),loscartempwsulf,first(timev),last(timev),length(timev));
         # get rid of the internal NaNs
         mu = fillnans(mu,150);
         # get rid of the NaNs at the end
@@ -83,13 +83,13 @@ let
             mu[first(findall(x->isnan(x),mu)):300] .= mu[first(findall(x->isnan(x),mu))-1]
         end
         d13cmu = Array{Float64,1}(undef,length(temp));
-        nanmean!(d13cmu,vec(tmv),d13csa,first(timev),last(timev),length(timev));
+        nanbinmean!(d13cmu,vec(tmv),d13csa,first(timev),last(timev),length(timev));
         d13cmu = fillnans(d13cmu,150);
         if isnan(d13cmu[300])
             d13cmu[first(findall(x->isnan(x),d13cmu)):300] .= d13cmu[first(findall(x->isnan(x),d13cmu))-1]
         end
         d13cbmu = Array{Float64,1}(undef,length(temp));
-        nanmean!(d13cbmu,vec(tmv),d13cba,first(timev),last(timev),length(timev));
+        nanbinmean!(d13cbmu,vec(tmv),d13cba,first(timev),last(timev),length(timev));
         d13cbmu = fillnans(d13cbmu,150);
         if isnan(d13cbmu[300])
             d13cbmu[first(findall(x->isnan(x),d13cbmu)):300] .= d13cbmu[first(findall(x->isnan(x),d13cbmu))-1]
@@ -209,7 +209,7 @@ let
             # discard the last time val which is outside the range
             loscartempwsulf = loscartempwsulf[loscartimebin .<= 300];
             muᵣ = Array{Float64,1}(undef,length(temp));
-            nanmean!(muᵣ,vec(tmv),loscartempwsulf,first(timev),last(timev),length(timev));
+            nanbinmean!(muᵣ,vec(tmv),loscartempwsulf,first(timev),last(timev),length(timev));
             # get rid of the internal NaNs
             muᵣ = fillnans(muᵣ,150);
             # get rid of the NaNs at the end
@@ -217,13 +217,13 @@ let
                 muᵣ[first(findall(x->isnan(x),muᵣ)):300] .= muᵣ[first(findall(x->isnan(x),muᵣ))-1]
             end
             d13cmuᵣ = Array{Float64,1}(undef,length(temp));
-            nanmean!(d13cmuᵣ,vec(tmv),d13csa,first(timev),last(timev),length(timev));
+            nanbinmean!(d13cmuᵣ,vec(tmv),d13csa,first(timev),last(timev),length(timev));
             d13cmuᵣ = fillnans(d13cmuᵣ,150);
             if isnan(d13cmuᵣ[300])
                 d13cmuᵣ[first(findall(x->isnan(x),d13cmuᵣ)):300] .= d13cmuᵣ[first(findall(x->isnan(x),d13cmuᵣ))-1]
             end
             d13cbmuᵣ = Array{Float64,1}(undef,length(temp));
-            nanmean!(d13cbmuᵣ,vec(tmv),d13cba,first(timev),last(timev),length(timev));
+            nanbinmean!(d13cbmuᵣ,vec(tmv),d13cba,first(timev),last(timev),length(timev));
             d13cbmuᵣ = fillnans(d13cbmuᵣ,150);
             if isnan(d13cbmuᵣ[300])
                 d13cbmuᵣ[first(findall(x->isnan(x),d13cbmuᵣ)):300] .= d13cbmuᵣ[first(findall(x->isnan(x),d13cbmuᵣ))-1]
