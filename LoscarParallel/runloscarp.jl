@@ -71,7 +71,6 @@ function runloscarp(timevals,CO2vals,Svals,Expvals,co2doubling)
 
     inputstring = "
     RESTART $RESTART
-    SVSTART $SVSTART
     EMSFILE $EMSFILE
     SEMSFILE $SEMSFILE
     EXPFILE $EXPFILE

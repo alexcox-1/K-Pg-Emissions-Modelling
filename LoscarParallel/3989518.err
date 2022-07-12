@@ -1,2 +1,0 @@
-mpiexec: Error: unknown option "--machinefile=./runloscarmcmc.bash"
-Type 'mpiexec --help' for usage.

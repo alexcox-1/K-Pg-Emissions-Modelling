@@ -30,12 +30,8 @@ using StatGeochem
     # characteristic Pg/y will be 0.01 - 0.1
     # change these to log
     co2vals = zeros(300);
-    co2vals[150:151] .= 0.025; 
-    co2vals[200:201] .= 0.025;
     svals = zeros(300);
     Expvals = ones(300);
-    Expvals[180:190] .= 1.25;
-    Expvals[250:260] .= 0.25;
     logexpvals = log.(Expvals)
     logco2vals = log.(co2vals);
     logsvals = log.(svals);
