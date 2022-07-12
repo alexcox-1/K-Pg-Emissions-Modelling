@@ -192,7 +192,7 @@ let
         end
 
         # run loscar with the new values
-        tmv,pco2,loscartemp, d13csa, d13cba = runloscar(timev,exp.(logco2valsᵣ),exp.(logsvalsᵣ),exp.(logexpvalsᵣ),co2doublingrate);
+        tmv,pco2,loscartemp, d13csa, d13cba = runloscarp(timev,exp.(logco2valsᵣ),exp.(logsvalsᵣ),exp.(logexpvalsᵣ),co2doublingrate);
         if all(isnan.(tmv))
             llᵣ = NaN
         else
