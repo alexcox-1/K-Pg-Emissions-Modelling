@@ -1,0 +1,83 @@
+ERROR: ERROR: ERROR: ERROR: ERROR: ERROR: ERROR: ERROR: ERROR: ERROR: ERROR: ERROR: ERROR: ERROR: ERROR: ERROR: LoadError: LoadError: LoadError: LoadError: LoadError: LoadError: LoadError: LoadError: LoadError: LoadError: LoadError: LoadError: LoadError: LoadError: LoadError: LoadError: UndefVarError: nanmean! not defined
+Stacktrace:
+ [1] top-level scope
+UndefVarError: nanmean! not definedUndefVarError: nanmean! not defined
+Stacktrace:
+ [1] top-level scope
+UndefVarError: nanmean! not defined
+Stacktrace:
+ [1] top-level scope
+
+Stacktrace:
+ [1] top-level scope
+UndefVarError: nanmean! not definedUndefVarError: nanmean! not defined
+Stacktrace:
+ [1] top-level scope
+
+Stacktrace:
+ [1] top-level scope
+UndefVarError: nanmean! not definedUndefVarError: nanmean! not defined
+Stacktrace:
+ [1] top-level scope
+
+Stacktrace:
+ [1] top-level scope
+UndefVarError: nanmean! not definedUndefVarError: nanmean! not defined
+Stacktrace:
+ [1] top-level scope
+UndefVarError: nanmean! not defined
+Stacktrace:
+ [1] top-level scope
+UndefVarError: nanmean! not definedUndefVarError: nanmean! not defined
+Stacktrace:
+ [1] top-level scope
+
+Stacktrace:
+
+Stacktrace: 
+[1] [1] top-level scope
+ top-level scope
+UndefVarError: nanmean! not definedUndefVarError: nanmean! not definedUndefVarError: nanmean! not defined
+Stacktrace:
+
+Stacktrace: 
+[1] [1] top-level scope
+ top-level scope
+
+Stacktrace:
+ [1] top-level scope
+   @ /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/   @ /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/   @ /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/   @ /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/   @ /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/   @ /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/   @ /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/   @ /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/   @ /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/   @ /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/   @ /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/   @ /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/   @ /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/   @    @ /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel//dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/   @ /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:78
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+loscarmcmcp.jl:78
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+loscarmcmcp.jl:78
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+loscarmcmcp.jl:78
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+loscarmcmcp.jl:78
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+loscarmcmcp.jl:78
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+loscarmcmcp.jl:78loscarmcmcp.jl:78
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+
+loscarmcmcp.jl:78
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+loscarmcmcp.jl:78
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+loscarmcmcp.jl:78
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+loscarmcmcp.jl:78
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[29116,1],7]
+  Exit code:    1
+--------------------------------------------------------------------------

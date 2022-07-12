@@ -1,0 +1,1808 @@
+Hello from 2 of 16 processors!
+Hello from 4 of 16 processors!
+Hello from 8 of 16 processors!
+Hello from 1 of 16 processors!
+Hello from 5 of 16 processors!
+Hello from 13 of 16 processors!
+Hello from 15 of 16 processors!
+Hello from 9 of 16 processors!
+Hello from 10 of 16 processors!
+Hello from 12 of 16 processors!
+Hello from 14 of 16 processors!
+Hello from 3 of 16 processors!
+Hello from 11 of 16 processors!
+Hello from 7 of 16 processors!
+Hello from 6 of 16 processors!
+Hello from 0 of 16 processors!
+Tue Jul 12 14:40:52 2022
+
+  Heus!
+
+   ************************************************
+   * LOSCAR V 2.0.4.3                   9/2018      *
+   *                                              *
+   * Richard E. Zeebe                             *
+   * SOEST, University of Hawaii                  *
+   * Honolulu, HI 96822, USA                      *
+   * loscar.model@gmail.com                       *
+   *                                              *
+   * LOSCAR: Long-term Ocean-atmosphere-Sediment  *
+   * CArbon cycle Reservoir Model                 *
+   *                                              *
+   * LOSCAR comes with ABSOLUTELY NO WARRANTY.    *
+   * Use at your own risk. DO NOT DISTRIBUTE.     *
+   *                                              *
+   ************************************************
+
+@ This is the PALEO setup including Tethys
+
+@ No. ocean basins         :   4
+Tue Jul 12 14:40:52 2022
+
+  Heus!
+
+   ************************************************
+   * LOSCAR V 2.0.4.3                   9/2018      *
+   *                                              *
+   * Richard E. Zeebe                             *
+   * SOEST, University of Hawaii                  *
+   * Honolulu, HI 96822, USA                      *
+   * loscar.model@gmail.com                       *
+   *                                              *
+   * LOSCAR: Long-term Ocean-atmosphere-Sediment  *
+   * CArbon cycle Reservoir Model                 *
+   *                                              *
+   * LOSCAR comes with ABSOLUTELY NO WARRANTY.    *
+   * Use at your own risk. DO NOT DISTRIBUTE.     *
+   *                                              *
+   ************************************************
+
+@ This is the PALEO setup including Tethys
+
+@ No. ocean basins         :   4
+@ No. ocean boxes          :  13
+@ No. ocean tracers        :   6
+@ Atmospheric Carbon       :   1
+@ Atmospheric Carbon-13    :   1
+@ No. sediment depth levels:  13
+@ No. sediment C-13 levels :  13
+@ No. equations            : 184
+Tue Jul 12 14:40:52 2022
+
+  Heus!
+
+   ************************************************
+   * LOSCAR V 2.0.4.3                   9/2018      *
+   *                                              *
+   * Richard E. Zeebe                             *
+   * SOEST, University of Hawaii                  *
+   * Honolulu, HI 96822, USA                      *
+   * loscar.model@gmail.com                       *
+   *                                              *
+   * LOSCAR: Long-term Ocean-atmosphere-Sediment  *
+   * CArbon cycle Reservoir Model                 *
+   *                                              *
+   * LOSCAR comes with ABSOLUTELY NO WARRANTY.    *
+   * Use at your own risk. DO NOT DISTRIBUTE.     *
+   *                                              *
+   ************************************************
+
+@ This is the PALEO setup including Tethys
+
+@ No. ocean basins         :   4
+@ No. ocean boxes          :  13
+@ No. ocean tracers        :   6
+@ Atmospheric Carbon       :   1
+@ Atmospheric Carbon-13    :   1
+@ No. sediment depth levels:  13
+@ No. sediment C-13 levels :  13
+@ No. equations            : 184
+Tue Jul 12 14:40:52 2022
+
+  Heus!
+
+   ************************************************
+   * LOSCAR V 2.0.4.3                   9/2018      *
+   *                                              *
+   * Richard E. Zeebe                             *
+   * SOEST, University of Hawaii                  *
+   * Honolulu, HI 96822, USA                      *
+   * loscar.model@gmail.com                       *
+   *                                              *
+   * LOSCAR: Long-term Ocean-atmosphere-Sediment  *
+   * CArbon cycle Reservoir Model                 *
+   *                                              *
+   * LOSCAR comes with ABSOLUTELY NO WARRANTY.    *
+   * Use at your own risk. DO NOT DISTRIBUTE.     *
+   *                                              *
+   ************************************************
+
+@ This is the PALEO setup including Tethys
+
+@ No. ocean basins         :   4
+@ No. ocean boxes          :  13
+@ No. ocean tracers        :   6
+@ Atmospheric Carbon       :   1
+@ Atmospheric Carbon-13    :   1
+@ No. sediment depth levels:  13
+@ No. sediment C-13 levels :  13
+@ No. equations            : 184
+Tue Jul 12 14:40:52 2022
+
+  Heus!
+
+   ************************************************
+   * LOSCAR V 2.0.4.3                   9/2018      *
+   *                                              *
+   * Richard E. Zeebe                             *
+   * SOEST, University of Hawaii                  *
+   * Honolulu, HI 96822, USA                      *
+   * loscar.model@gmail.com                       *
+   *                                              *
+   * LOSCAR: Long-term Ocean-atmosphere-Sediment  *
+   * CArbon cycle Reservoir Model                 *
+   *                                              *
+   * LOSCAR comes with ABSOLUTELY NO WARRANTY.    *
+   * Use at your own risk. DO NOT DISTRIBUTE.     *
+   *                                              *
+   ************************************************
+
+@ This is the PALEO setup including Tethys
+
+@ No. ocean basins         :   4
+@ No. ocean boxes          :  13
+@ No. ocean tracers        :   6
+@ Atmospheric Carbon       :   1
+@ Atmospheric Carbon-13    :   1
+@ No. sediment depth levels:  13
+@ No. sediment C-13 levels :  13
+@ No. equations            : 184
+Tue Jul 12 14:40:52 2022
+
+  Heus!
+
+   ************************************************
+   * LOSCAR V 2.0.4.3                   9/2018      *
+   *                                              *
+   * Richard E. Zeebe                             *
+   * SOEST, University of Hawaii                  *
+   * Honolulu, HI 96822, USA                      *
+   * loscar.model@gmail.com                       *
+@ No. ocean boxes          :  13
+@ No. ocean tracers        :   6
+@ Atmospheric Carbon       :   1
+@ Atmospheric Carbon-13    :   1
+@ No. sediment depth levels:  13
+@ No. sediment C-13 levels :  13
+@ No. equations            : 184
+   *                                              *
+   * LOSCAR: Long-term Ocean-atmosphere-Sediment  *
+   * CArbon cycle Reservoir Model                 *
+   *                                              *
+   * LOSCAR comes with ABSOLUTELY NO WARRANTY.    *
+   * Use at your own risk. DO NOT DISTRIBUTE.     *
+   *                                              *
+   ************************************************
+
+@ This is the PALEO setup including Tethys
+
+@ No. ocean basins         :   4
+@ No. ocean boxes          :  13
+@ No. ocean tracers        :   6
+@ Atmospheric Carbon       :   1
+@ Atmospheric Carbon-13    :   1
+@ No. sediment depth levels:  13
+@ No. sediment C-13 levels :  13
+@ No. equations            : 184
+Tue Jul 12 14:40:52 2022
+
+  Heus!
+
+   ************************************************
+   * LOSCAR V 2.0.4.3                   9/2018      *
+   *                                              *
+   * Richard E. Zeebe                             *
+   * SOEST, University of Hawaii                  *
+   * Honolulu, HI 96822, USA                      *
+   * loscar.model@gmail.com                       *
+   *                                              *
+   * LOSCAR: Long-term Ocean-atmosphere-Sediment  *
+   * CArbon cycle Reservoir Model                 *
+   *                                              *
+   * LOSCAR comes with ABSOLUTELY NO WARRANTY.    *
+   * Use at your own risk. DO NOT DISTRIBUTE.     *
+   *                                              *
+   ************************************************
+
+@ This is the PALEO setup including Tethys
+
+@ No. ocean basins         :   4
+@ No. ocean boxes          :  13
+@ No. ocean tracers        :   6
+@ Atmospheric Carbon       :   1
+@ Atmospheric Carbon-13    :   1
+@ No. sediment depth levels:  13
+@ No. sediment C-13 levels :  13
+@ No. equations            : 184
+Tue Jul 12 14:40:52 2022
+
+Tue Jul 12 14:40:52 2022
+
+  Heus!
+  Heus!
+
+   ************************************************
+   * LOSCAR V 2.0.4.3                   9/2018      *
+   *                                              *
+   * Richard E. Zeebe                             *
+   * SOEST, University of Hawaii                  *
+   * Honolulu, HI 96822, USA                      *
+
+   ************************************************
+   * LOSCAR V 2.0.4.3                   9/2018      *
+   *                                              *
+   * loscar.model@gmail.com                       *
+   *                                              *
+   * LOSCAR: Long-term Ocean-atmosphere-Sediment  *
+   * CArbon cycle Reservoir Model                 *
+   *                                              *
+   * LOSCAR comes with ABSOLUTELY NO WARRANTY.    *
+   * Richard E. Zeebe                             *
+   * SOEST, University of Hawaii                  *
+   * Honolulu, HI 96822, USA                      *
+   * loscar.model@gmail.com                       *
+   *                                              *
+   * LOSCAR: Long-term Ocean-atmosphere-Sediment  *
+   * CArbon cycle Reservoir Model                 *
+   *                                              *
+   * LOSCAR comes with ABSOLUTELY NO WARRANTY.    *
+   * Use at your own risk. DO NOT DISTRIBUTE.     *
+   *                                              *
+   * Use at your own risk. DO NOT DISTRIBUTE.     *
+   *                                              *
+   ************************************************
+
+@ This is the PALEO setup including Tethys
+
+@ No. ocean basins         :   4
+@ No. ocean boxes          :  13
+@ No. ocean tracers        :   6
+@ Atmospheric Carbon       :   1
+@ Atmospheric Carbon-13    :   1
+@ No. sediment depth levels:  13
+   ************************************************
+
+@ This is the PALEO setup including Tethys
+
+@ No. ocean basins         :   4
+@ No. ocean boxes          :  13
+@ No. sediment C-13 levels :  13
+@ No. equations            : 184
+@ No. ocean tracers        :   6
+@ Atmospheric Carbon       :   1
+@ Atmospheric Carbon-13    :   1
+@ No. sediment depth levels:  13
+@ No. sediment C-13 levels :  13
+@ No. equations            : 184
+Tue Jul 12 14:40:52 2022
+
+  Heus!
+
+   ************************************************
+
+@ Setting up run. Reading parameter file: 'deccan.inp'
+
+   * LOSCAR V 2.0.4.3                   9/2018      *
+   *                                              *
+   * Richard E. Zeebe                             *
+   * SOEST, University of Hawaii                  *
+   * Honolulu, HI 96822, USA                      *
+   * loscar.model@gmail.com                       *
+   *                                              *
+   * LOSCAR: Long-term Ocean-atmosphere-Sediment  *
+   * CArbon cycle Reservoir Model                 *
+   *                                              *
+   * LOSCAR comes with ABSOLUTELY NO WARRANTY.    *
+   * Use at your own risk. DO NOT DISTRIBUTE.     *
+   *                                              *
+   ************************************************
+RESTART LoscarParallel/dat/deccanrestart.dat
+SVSTART LoscarParallel/dat/deccanrestart.dat
+EMSFILE LoscarParallel/deccan_CO2emss.dat
+
+@ This is the PALEO setup including Tethys
+
+@ No. ocean basins         :   4
+@ No. ocean boxes          :  13
+SEMSFILE LoscarParallel/deccan_Semss.dat
+EXPFILE LoscarParallel/deccan_Exp.dat
+
+@ Setting up run. Reading parameter file: 'deccan.inp'
+
+@ No. ocean tracers        :   6
+@ Atmospheric Carbon       :   1
+@ Atmospheric Carbon-13    :   1
+@ No. sediment depth levels:  13
+@ No. sediment C-13 levels :  13
+TSTART  (y) 0.00e+00
+@ No. equations            : 184
+TFINAL  (y) 1.50e+06
+CINP    (Pg C)       0.00e+00
+RESTART LoscarParallel/dat/deccanrestart.dat
+SVSTART LoscarParallel/dat/deccanrestart.dat
+EMSFILE LoscarParallel/deccan_CO2emss.dat
+D13CIN  (per mil)   -5.50e+01
+TCIN0   (y) 0.00e+00
+TCSPAN  (y) 0.00e+00
+SEMSFILE LoscarParallel/deccan_Semss.dat
+EXPFILE LoscarParallel/deccan_Exp.dat
+EPSLV   (-) 1.00e-04
+TSTART  (y) 0.00e+00
+FCSML   (-) 5.00e-02
+KMAX    (-) 5000
+TSNS    (-) 1
+SCLIM   (C) 3.00e+00
+TFINAL  (y) 1.50e+06
+CINP    (Pg C)       0.00e+00
+D13CIN  (per mil)   -5.50e+01
+TCIN0   (y) 0.00e+00
+Tue Jul 12 14:40:52 2022
+
+TEMP    (C) 25.00 25.00 25.00 16.00 16.00 16.00 12.00 12.00 12.00 12.00 18.00 14.00 12.00 
+  Heus!
+
+   ************************************************
+   * LOSCAR V 2.0.4.3                   9/2018      *
+   *                                              *
+   * Richard E. Zeebe                             *
+
+@ Setting up run. Reading parameter file: 'deccan.inp'
+
+TCSPAN  (y) 0.00e+00
+EPSLV   (-) 1.00e-04
+FCSML   (-) 5.00e-02
+KMAX    (-) 5000
+TSNS    (-) 1
+SAL     (-) 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 
+PCO2SI  (ppmv)       6.00e+02
+FDICI   (%) 0.00e+00
+FALKI   (%) 0.00e+00
+FPO4I   (%) 0.00e+00
+SCLIM   (C) 3.00e+00
+TEMP    (C) 25.00 25.00 25.00 16.00 16.00 16.00 12.00 12.00 12.00 12.00 18.00 14.00 12.00 
+   * SOEST, University of Hawaii                  *
+   * Honolulu, HI 96822, USA                      *
+   * loscar.model@gmail.com                       *
+   *                                              *
+THC    (Sv) 2.50e+01
+FBIOL   (-) 8.00e-01
+   * LOSCAR: Long-term Ocean-atmosphere-Sediment  *
+   * CArbon cycle Reservoir Model                 *
+   *                                              *
+   * LOSCAR comes with ABSOLUTELY NO WARRANTY.    *
+   * Use at your own risk. DO NOT DISTRIBUTE.     *
+   *                                              *
+   ************************************************
+
+@ This is the PALEO setup including Tethys
+
+SAL     (-) 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 
+PCO2SI  (ppmv)       6.00e+02
+FDICI   (%) 0.00e+00
+FALKI   (%) 0.00e+00
+FPO4I   (%) 0.00e+00
+THC    (Sv) 2.50e+01
+RESTART LoscarParallel/dat/deccanrestart.dat
+SVSTART LoscarParallel/dat/deccanrestart.dat
+EMSFILE LoscarParallel/deccan_CO2emss.dat
+SEMSFILE LoscarParallel/deccan_Semss.dat
+CBIOH   (mol C/m2/y) 1.80e+00
+RRAIN   (-) 6.70e+00
+FSHLF   (-) 4.50e+00
+FINC    (mol C/y)    1.58e+13
+CALC    (mol/kg)     2.10e-02
+MAGN    (mol/kg)     4.20e-02
+SULF    (mol/kg)     1.40e-02
+EXPFILE LoscarParallel/deccan_Exp.dat
+@ No. ocean basins         :   4
+@ No. ocean boxes          :  13
+@ No. ocean tracers        :   6
+@ Atmospheric Carbon       :   1
+@ Atmospheric Carbon-13    :   1
+@ No. sediment depth levels:  13
+@ No. sediment C-13 levels :  13
+@ No. equations            : 184
+FBIOL   (-) 8.00e-01
+CBIOH   (mol C/m2/y) 1.80e+00
+RRAIN   (-) 6.70e+00
+FSHLF   (-) 4.50e+00
+
+@ Done reading parameter file: 'deccan.inp'
+FINC    (mol C/y)    1.58e+13
+CALC    (mol/kg)     2.10e-02
+MAGN    (mol/kg)     4.20e-02
+TSTART  (y) 0.00e+00
+TFINAL  (y) 1.50e+06
+CINP    (Pg C)       0.00e+00
+D13CIN  (per mil)   -5.50e+01
+TCIN0   (y) 0.00e+00
+
+@ Setting up run. Reading parameter file: 'deccan.inp'
+
+
+@ Loading CO2 emissions: 'LoscarParallel/deccan_CO2emss.dat'
+SULF    (mol/kg)     1.40e-02
+
+@ Done reading parameter file: 'deccan.inp'
+TCSPAN  (y) 0.00e+00
+EPSLV   (-) 1.00e-04
+FCSML   (-) 5.00e-02
+KMAX    (-) 5000
+
+@ Loading CO2 emissions: 'LoscarParallel/deccan_CO2emss.dat'
+TSNS    (-) 1
+SCLIM   (C) 3.00e+00
+RESTART LoscarParallel/dat/deccanrestart.dat
+SVSTART LoscarParallel/dat/deccanrestart.dat
+EMSFILE LoscarParallel/deccan_CO2emss.dat
+SEMSFILE LoscarParallel/deccan_Semss.dat
+TEMP    (C) 25.00 25.00 25.00 16.00 16.00 16.00 12.00 12.00 12.00 12.00 18.00 14.00 12.00 
+EXPFILE LoscarParallel/deccan_Exp.dat
+SAL     (-) 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 
+PCO2SI  (ppmv)       6.00e+02
+TSTART  (y) 0.00e+00
+Tue Jul 12 14:40:52 2022
+
+FDICI   (%) 0.00e+00
+FALKI   (%) 0.00e+00
+FPO4I   (%) 0.00e+00
+THC    (Sv) 2.50e+01
+  Heus!
+
+   ************************************************
+   * LOSCAR V 2.0.4.3                   9/2018      *
+TFINAL  (y) 1.50e+06
+CINP    (Pg C)       0.00e+00
+D13CIN  (per mil)   -5.50e+01
+TCIN0   (y) 0.00e+00
+TCSPAN  (y) 0.00e+00
+FBIOL   (-) 8.00e-01
+CBIOH   (mol C/m2/y) 1.80e+00
+RRAIN   (-) 6.70e+00
+FSHLF   (-) 4.50e+00
+EPSLV   (-) 1.00e-04
+FCSML   (-) 5.00e-02
+KMAX    (-) 5000
+TSNS    (-) 1
+SCLIM   (C) 3.00e+00
+   *                                              *
+   * Richard E. Zeebe                             *
+   * SOEST, University of Hawaii                  *
+   * Honolulu, HI 96822, USA                      *
+   * loscar.model@gmail.com                       *
+   *                                              *
+   * LOSCAR: Long-term Ocean-atmosphere-Sediment  *
+   * CArbon cycle Reservoir Model                 *
+   *                                              *
+   * LOSCAR comes with ABSOLUTELY NO WARRANTY.    *
+   * Use at your own risk. DO NOT DISTRIBUTE.     *
+   *                                              *
+FINC    (mol C/y)    1.58e+13
+CALC    (mol/kg)     2.10e-02
+MAGN    (mol/kg)     4.20e-02
+SULF    (mol/kg)     1.40e-02
+
+@ Done reading parameter file: 'deccan.inp'
+   ************************************************
+
+@ This is the PALEO setup including Tethys
+
+@ No. ocean basins         :   4
+@ No. ocean boxes          :  13
+@ No. ocean tracers        :   6
+@ Atmospheric Carbon       :   1
+TEMP    (C) 25.00 25.00 25.00 16.00 16.00 16.00 12.00 12.00 12.00 12.00 18.00 14.00 12.00 
+SAL     (-) 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 
+PCO2SI  (ppmv)       6.00e+02
+FDICI   (%) 0.00e+00
+Tue Jul 12 14:40:52 2022
+
+  Heus!
+
+   ************************************************
+   * LOSCAR V 2.0.4.3                   9/2018      *
+   *                                              *
+
+@ Loading CO2 emissions: 'LoscarParallel/deccan_CO2emss.dat'
+   * Richard E. Zeebe                             *
+   * SOEST, University of Hawaii                  *
+   * Honolulu, HI 96822, USA                      *
+   * loscar.model@gmail.com                       *
+   *                                              *
+   * LOSCAR: Long-term Ocean-atmosphere-Sediment  *
+   * CArbon cycle Reservoir Model                 *
+   *                                              *
+   * LOSCAR comes with ABSOLUTELY NO WARRANTY.    *
+   * Use at your own risk. DO NOT DISTRIBUTE.     *
+   *                                              *
+   ************************************************
+
+@ This is the PALEO setup including Tethys
+
+@ No. ocean basins         :   4
+@ Atmospheric Carbon-13    :   1
+@ No. sediment depth levels:  13
+@ No. sediment C-13 levels :  13
+FALKI   (%) 0.00e+00
+FPO4I   (%) 0.00e+00
+THC    (Sv) 2.50e+01
+FBIOL   (-) 8.00e-01
+CBIOH   (mol C/m2/y) 1.80e+00
+RRAIN   (-) 6.70e+00
+FSHLF   (-) 4.50e+00
+FINC    (mol C/y)    1.58e+13
+CALC    (mol/kg)     2.10e-02
+MAGN    (mol/kg)     4.20e-02
+SULF    (mol/kg)     1.40e-02
+
+@ Done reading parameter file: 'deccan.inp'
+
+@ Setting up run. Reading parameter file: 'deccan.inp'
+
+@ No. ocean boxes          :  13
+@ No. ocean tracers        :   6
+@ Atmospheric Carbon       :   1
+@ Atmospheric Carbon-13    :   1
+@ No. sediment depth levels:  13
+@ No. sediment C-13 levels :  13
+@ No. equations            : 184
+@ No. equations            : 184
+
+@ Loading CO2 emissions: 'LoscarParallel/deccan_CO2emss.dat'
+RESTART LoscarParallel/dat/deccanrestart.dat
+SVSTART LoscarParallel/dat/deccanrestart.dat
+EMSFILE LoscarParallel/deccan_CO2emss.dat
+SEMSFILE LoscarParallel/deccan_Semss.dat
+EXPFILE LoscarParallel/deccan_Exp.dat
+TSTART  (y) 0.00e+00
+TFINAL  (y) 1.50e+06
+CINP    (Pg C)       0.00e+00
+D13CIN  (per mil)   -5.50e+01
+TCIN0   (y) 0.00e+00
+
+TCSPAN  (y) 0.00e+00
+@ Setting up run. Reading parameter file: 'deccan.inp'
+
+EPSLV   (-) 1.00e-04
+FCSML   (-) 5.00e-02
+KMAX    (-) 5000
+TSNS    (-) 1
+SCLIM   (C) 3.00e+00
+TEMP    (C) 25.00 25.00 25.00 16.00 16.00 16.00 12.00 12.00 12.00 12.00 18.00 14.00 12.00 
+RESTART LoscarParallel/dat/deccanrestart.dat
+SVSTART LoscarParallel/dat/deccanrestart.dat
+SAL     (-) 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 
+PCO2SI  (ppmv)       6.00e+02
+FDICI   (%) 0.00e+00
+FALKI   (%) 0.00e+00
+EMSFILE LoscarParallel/deccan_CO2emss.dat
+SEMSFILE LoscarParallel/deccan_Semss.dat
+EXPFILE LoscarParallel/deccan_Exp.dat
+FPO4I   (%) 0.00e+00
+THC    (Sv) 2.50e+01
+TSTART  (y) 0.00e+00
+TFINAL  (y) 1.50e+06
+FBIOL   (-) 8.00e-01
+CBIOH   (mol C/m2/y) 1.80e+00
+RRAIN   (-) 6.70e+00
+FSHLF   (-) 4.50e+00
+CINP    (Pg C)       0.00e+00
+D13CIN  (per mil)   -5.50e+01
+TCIN0   (y) 0.00e+00
+TCSPAN  (y) 0.00e+00
+EPSLV   (-) 1.00e-04
+FINC    (mol C/y)    1.58e+13
+CALC    (mol/kg)     2.10e-02
+FCSML   (-) 5.00e-02
+KMAX    (-) 5000
+MAGN    (mol/kg)     4.20e-02
+SULF    (mol/kg)     1.40e-02
+
+@ Done reading parameter file: 'deccan.inp'
+TSNS    (-) 1
+SCLIM   (C) 3.00e+00
+TEMP    (C) 25.00 25.00 25.00 16.00 16.00 16.00 12.00 12.00 12.00 12.00 18.00 14.00 12.00 
+SAL     (-) 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 
+PCO2SI  (ppmv)       6.00e+02
+
+@ Loading CO2 emissions: 'LoscarParallel/deccan_CO2emss.dat'
+FDICI   (%) 0.00e+00
+FALKI   (%) 0.00e+00
+FPO4I   (%) 0.00e+00
+THC    (Sv) 2.50e+01
+FBIOL   (-) 8.00e-01
+CBIOH   (mol C/m2/y) 1.80e+00
+RRAIN   (-) 6.70e+00
+FSHLF   (-) 4.50e+00
+FINC    (mol C/y)    1.58e+13
+CALC    (mol/kg)     2.10e-02
+Tue Jul 12 14:40:52 2022
+
+  Heus!
+
+MAGN    (mol/kg)     4.20e-02
+SULF    (mol/kg)     1.40e-02
+
+@ Done reading parameter file: 'deccan.inp'
+   ************************************************
+   * LOSCAR V 2.0.4.3                   9/2018      *
+
+@ Loading CO2 emissions: 'LoscarParallel/deccan_CO2emss.dat'
+   *                                              *
+   * Richard E. Zeebe                             *
+   * SOEST, University of Hawaii                  *
+   * Honolulu, HI 96822, USA                      *
+   * loscar.model@gmail.com                       *
+   *                                              *
+   * LOSCAR: Long-term Ocean-atmosphere-Sediment  *
+   * CArbon cycle Reservoir Model                 *
+   *                                              *
+   * LOSCAR comes with ABSOLUTELY NO WARRANTY.    *
+   * Use at your own risk. DO NOT DISTRIBUTE.     *
+   *                                              *
+   ************************************************
+
+@ This is the PALEO setup including Tethys
+
+@ No. ocean basins         :   4
+@ No. ocean boxes          :  13
+@ No. ocean tracers        :   6
+
+@ Setting up run. Reading parameter file: 'deccan.inp'
+
+@ Atmospheric Carbon       :   1
+@ Atmospheric Carbon-13    :   1
+@ No. sediment depth levels:  13
+@ No. sediment C-13 levels :  13
+@ No. equations            : 184
+RESTART LoscarParallel/dat/deccanrestart.dat
+SVSTART LoscarParallel/dat/deccanrestart.dat
+EMSFILE LoscarParallel/deccan_CO2emss.dat
+SEMSFILE LoscarParallel/deccan_Semss.dat
+EXPFILE LoscarParallel/deccan_Exp.dat
+TSTART  (y) 0.00e+00
+
+@ Setting up run. Reading parameter file: 'deccan.inp'
+
+TFINAL  (y) 1.50e+06
+CINP    (Pg C)       0.00e+00
+D13CIN  (per mil)   -5.50e+01
+TCIN0   (y) 0.00e+00
+TCSPAN  (y) 0.00e+00
+EPSLV   (-) 1.00e-04
+FCSML   (-) 5.00e-02
+KMAX    (-) 5000
+RESTART LoscarParallel/dat/deccanrestart.dat
+SVSTART LoscarParallel/dat/deccanrestart.dat
+EMSFILE LoscarParallel/deccan_CO2emss.dat
+SEMSFILE LoscarParallel/deccan_Semss.dat
+TSNS    (-) 1
+SCLIM   (C) 3.00e+00
+EXPFILE LoscarParallel/deccan_Exp.dat
+TEMP    (C) 25.00 25.00 25.00 16.00 16.00 16.00 12.00 12.00 12.00 12.00 18.00 14.00 12.00 
+TSTART  (y) 0.00e+00
+SAL     (-) 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 
+TFINAL  (y) 1.50e+06
+CINP    (Pg C)       0.00e+00
+D13CIN  (per mil)   -5.50e+01
+TCIN0   (y) 0.00e+00
+TCSPAN  (y) 0.00e+00
+PCO2SI  (ppmv)       6.00e+02
+FDICI   (%) 0.00e+00
+FALKI   (%) 0.00e+00
+FPO4I   (%) 0.00e+00
+THC    (Sv) 2.50e+01
+EPSLV   (-) 1.00e-04
+FCSML   (-) 5.00e-02
+FBIOL   (-) 8.00e-01
+CBIOH   (mol C/m2/y) 1.80e+00
+RRAIN   (-) 6.70e+00
+KMAX    (-) 5000
+TSNS    (-) 1
+SCLIM   (C) 3.00e+00
+TEMP    (C) 25.00 25.00 25.00 16.00 16.00 16.00 12.00 12.00 12.00 12.00 18.00 14.00 12.00 
+FSHLF   (-) 4.50e+00
+FINC    (mol C/y)    1.58e+13
+CALC    (mol/kg)     2.10e-02
+MAGN    (mol/kg)     4.20e-02
+SAL     (-) 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 
+PCO2SI  (ppmv)       6.00e+02
+SULF    (mol/kg)     1.40e-02
+
+@ Done reading parameter file: 'deccan.inp'
+FDICI   (%) 0.00e+00
+FALKI   (%) 0.00e+00
+FPO4I   (%) 0.00e+00
+THC    (Sv) 2.50e+01
+
+@ Loading CO2 emissions: 'LoscarParallel/deccan_CO2emss.dat'
+FBIOL   (-) 8.00e-01
+CBIOH   (mol C/m2/y) 1.80e+00
+
+@ Setting up run. Reading parameter file: 'deccan.inp'
+
+RRAIN   (-) 6.70e+00
+FSHLF   (-) 4.50e+00
+FINC    (mol C/y)    1.58e+13
+CALC    (mol/kg)     2.10e-02
+MAGN    (mol/kg)     4.20e-02
+SULF    (mol/kg)     1.40e-02
+
+RESTART LoscarParallel/dat/deccanrestart.dat
+SVSTART LoscarParallel/dat/deccanrestart.dat
+EMSFILE LoscarParallel/deccan_CO2emss.dat
+SEMSFILE LoscarParallel/deccan_Semss.dat
+@ Done reading parameter file: 'deccan.inp'
+EXPFILE LoscarParallel/deccan_Exp.dat
+
+@ Loading CO2 emissions: 'LoscarParallel/deccan_CO2emss.dat'
+TSTART  (y) 0.00e+00
+TFINAL  (y) 1.50e+06
+CINP    (Pg C)       0.00e+00
+D13CIN  (per mil)   -5.50e+01
+TCIN0   (y) 0.00e+00
+TCSPAN  (y) 0.00e+00
+EPSLV   (-) 1.00e-04
+FCSML   (-) 5.00e-02
+KMAX    (-) 5000
+TSNS    (-) 1
+
+@ Setting up run. Reading parameter file: 'deccan.inp'
+
+SCLIM   (C) 3.00e+00
+TEMP    (C) 25.00 25.00 25.00 16.00 16.00 16.00 12.00 12.00 12.00 12.00 18.00 14.00 12.00 
+SAL     (-) 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 
+PCO2SI  (ppmv)       6.00e+02
+RESTART LoscarParallel/dat/deccanrestart.dat
+SVSTART LoscarParallel/dat/deccanrestart.dat
+FDICI   (%) 0.00e+00
+FALKI   (%) 0.00e+00
+FPO4I   (%) 0.00e+00
+THC    (Sv) 2.50e+01
+EMSFILE LoscarParallel/deccan_CO2emss.dat
+SEMSFILE LoscarParallel/deccan_Semss.dat
+EXPFILE LoscarParallel/deccan_Exp.dat
+FBIOL   (-) 8.00e-01
+CBIOH   (mol C/m2/y) 1.80e+00
+RRAIN   (-) 6.70e+00
+FSHLF   (-) 4.50e+00
+TSTART  (y) 0.00e+00
+TFINAL  (y) 1.50e+06
+CINP    (Pg C)       0.00e+00
+FINC    (mol C/y)    1.58e+13
+CALC    (mol/kg)     2.10e-02
+MAGN    (mol/kg)     4.20e-02
+SULF    (mol/kg)     1.40e-02
+D13CIN  (per mil)   -5.50e+01
+TCIN0   (y) 0.00e+00
+TCSPAN  (y) 0.00e+00
+
+@ Done reading parameter file: 'deccan.inp'
+EPSLV   (-) 1.00e-04
+FCSML   (-) 5.00e-02
+KMAX    (-) 5000
+
+@ Loading CO2 emissions: 'LoscarParallel/deccan_CO2emss.dat'
+TSNS    (-) 1
+SCLIM   (C) 3.00e+00
+TEMP    (C) 25.00 25.00 25.00 16.00 16.00 16.00 12.00 12.00 12.00 12.00 18.00 14.00 12.00 
+SAL     (-) 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 
+PCO2SI  (ppmv)       6.00e+02
+FDICI   (%) 0.00e+00
+FALKI   (%) 0.00e+00
+FPO4I   (%) 0.00e+00
+THC    (Sv) 2.50e+01
+FBIOL   (-) 8.00e-01
+CBIOH   (mol C/m2/y) 1.80e+00
+RRAIN   (-) 6.70e+00
+FSHLF   (-) 4.50e+00
+FINC    (mol C/y)    1.58e+13
+CALC    (mol/kg)     2.10e-02
+
+@ Loading S emissions: 'LoscarParallel/deccan_Semss.dat'
+MAGN    (mol/kg)     4.20e-02
+SULF    (mol/kg)     1.40e-02
+
+@ Done reading parameter file: 'deccan.inp'
+
+@ Loading CO2 emissions: 'LoscarParallel/deccan_CO2emss.dat'
+
+@ Loading S emissions: 'LoscarParallel/deccan_Semss.dat'
+
+@ Setting up run. Reading parameter file: 'deccan.inp'
+
+RESTART LoscarParallel/dat/deccanrestart.dat
+SVSTART LoscarParallel/dat/deccanrestart.dat
+EMSFILE LoscarParallel/deccan_CO2emss.dat
+SEMSFILE LoscarParallel/deccan_Semss.dat
+EXPFILE LoscarParallel/deccan_Exp.dat
+TSTART  (y) 0.00e+00
+TFINAL  (y) 1.50e+06
+CINP    (Pg C)       0.00e+00
+D13CIN  (per mil)   -5.50e+01
+TCIN0   (y) 0.00e+00
+TCSPAN  (y) 0.00e+00
+EPSLV   (-) 1.00e-04
+FCSML   (-) 5.00e-02
+KMAX    (-) 5000
+TSNS    (-) 1
+SCLIM   (C) 3.00e+00
+TEMP    (C) 25.00 25.00 25.00 16.00 16.00 16.00 12.00 12.00 12.00 12.00 18.00 14.00 12.00 
+SAL     (-) 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 
+PCO2SI  (ppmv)       6.00e+02
+FDICI   (%) 0.00e+00
+FALKI   (%) 0.00e+00
+FPO4I   (%) 0.00e+00
+THC    (Sv) 2.50e+01
+FBIOL   (-) 8.00e-01
+CBIOH   (mol C/m2/y) 1.80e+00
+RRAIN   (-) 6.70e+00
+FSHLF   (-) 4.50e+00
+FINC    (mol C/y)    1.58e+13
+CALC    (mol/kg)     2.10e-02
+MAGN    (mol/kg)     4.20e-02
+
+@ Loading S emissions: 'LoscarParallel/deccan_Semss.dat'
+SULF    (mol/kg)     1.40e-02
+
+@ Done reading parameter file: 'deccan.inp'
+
+@ Loading CO2 emissions: 'LoscarParallel/deccan_CO2emss.dat'
+
+@ Setting up run. Reading parameter file: 'deccan.inp'
+
+
+@ Loading S emissions: 'LoscarParallel/deccan_Semss.dat'
+RESTART LoscarParallel/dat/deccanrestart.dat
+SVSTART LoscarParallel/dat/deccanrestart.dat
+EMSFILE LoscarParallel/deccan_CO2emss.dat
+SEMSFILE LoscarParallel/deccan_Semss.dat
+EXPFILE LoscarParallel/deccan_Exp.dat
+TSTART  (y) 0.00e+00
+TFINAL  (y) 1.50e+06
+CINP    (Pg C)       0.00e+00
+D13CIN  (per mil)   -5.50e+01
+TCIN0   (y) 0.00e+00
+TCSPAN  (y) 0.00e+00
+EPSLV   (-) 1.00e-04
+FCSML   (-) 5.00e-02
+KMAX    (-) 5000
+TSNS    (-) 1
+SCLIM   (C) 3.00e+00
+
+@ Setting up run. Reading parameter file: 'deccan.inp'
+
+TEMP    (C) 25.00 25.00 25.00 16.00 16.00 16.00 12.00 12.00 12.00 12.00 18.00 14.00 12.00 
+SAL     (-) 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 
+PCO2SI  (ppmv)       6.00e+02
+FDICI   (%) 0.00e+00
+FALKI   (%) 0.00e+00
+FPO4I   (%) 0.00e+00
+THC    (Sv) 2.50e+01
+FBIOL   (-) 8.00e-01
+RESTART LoscarParallel/dat/deccanrestart.dat
+SVSTART LoscarParallel/dat/deccanrestart.dat
+EMSFILE LoscarParallel/deccan_CO2emss.dat
+SEMSFILE LoscarParallel/deccan_Semss.dat
+CBIOH   (mol C/m2/y) 1.80e+00
+RRAIN   (-) 6.70e+00
+FSHLF   (-) 4.50e+00
+EXPFILE LoscarParallel/deccan_Exp.dat
+FINC    (mol C/y)    1.58e+13
+CALC    (mol/kg)     2.10e-02
+MAGN    (mol/kg)     4.20e-02
+TSTART  (y) 0.00e+00
+SULF    (mol/kg)     1.40e-02
+
+@ Done reading parameter file: 'deccan.inp'
+TFINAL  (y) 1.50e+06
+CINP    (Pg C)       0.00e+00
+D13CIN  (per mil)   -5.50e+01
+TCIN0   (y) 0.00e+00
+
+@ Loading CO2 emissions: 'LoscarParallel/deccan_CO2emss.dat'
+TCSPAN  (y) 0.00e+00
+EPSLV   (-) 1.00e-04
+FCSML   (-) 5.00e-02
+KMAX    (-) 5000
+TSNS    (-) 1
+SCLIM   (C) 3.00e+00
+TEMP    (C) 25.00 25.00 25.00 16.00 16.00 16.00 12.00 12.00 12.00 12.00 18.00 14.00 12.00 
+SAL     (-) 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 
+PCO2SI  (ppmv)       6.00e+02
+FDICI   (%) 0.00e+00
+FALKI   (%) 0.00e+00
+FPO4I   (%) 0.00e+00
+THC    (Sv) 2.50e+01
+FBIOL   (-) 8.00e-01
+CBIOH   (mol C/m2/y) 1.80e+00
+RRAIN   (-) 6.70e+00
+FSHLF   (-) 4.50e+00
+
+@ Loading S emissions: 'LoscarParallel/deccan_Semss.dat'
+FINC    (mol C/y)    1.58e+13
+CALC    (mol/kg)     2.10e-02
+MAGN    (mol/kg)     4.20e-02
+SULF    (mol/kg)     1.40e-02
+
+@ Done reading parameter file: 'deccan.inp'
+
+@ Loading CO2 emissions: 'LoscarParallel/deccan_CO2emss.dat'
+
+@ Loading S emissions: 'LoscarParallel/deccan_Semss.dat'
+
+@ Setting up run. Reading parameter file: 'deccan.inp'
+
+RESTART LoscarParallel/dat/deccanrestart.dat
+SVSTART LoscarParallel/dat/deccanrestart.dat
+EMSFILE LoscarParallel/deccan_CO2emss.dat
+SEMSFILE LoscarParallel/deccan_Semss.dat
+EXPFILE LoscarParallel/deccan_Exp.dat
+TSTART  (y) 0.00e+00
+TFINAL  (y) 1.50e+06
+CINP    (Pg C)       0.00e+00
+D13CIN  (per mil)   -5.50e+01
+TCIN0   (y) 0.00e+00
+TCSPAN  (y) 0.00e+00
+EPSLV   (-) 1.00e-04
+FCSML   (-) 5.00e-02
+KMAX    (-) 5000
+TSNS    (-) 1
+SCLIM   (C) 3.00e+00
+TEMP    (C) 25.00 25.00 25.00 16.00 16.00 16.00 12.00 12.00 12.00 12.00 18.00 14.00 12.00 
+SAL     (-) 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 
+PCO2SI  (ppmv)       6.00e+02
+FDICI   (%) 0.00e+00
+FALKI   (%) 0.00e+00
+FPO4I   (%) 0.00e+00
+THC    (Sv) 2.50e+01
+FBIOL   (-) 8.00e-01
+CBIOH   (mol C/m2/y) 1.80e+00
+RRAIN   (-) 6.70e+00
+FSHLF   (-) 4.50e+00
+FINC    (mol C/y)    1.58e+13
+CALC    (mol/kg)     2.10e-02
+MAGN    (mol/kg)     4.20e-02
+SULF    (mol/kg)     1.40e-02
+
+@ Done reading parameter file: 'deccan.inp'
+
+@ Loading CO2 emissions: 'LoscarParallel/deccan_CO2emss.dat'
+
+@ Loading S emissions: 'LoscarParallel/deccan_Semss.dat'
+
+@ Loading S emissions: 'LoscarParallel/deccan_Semss.dat'
+
+@ Loading S emissions: 'LoscarParallel/deccan_Semss.dat'
+
+@ Loading Export Factor: 'LoscarParallel/deccan_Exp.dat'
+
+@ Loading S emissions: 'LoscarParallel/deccan_Semss.dat'
+
+@ Loading Export Factor: 'LoscarParallel/deccan_Exp.dat'
+
+@ Loading Export Factor: 'LoscarParallel/deccan_Exp.dat'
+
+@ Loading S emissions: 'LoscarParallel/deccan_Semss.dat'
+
+@ Loading Export Factor: 'LoscarParallel/deccan_Exp.dat'
+
+@ Loading S emissions: 'LoscarParallel/deccan_Semss.dat'
+
+@ Loading Export Factor: 'LoscarParallel/deccan_Exp.dat'
+
+@ Loading S emissions: 'LoscarParallel/deccan_Semss.dat'
+
+@ Loading Export Factor: 'LoscarParallel/deccan_Exp.dat'
+
+@ Loading S emissions: 'LoscarParallel/deccan_Semss.dat'
+
+@ Loading Export Factor: 'LoscarParallel/deccan_Exp.dat'
+
+@ Loading Export Factor: 'LoscarParallel/deccan_Exp.dat'
+
+@ Loading Export Factor: 'LoscarParallel/deccan_Exp.dat'
+
+@ No. default start values : 184
+
+@ Loading Export Factor: 'LoscarParallel/deccan_Exp.dat'
+
+@ No. default start values : 184
+
+@ No. default start values : 184
+
+@ Loading Export Factor: 'LoscarParallel/deccan_Exp.dat'
+
+@ No. default start values : 184
+
+@ Loading Export Factor: 'LoscarParallel/deccan_Exp.dat'
+
+@ No. default start values : 184
+
+@ Loading Export Factor: 'LoscarParallel/deccan_Exp.dat'
+
+@ No. default start values : 184
+
+@ Loading Export Factor: 'LoscarParallel/deccan_Exp.dat'
+
+@ No. default start values : 184
+
+@ No. default start values : 184
+
+@ This is a restart: loading 'LoscarParallel/dat/deccanrestart.dat'
+
+@ No. default start values : 184
+
+@ This is a restart: loading 'LoscarParallel/dat/deccanrestart.dat'
+
+@ No. default start values : 184
+
+@ This is a restart: loading 'LoscarParallel/dat/deccanrestart.dat'
+
+@ No. default start values : 184
+
+@ This is a restart: loading 'LoscarParallel/dat/deccanrestart.dat'
+
+@ No. default start values : 184
+
+@ This is a restart: loading 'LoscarParallel/dat/deccanrestart.dat'
+
+@ No. default start values : 184
+
+@ This is a restart: loading 'LoscarParallel/dat/deccanrestart.dat'
+
+@ This is a restart: loading 'LoscarParallel/dat/deccanrestart.dat'
+
+@ No. default start values : 184
+
+@ This is a restart: loading 'LoscarParallel/dat/deccanrestart.dat'
+
+@ This is a restart: loading 'LoscarParallel/dat/deccanrestart.dat'
+
+@ This is a restart: loading 'LoscarParallel/dat/deccanrestart.dat'
+
+@ This is a restart: loading 'LoscarParallel/dat/deccanrestart.dat'
+
+@ This is a restart: loading 'LoscarParallel/dat/deccanrestart.dat'
+
+@ This is a restart: loading 'LoscarParallel/dat/deccanrestart.dat'
+
+@ This is a restart: loading 'LoscarParallel/dat/deccanrestart.dat'
+Tue Jul 12 14:40:52 2022
+
+  Heus!
+
+   ************************************************
+   * LOSCAR V 2.0.4.3                   9/2018      *
+   *                                              *
+   * Richard E. Zeebe                             *
+   * SOEST, University of Hawaii                  *
+   * Honolulu, HI 96822, USA                      *
+   * loscar.model@gmail.com                       *
+   *                                              *
+   * LOSCAR: Long-term Ocean-atmosphere-Sediment  *
+   * CArbon cycle Reservoir Model                 *
+   *                                              *
+   * LOSCAR comes with ABSOLUTELY NO WARRANTY.    *
+   * Use at your own risk. DO NOT DISTRIBUTE.     *
+   *                                              *
+   ************************************************
+
+@ This is the PALEO setup including Tethys
+
+@ No. ocean basins         :   4
+@ No. ocean boxes          :  13
+@ No. ocean tracers        :   6
+@ Atmospheric Carbon       :   1
+@ Atmospheric Carbon-13    :   1
+@ No. sediment depth levels:  13
+@ No. sediment C-13 levels :  13
+@ No. equations            : 184
+
+@ Setting up run. Reading parameter file: 'deccan.inp'
+
+RESTART LoscarParallel/dat/deccanrestart.dat
+SVSTART LoscarParallel/dat/deccanrestart.dat
+EMSFILE LoscarParallel/deccan_CO2emss.dat
+SEMSFILE LoscarParallel/deccan_Semss.dat
+EXPFILE LoscarParallel/deccan_Exp.dat
+TSTART  (y) 0.00e+00
+TFINAL  (y) 1.50e+06
+CINP    (Pg C)       0.00e+00
+D13CIN  (per mil)   -5.50e+01
+TCIN0   (y) 0.00e+00
+TCSPAN  (y) 0.00e+00
+EPSLV   (-) 1.00e-04
+FCSML   (-) 5.00e-02
+KMAX    (-) 5000
+TSNS    (-) 1
+SCLIM   (C) 3.00e+00
+TEMP    (C) 25.00 25.00 25.00 16.00 16.00 16.00 12.00 12.00 12.00 12.00 18.00 14.00 12.00 
+SAL     (-) 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 
+PCO2SI  (ppmv)       6.00e+02
+FDICI   (%) 0.00e+00
+FALKI   (%) 0.00e+00
+FPO4I   (%) 0.00e+00
+THC    (Sv) 2.50e+01
+FBIOL   (-) 8.00e-01
+CBIOH   (mol C/m2/y) 1.80e+00
+RRAIN   (-) 6.70e+00
+FSHLF   (-) 4.50e+00
+FINC    (mol C/y)    1.58e+13
+CALC    (mol/kg)     2.10e-02
+MAGN    (mol/kg)     4.20e-02
+SULF    (mol/kg)     1.40e-02
+
+@ Done reading parameter file: 'deccan.inp'
+
+@ Loading CO2 emissions: 'LoscarParallel/deccan_CO2emss.dat'
+
+@ Loading S emissions: 'LoscarParallel/deccan_Semss.dat'
+
+@ Loading Export Factor: 'LoscarParallel/deccan_Exp.dat'
+
+@ No. default start values : 184
+
+@ This is a restart: loading 'LoscarParallel/dat/deccanrestart.dat'
+
+@ Starting integration[tstart tfinal]=[0.00e+00 1.50e+06]
+  Dum spiro spero.
+
+@ Progress (model time): 
+
+0.00e+00 
+@ Starting integration[tstart tfinal]=[0.00e+00 1.50e+06]
+  Dum spiro spero.
+
+@ Progress (model time): 
+
+0.00e+00 
+@ Starting integration[tstart tfinal]=[0.00e+00 1.50e+06]
+  Dum spiro spero.
+
+@ Progress (model time): 
+
+
+@ Starting integration[tstart tfinal]=[0.00e+00 1.50e+06]
+  Dum spiro spero.
+
+@ Progress (model time): 
+
+0.00e+00 0.00e+00 
+@ Starting integration[tstart tfinal]=[0.00e+00 1.50e+06]
+
+@ Starting integration[tstart tfinal]=[0.00e+00 1.50e+06]
+  Dum spiro spero.
+  Dum spiro spero.
+
+@ Progress (model time): 
+
+@ Progress (model time): 
+
+0.00e+00 
+0.00e+00 
+@ Starting integration[tstart tfinal]=[0.00e+00 1.50e+06]
+  Dum spiro spero.
+
+@ Progress (model time): 
+
+0.00e+00 
+@ Starting integration[tstart tfinal]=[0.00e+00 1.50e+06]
+  Dum spiro spero.
+
+@ Progress (model time): 
+
+0.00e+00 
+@ Starting integration[tstart tfinal]=[0.00e+00 1.50e+06]
+  Dum spiro spero.
+
+@ Progress (model time): 
+
+0.00e+00 
+@ Starting integration[tstart tfinal]=[0.00e+00 1.50e+06]
+  Dum spiro spero.
+
+@ Progress (model time): 
+
+0.00e+00 
+@ Starting integration[tstart tfinal]=[0.00e+00 1.50e+06]
+  Dum spiro spero.
+
+@ Progress (model time): 
+
+
+@ Starting integration[tstart tfinal]=[0.00e+00 1.50e+06]
+0.00e+00   Dum spiro spero.
+
+@ Progress (model time): 
+
+0.00e+00 
+@ Starting integration[tstart tfinal]=[0.00e+00 1.50e+06]
+  Dum spiro spero.
+
+@ Progress (model time): 
+
+0.00e+00 
+@ Starting integration[tstart tfinal]=[0.00e+00 1.50e+06]
+  Dum spiro spero.
+
+@ Progress (model time): 
+
+0.00e+00 
+@ Starting integration[tstart tfinal]=[0.00e+00 1.50e+06]
+  Dum spiro spero.
+
+@ Progress (model time): 
+
+0.00e+00 Tue Jul 12 14:40:52 2022
+
+  Heus!
+
+   ************************************************
+   * LOSCAR V 2.0.4.3                   9/2018      *
+   *                                              *
+   * Richard E. Zeebe                             *
+   * SOEST, University of Hawaii                  *
+   * Honolulu, HI 96822, USA                      *
+   * loscar.model@gmail.com                       *
+   *                                              *
+   * LOSCAR: Long-term Ocean-atmosphere-Sediment  *
+   * CArbon cycle Reservoir Model                 *
+   *                                              *
+   * LOSCAR comes with ABSOLUTELY NO WARRANTY.    *
+   * Use at your own risk. DO NOT DISTRIBUTE.     *
+   *                                              *
+   ************************************************
+
+@ This is the PALEO setup including Tethys
+
+@ No. ocean basins         :   4
+@ No. ocean boxes          :  13
+@ No. ocean tracers        :   6
+@ Atmospheric Carbon       :   1
+@ Atmospheric Carbon-13    :   1
+@ No. sediment depth levels:  13
+@ No. sediment C-13 levels :  13
+@ No. equations            : 184
+
+@ Setting up run. Reading parameter file: 'deccan.inp'
+
+RESTART LoscarParallel/dat/deccanrestart.dat
+SVSTART LoscarParallel/dat/deccanrestart.dat
+EMSFILE LoscarParallel/deccan_CO2emss.dat
+SEMSFILE LoscarParallel/deccan_Semss.dat
+EXPFILE LoscarParallel/deccan_Exp.dat
+TSTART  (y) 0.00e+00
+TFINAL  (y) 1.50e+06
+CINP    (Pg C)       0.00e+00
+D13CIN  (per mil)   -5.50e+01
+TCIN0   (y) 0.00e+00
+TCSPAN  (y) 0.00e+00
+EPSLV   (-) 1.00e-04
+FCSML   (-) 5.00e-02
+KMAX    (-) 5000
+TSNS    (-) 1
+SCLIM   (C) 3.00e+00
+TEMP    (C) 25.00 25.00 25.00 16.00 16.00 16.00 12.00 12.00 12.00 12.00 18.00 14.00 12.00 
+SAL     (-) 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 34.72 
+PCO2SI  (ppmv)       6.00e+02
+FDICI   (%) 0.00e+00
+FALKI   (%) 0.00e+00
+FPO4I   (%) 0.00e+00
+THC    (Sv) 2.50e+01
+FBIOL   (-) 8.00e-01
+CBIOH   (mol C/m2/y) 1.80e+00
+RRAIN   (-) 6.70e+00
+FSHLF   (-) 4.50e+00
+FINC    (mol C/y)    1.58e+13
+CALC    (mol/kg)     2.10e-02
+MAGN    (mol/kg)     4.20e-02
+SULF    (mol/kg)     1.40e-02
+
+@ Done reading parameter file: 'deccan.inp'
+
+@ Loading CO2 emissions: 'LoscarParallel/deccan_CO2emss.dat'
+
+@ Loading S emissions: 'LoscarParallel/deccan_Semss.dat'
+
+@ Loading Export Factor: 'LoscarParallel/deccan_Exp.dat'
+
+@ No. default start values : 184
+
+@ This is a restart: loading 'LoscarParallel/dat/deccanrestart.dat'
+
+@ Starting integration[tstart tfinal]=[0.00e+00 1.50e+06]
+  Dum spiro spero.
+
+@ Progress (model time): 
+
+0.00e+00 7.54e+04 7.54e+04 7.54e+04 7.54e+04 7.54e+04 7.54e+04 7.54e+04 7.54e+04 7.54e+04 7.54e+04 7.54e+04 7.54e+04 7.54e+04 7.54e+04 7.54e+04 7.54e+04 1.50e+05 1.50e+05 1.50e+05 1.50e+05 1.50e+05 1.50e+05 1.50e+05 1.50e+05 1.50e+05 1.50e+05 1.50e+05 1.50e+05 1.50e+05 1.50e+05 1.50e+05 1.50e+05 2.24e+05 2.24e+05 2.24e+05 2.24e+05 2.24e+05 2.24e+05 2.24e+05 2.24e+05 2.24e+05 2.24e+05 2.24e+05 2.24e+05 2.24e+05 2.24e+05 2.24e+05 2.24e+05 3.00e+05 3.00e+05 3.00e+05 3.00e+05 3.00e+05 3.00e+05 3.00e+05 3.00e+05 3.00e+05 3.00e+05 3.00e+05 3.00e+05 3.00e+05 3.00e+05 3.00e+05 3.00e+05 3.76e+05 3.76e+05 3.76e+05 3.76e+05 3.76e+05 3.76e+05 3.76e+05 3.76e+05 3.76e+05 3.76e+05 3.76e+05 3.76e+05 3.76e+05 3.76e+05 3.76e+05 3.76e+05 4.51e+05 4.51e+05 4.51e+05 4.51e+05 4.51e+05 4.51e+05 4.51e+05 4.51e+05 4.51e+05 4.51e+05 4.51e+05 4.51e+05 4.51e+05 4.51e+05 4.51e+05 4.51e+05 5.24e+05 5.24e+05 5.24e+05 5.24e+05 5.24e+05 5.24e+05 5.24e+05 5.24e+05 5.24e+05 5.24e+05 5.24e+05 5.24e+05 5.24e+05 5.24e+05 5.24e+05 5.24e+05 6.01e+05 6.01e+05 6.01e+05 6.01e+05 6.01e+05 6.01e+05 6.01e+05 6.01e+05 6.01e+05 6.01e+05 6.01e+05 6.01e+05 6.01e+05 6.01e+05 6.01e+05 6.01e+05 6.76e+05 6.76e+05 6.76e+05 6.76e+05 6.76e+05 6.76e+05 6.76e+05 6.76e+05 6.76e+05 6.76e+05 6.76e+05 6.76e+05 6.76e+05 6.76e+05 6.76e+05 6.76e+05 7.48e+05 7.48e+05 7.48e+05 7.48e+05 7.48e+05 7.48e+05 7.48e+05 7.48e+05 7.48e+05 7.48e+05 7.48e+05 7.48e+05 7.48e+05 7.48e+05 7.48e+05 7.48e+05 8.23e+05 8.23e+05 8.23e+05 8.23e+05 8.23e+05 8.23e+05 8.23e+05 8.23e+05 8.23e+05 8.23e+05 8.23e+05 8.23e+05 8.23e+05 8.23e+05 8.23e+05 8.23e+05 8.99e+05 8.99e+05 8.99e+05 8.99e+05 8.99e+05 8.99e+05 8.99e+05 8.99e+05 8.99e+05 8.99e+05 8.99e+05 8.99e+05 8.99e+05 8.99e+05 8.99e+05 9.74e+05 8.99e+05 9.74e+05 9.74e+05 9.74e+05 9.74e+05 9.74e+05 9.74e+05 9.74e+05 9.74e+05 9.74e+05 9.74e+05 9.74e+05 9.74e+05 9.74e+05 9.74e+05 1.05e+06 1.05e+06 1.05e+06 1.05e+06 1.05e+06 1.05e+06 1.05e+06 1.05e+06 9.74e+05 1.05e+06 1.05e+06 1.05e+06 1.05e+06 1.05e+06 1.05e+06 1.13e+06 1.05e+06 1.13e+06 1.13e+06 1.13e+06 1.13e+06 1.13e+06 1.13e+06 1.13e+06 1.13e+06 1.13e+06 1.13e+06 1.13e+06 1.13e+06 1.13e+06 1.20e+06 1.05e+06 1.20e+06 1.20e+06 1.13e+06 1.20e+06 1.20e+06 1.20e+06 1.20e+06 1.20e+06 1.20e+06 1.20e+06 1.20e+06 1.29e+06 1.20e+06 1.20e+06 1.20e+06 1.29e+06 1.29e+06 1.35e+06 1.29e+06 1.29e+06 1.29e+06 1.35e+06 1.20e+06 1.29e+06 1.29e+06 1.13e+06 1.29e+06 1.29e+06 1.29e+06 1.35e+06 1.29e+06 1.35e+06 1.29e+06 1.35e+06 1.35e+06 1.29e+06 1.46e+06 1.35e+06 1.35e+06 1.35e+06 
+@ Done integrating
+  Alea iacta est.
+
+@ Wallclock Time = 20.410000 sec 
+
+@ Step Info:
+        511 steps OK
+         19 steps FIXED
+        530 steps TOTAL
+  kmax=5000, kount=493
+
+@ [tfinal      solution[1][lt]]
+  [1.50e+06    2.20434829] 
+
+@ Final Atm CO2: 883.10016648 
+
+@ Checking and writing output (.dat) files
+1.35e+06 
+@ Saving restart values in 'LoscarParallel/dat/deccanrestart.dat'
+1.35e+06 1.46e+06 1.35e+06 1.35e+06 
+@ Done integrating
+  Alea iacta est.
+
+@ Wallclock Time = 20.450000 sec 
+
+@ Step Info:
+        511 steps OK
+         19 steps FIXED
+        530 steps TOTAL
+  kmax=5000, kount=493
+
+@ [tfinal      solution[1][lt]]
+  [1.50e+06    2.20434829] 
+
+@ Final Atm CO2: 883.10016648 
+
+@ Checking and writing output (.dat) files
+1.35e+06 
+@ Saving restart values in 'LoscarParallel/dat/deccanrestart.dat'
+1.46e+06 1.29e+06 1.46e+06 
+@ Done integrating
+  Alea iacta est.
+
+@ Wallclock Time = 20.480000 sec 
+
+@ Step Info:
+        511 steps OK
+         19 steps FIXED
+        530 steps TOTAL
+  kmax=5000, kount=493
+
+@ [tfinal      solution[1][lt]]
+  [1.50e+06    2.20434829] 
+
+@ Final Atm CO2: 883.10016648 
+
+@ Checking and writing output (.dat) files
+
+@ Saving restart values in 'LoscarParallel/dat/deccanrestart.dat'
+1.46e+06 1.46e+06 
+@ Done integrating
+  Alea iacta est.
+
+@ Wallclock Time = 20.500000 sec 
+
+@ Step Info:
+        511 steps OK
+         19 steps FIXED
+        530 steps TOTAL
+  kmax=5000, kount=493
+
+@ [tfinal      solution[1][lt]]
+  [1.50e+06    2.20434829] 
+
+@ Final Atm CO2: 883.10016648 
+
+@ Checking and writing output (.dat) files
+
+@ Saving restart values in 'LoscarParallel/dat/deccanrestart.dat'
+1.46e+06 
+@ Done integrating
+  Alea iacta est.
+
+@ Wallclock Time = 20.520000 sec 
+
+@ Step Info:
+        511 steps OK
+         19 steps FIXED
+        530 steps TOTAL
+  kmax=5000, kount=493
+
+@ [tfinal      solution[1][lt]]
+  [1.50e+06    2.20434829] 
+
+@ Final Atm CO2: 883.10016648 
+
+@ Checking and writing output (.dat) files
+1.46e+06 
+@ Done integrating
+  Alea iacta est.
+
+@ Wallclock Time = 20.520000 sec 
+
+@ Step Info:
+        511 steps OK
+         19 steps FIXED
+        530 steps TOTAL
+  kmax=5000, kount=493
+
+@ [tfinal      solution[1][lt]]
+  [1.50e+06    2.20434829] 
+
+@ Final Atm CO2: 883.10016648 
+
+@ Checking and writing output (.dat) files
+
+@ Saving restart values in 'LoscarParallel/dat/deccanrestart.dat'
+
+@ Saving restart values in 'LoscarParallel/dat/deccanrestart.dat'
+1.20e+06 1.46e+06 1.46e+06 1.46e+06 
+@ Done integrating
+  Alea iacta est.
+
+@ Wallclock Time = 20.540000 sec 
+
+@ Step Info:
+        511 steps OK
+         19 steps FIXED
+        530 steps TOTAL
+  kmax=5000, kount=493
+
+@ [tfinal      solution[1][lt]]
+  [1.50e+06    2.20434829] 
+
+@ Final Atm CO2: 883.10016648 
+
+@ Checking and writing output (.dat) files
+
+@ Done integrating
+  Alea iacta est.
+
+@ Wallclock Time = 20.540000 sec 
+
+@ Step Info:
+        511 steps OK
+         19 steps FIXED
+        530 steps TOTAL
+  kmax=5000, kount=493
+
+@ [tfinal      solution[1][lt]]
+  [1.50e+06    2.20434829] 
+
+@ Final Atm CO2: 883.10016648 
+
+@ Checking and writing output (.dat) files
+
+@ Saving restart values in 'LoscarParallel/dat/deccanrestart.dat'
+
+@ Saving restart values in 'LoscarParallel/dat/deccanrestart.dat'
+
+@ Done integrating
+  Alea iacta est.
+
+@ Wallclock Time = 20.510000 sec 
+
+@ Step Info:
+        511 steps OK
+         19 steps FIXED
+        530 steps TOTAL
+  kmax=5000, kount=493
+
+@ [tfinal      solution[1][lt]]
+  [1.50e+06    2.20434829] 
+
+@ Final Atm CO2: 883.10016648 
+
+@ Checking and writing output (.dat) files
+1.46e+06 1.35e+06 
+@ Done integrating
+  Alea iacta est.
+
+@ Wallclock Time = 20.550000 sec 
+
+@ Step Info:
+        511 steps OK
+         19 steps FIXED
+        530 steps TOTAL
+  kmax=5000, kount=493
+
+@ [tfinal      solution[1][lt]]
+  [1.50e+06    2.20434829] 
+
+@ Final Atm CO2: 883.10016648 
+
+@ Checking and writing output (.dat) files
+
+@ Done integrating
+  Alea iacta est.
+
+@ Wallclock Time = 20.530000 sec 
+
+@ Step Info:
+        511 steps OK
+         19 steps FIXED
+        530 steps TOTAL
+  kmax=5000, kount=493
+
+@ [tfinal      solution[1][lt]]
+  [1.50e+06    2.20434829] 
+
+@ Final Atm CO2: 883.10016648 
+
+@ Checking and writing output (.dat) files
+
+@ Saving restart values in 'LoscarParallel/dat/deccanrestart.dat'
+1.46e+06 
+@ Saving restart values in 'LoscarParallel/dat/deccanrestart.dat'
+
+@ Saving restart values in 'LoscarParallel/dat/deccanrestart.dat'
+
+@ Done integrating
+  Alea iacta est.
+
+@ Wallclock Time = 20.560000 sec 
+
+@ Step Info:
+        511 steps OK
+         19 steps FIXED
+        530 steps TOTAL
+  kmax=5000, kount=493
+
+@ [tfinal      solution[1][lt]]
+  [1.50e+06    2.20434829] 
+
+@ Final Atm CO2: 883.10016648 
+
+@ Checking and writing output (.dat) files
+1.46e+06 
+@ Saving restart values in 'LoscarParallel/dat/deccanrestart.dat'
+
+@ Done integrating
+  Alea iacta est.
+
+@ Wallclock Time = 20.580000 sec 
+
+@ Step Info:
+        511 steps OK
+         19 steps FIXED
+        530 steps TOTAL
+  kmax=5000, kount=493
+
+@ [tfinal      solution[1][lt]]
+  [1.50e+06    2.20434829] 
+
+@ Final Atm CO2: 883.10016648 
+
+@ Checking and writing output (.dat) files
+
+@ Saving restart values in 'LoscarParallel/dat/deccanrestart.dat'
+
+@ Done integrating
+  Alea iacta est.
+
+@ Wallclock Time = 20.600000 sec 
+
+@ Step Info:
+        511 steps OK
+         19 steps FIXED
+        530 steps TOTAL
+  kmax=5000, kount=493
+
+@ [tfinal      solution[1][lt]]
+  [1.50e+06    2.20434829] 
+
+@ Final Atm CO2: 883.10016648 
+
+@ Checking and writing output (.dat) files
+
+@ Saving restart values in 'LoscarParallel/dat/deccanrestart.dat'
+1.46e+06 1.29e+06 
+@ Done integrating
+  Alea iacta est.
+
+@ Wallclock Time = 20.690000 sec 
+
+@ Step Info:
+        511 steps OK
+         19 steps FIXED
+        530 steps TOTAL
+  kmax=5000, kount=493
+
+@ [tfinal      solution[1][lt]]
+  [1.50e+06    2.20434829] 
+
+@ Final Atm CO2: 883.10016648 
+
+@ Checking and writing output (.dat) files
+
+@ Saving restart values in 'LoscarParallel/dat/deccanrestart.dat'
+1.35e+06 1.46e+06 
+@ Done integrating
+  Alea iacta est.
+
+@ Wallclock Time = 20.690000 sec 
+
+@ Step Info:
+        511 steps OK
+         19 steps FIXED
+        530 steps TOTAL
+  kmax=5000, kount=493
+
+@ [tfinal      solution[1][lt]]
+  [1.50e+06    2.20434829] 
+
+@ Final Atm CO2: 883.10016648 
+
+@ Checking and writing output (.dat) files
+
+@ Saving restart values in 'LoscarParallel/dat/deccanrestart.dat'
+
+@ Freeing memory
+
+   ************************************************
+   * LOSCAR V 2.0.4.3  Done.                        *
+   ************************************************
+
+  Nunc est bibendum.
+
+Tue Jul 12 14:41:13 2022
+
+@ Freeing memory
+
+   ************************************************
+   * LOSCAR V 2.0.4.3  Done.                        *
+   ************************************************
+
+  Nunc est bibendum.
+
+Tue Jul 12 14:41:13 2022
+
+@ Freeing memory
+
+   ************************************************
+   * LOSCAR V 2.0.4.3  Done.                        *
+   ************************************************
+
+  Nunc est bibendum.
+
+Tue Jul 12 14:41:13 2022
+
+@ Freeing memory
+
+   ************************************************
+   * LOSCAR V 2.0.4.3  Done.                        *
+   ************************************************
+
+  Nunc est bibendum.
+
+Tue Jul 12 14:41:13 2022
+
+@ Freeing memory
+
+   ************************************************
+   * LOSCAR V 2.0.4.3  Done.                        *
+   ************************************************
+
+  Nunc est bibendum.
+
+Tue Jul 12 14:41:13 2022
+
+@ Freeing memory
+
+   ************************************************
+   * LOSCAR V 2.0.4.3  Done.                        *
+   ************************************************
+
+  Nunc est bibendum.
+
+Tue Jul 12 14:41:13 2022
+
+@ Freeing memory
+
+   ************************************************
+   * LOSCAR V 2.0.4.3  Done.                        *
+   ************************************************
+
+  Nunc est bibendum.
+
+Tue Jul 12 14:41:13 2022
+
+@ Freeing memory
+
+   ************************************************
+   * LOSCAR V 2.0.4.3  Done.                        *
+   ************************************************
+
+  Nunc est bibendum.
+
+Tue Jul 12 14:41:13 2022
+
+@ Freeing memory
+
+   ************************************************
+   * LOSCAR V 2.0.4.3  Done.                        *
+   ************************************************
+
+  Nunc est bibendum.
+
+Tue Jul 12 14:41:13 2022
+
+@ Freeing memory
+
+   ************************************************
+   * LOSCAR V 2.0.4.3  Done.                        *
+   ************************************************
+
+  Nunc est bibendum.
+
+Tue Jul 12 14:41:13 2022
+
+@ Freeing memory
+
+   ************************************************
+   * LOSCAR V 2.0.4.3  Done.                        *
+   ************************************************
+
+  Nunc est bibendum.
+
+Tue Jul 12 14:41:13 2022
+
+@ Freeing memory
+
+   ************************************************
+   * LOSCAR V 2.0.4.3  Done.                        *
+   ************************************************
+
+  Nunc est bibendum.
+
+Tue Jul 12 14:41:13 2022
+
+@ Freeing memory
+
+   ************************************************
+   * LOSCAR V 2.0.4.3  Done.                        *
+   ************************************************
+
+  Nunc est bibendum.
+
+Tue Jul 12 14:41:13 2022
+
+@ Freeing memory
+
+   ************************************************
+   * LOSCAR V 2.0.4.3  Done.                        *
+   ************************************************
+
+  Nunc est bibendum.
+
+Tue Jul 12 14:41:13 2022
+
+@ Freeing memory
+
+   ************************************************
+   * LOSCAR V 2.0.4.3  Done.                        *
+   ************************************************
+
+  Nunc est bibendum.
+
+Tue Jul 12 14:41:13 2022
+
+@ Freeing memory
+
+   ************************************************
+   * LOSCAR V 2.0.4.3  Done.                        *
+   ************************************************
+
+  Nunc est bibendum.
+
+Tue Jul 12 14:41:13 2022
