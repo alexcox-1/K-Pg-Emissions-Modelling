@@ -1,6 +1,6 @@
 ## run loscar ac.gr@ 11/12
 using DelimitedFiles
-function runloscarp(timevals,CO2vals,Svals,co2doubling)
+function runloscarp(timevals,CO2vals,Svals,Expvals,co2doubling)
     # takes an array of timevals with associated CO2 and SO2 emissions,
     # runs loscar, and return the output times, pC02, and temperature 
     # given a user-specified CO2 doubling rate.
@@ -12,8 +12,8 @@ function runloscarp(timevals,CO2vals,Svals,co2doubling)
     if isfile("LoscarParallel/deccan_Semss.dat")
         rm("LoscarParallel/deccan_Semss.dat");
     end
-    if isfile("dat/Emss/deccan_Exp.dat")
-        rm("dat/Emss/deccan_Exp.dat");
+    if isfile("LoscarParallel/deccan_Exp.dat")
+        rm("LoscarParallel/deccan_Exp.dat");
     end
     if isfile("deccan.inp")
         rm("deccan.inp")
@@ -31,6 +31,7 @@ function runloscarp(timevals,CO2vals,Svals,co2doubling)
     CO2vals = CO2vals;
     Svals = Svals;
     timevals = timevals;
+    Expvals = Expvals;
     # the values for the input file ("deccan.inp")
 
     RESTART = "LoscarParallel/dat/deccanrestart.dat";
@@ -38,6 +39,7 @@ function runloscarp(timevals,CO2vals,Svals,co2doubling)
 
     EMSFILE = "LoscarParallel/deccan_CO2emss.dat";
     SEMSFILE = "LoscarParallel/deccan_Semss.dat";
+    EXPFILE = "LoscarParallel/deccan_Exp.dat"
     TSTART  = 0;
     TFINAL  = last(timevals);
     CINP    = 0;
@@ -72,6 +74,7 @@ function runloscarp(timevals,CO2vals,Svals,co2doubling)
     SVSTART $SVSTART
     EMSFILE $EMSFILE
     SEMSFILE $SEMSFILE
+    EXPFILE $EXPFILE
     TSTART  $TSTART
     TFINAL  $TFINAL
     CINP    $CINP
@@ -116,6 +119,11 @@ function runloscarp(timevals,CO2vals,Svals,co2doubling)
         end
     end;
     
+    open("LoscarParallel/deccan_Exp.dat", "a+") do io
+        for i in 1:length(Expvals)
+        write(io, string(timevals[i])*" "*string(Expvals[i])*'\n')
+        end
+    end;
     #do the make and run ***CHANGE THIS
     #loscarmake = `make loscar PALEO=1`
 
