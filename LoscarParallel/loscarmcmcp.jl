@@ -30,7 +30,7 @@ let
     # add an error in quadrature given LOSCAR uncertainties (assumed 0.3)
     d13cerror .= sqrt.((d13cerror.^2) .+ 0.3^2)
     # add benthic d13c values
-    bsrd13cb = importdataset("d13cdatabenthicbsr.csv",',')
+    bsrd13cb = importdataset("LoscarParallel/d13cdatabenthicbsr.csv",',')
     d13cbvals = bsrd13cb["d13cval"];
     d13cberror = bsrd13cb["d13cerror"]
     # add an error in quadrature
