@@ -1,0 +1,3018 @@
+┌ Warning: Iteration 1
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:134
+┌ Warning: Iteration 2
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:134
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+┌ Warning: Iteration 3
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:134
+┌ Warning: Iteration 4
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:134
+┌ Warning: Iteration 5
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:134
+
+LowLat PO4[1] = -5.923019e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+┌ Warning: Iteration 6
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:134
+
+LowLat PO4[1] = -7.841818e-08 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -2.193353e-08 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+┌ Warning: Iteration 7
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:134
+
+Dissolved Oxygen: dox[12] = -1.277619e-03 mol/m3
+@ ======================== Warning.
+derivs(): Diss. O2 is negative (<anoxic). Reduce CBIOH?
+@ ===================== Continuing.
+  Cogito ergo sum.
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -6.654583e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+[H+] = 2.197972e-05
+[H+] iteration did not converge after 50 steps
+@ ======================== Error.
+csys(): check CO2 system input
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+┌ Warning: Iteration 8
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:134
+
+LowLat PO4[1] = -5.745164e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -5.858864e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+
+@ ======================== Warning.
+writedat(): Dissolved O2 was low during this run.
+Check output. Oxygen demand exceeded supply.
+O2 Uptake reduced using Michaelis-Menten kinetics.
+@ ===================== Continuing.
+  Cogito ergo sum.
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -1.039411e-06 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -2.545523e-06 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -3.617869e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+┌ Warning: Iteration 9
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:134
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -4.898134e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+[H+] = 1.608346e-05
+[H+] iteration did not converge after 50 steps
+@ ======================== Error.
+csys(): check CO2 system input
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -5.963345e-08 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -4.135001e-08 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+┌ Warning: Iteration 10
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:134
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -7.339732e-08 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+
+@ ======================== Warning.
+writedat(): Dissolved O2 was low during this run.
+Check output. Oxygen demand exceeded supply.
+O2 Uptake reduced using Michaelis-Menten kinetics.
+@ ===================== Continuing.
+  Cogito ergo sum.
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -5.868579e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -7.294384e-08 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+
+@ ======================== Warning.
+writedat(): Dissolved O2 was low during this run.
+Check output. Oxygen demand exceeded supply.
+O2 Uptake reduced using Michaelis-Menten kinetics.
+@ ===================== Continuing.
+  Cogito ergo sum.
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+┌ Warning: Iteration 11
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:134
+
+LowLat PO4[1] = -5.448843e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -4.819642e-08 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -1.284399e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -1.561469e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -5.160898e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -6.809890e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -3.131056e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+
+LowLat PO4[1] = -5.410863e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+┌ Warning: Iteration 12
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:134
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -4.017515e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -1.867958e-06 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -5.567351e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -7.941981e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+┌ Warning: Iteration 13
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:134
+
+LowLat PO4[1] = -5.968372e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+
+@ ======================== Warning.
+writedat(): Dissolved O2 was low during this run.
+Check output. Oxygen demand exceeded supply.
+O2 Uptake reduced using Michaelis-Menten kinetics.
+@ ===================== Continuing.
+  Cogito ergo sum.
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -4.600231e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -8.832583e-08 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -3.938206e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+┌ Warning: Iteration 14
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:134
+
+LowLat PO4[1] = -5.502962e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Warning.
+writedat(): Dissolved O2 was low during this run.
+Check output. Oxygen demand exceeded supply.
+O2 Uptake reduced using Michaelis-Menten kinetics.
+@ ===================== Continuing.
+  Cogito ergo sum.
+
+@ ======================== Warning.
+writedat(): Dissolved O2 was low during this run.
+Check output. Oxygen demand exceeded supply.
+O2 Uptake reduced using Michaelis-Menten kinetics.
+@ ===================== Continuing.
+  Cogito ergo sum.
+
+LowLat PO4[1] = -1.602018e-05 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -1.344342e-05 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -4.421664e-08 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -3.155654e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -1.545272e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -4.219675e-08 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+┌ Warning: Iteration 15
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:134
+
+LowLat PO4[1] = -4.383497e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -9.161513e-08 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -4.231064e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -5.103353e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -1.213765e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+[H+] = 4.726310e-06
+[H+] iteration did not converge after 50 steps
+@ ======================== Error.
+csys(): check CO2 system input
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -6.182656e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -5.872239e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -3.797526e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -2.957570e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+┌ Warning: Iteration 16
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:134
+
+LowLat PO4[1] = -1.431838e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -8.485731e-09 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -5.180988e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -4.613505e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+┌ Warning: Iteration 17
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:134
+
+@ ======================== Warning.
+writedat(): Dissolved O2 was low during this run.
+Check output. Oxygen demand exceeded supply.
+O2 Uptake reduced using Michaelis-Menten kinetics.
+@ ===================== Continuing.
+  Cogito ergo sum.
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -2.359823e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -4.943605e-08 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -6.416732e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+[H+] = -1.356629e-09
+[H+] iteration did not converge after 50 steps
+[H+] < 0. Your ALK/DIC ratio may be too high
+@ ======================== Error.
+csys(): check CO2 system input
+Writing output (.dat) files for error check
+
+LowLat PO4[1] = -4.267246e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+[H+] = 1.389843e-05
+[H+] iteration did not converge after 50 steps
+@ ======================== Error.
+csys(): check CO2 system input
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+
+LowLat PO4[1] = -5.635430e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -3.440890e-08 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -7.916953e-06 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -5.551972e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -7.037958e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+[H+] = 2.342869e-05
+[H+] iteration did not converge after 50 steps
+@ ======================== Error.
+csys(): check CO2 system input
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -7.605497e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -7.104789e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+[H+] = 1.984562e-05
+[H+] iteration did not converge after 50 steps
+@ ======================== Error.
+csys(): check CO2 system input
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -1.068482e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+┌ Warning: Iteration 18
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:134
+
+LowLat PO4[1] = -9.450227e-09 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+
+@ ======================== Warning.
+writedat(): Dissolved O2 was low during this run.
+Check output. Oxygen demand exceeded supply.
+O2 Uptake reduced using Michaelis-Menten kinetics.
+@ ===================== Continuing.
+  Cogito ergo sum.
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -2.557634e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Warning.
+writedat(): Dissolved O2 was low during this run.
+Check output. Oxygen demand exceeded supply.
+O2 Uptake reduced using Michaelis-Menten kinetics.
+@ ===================== Continuing.
+  Cogito ergo sum.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -2.196441e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -9.190436e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -8.393871e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -5.402820e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+Dissolved Oxygen: dox[1] = -4.399744e-02 mol/m3
+@ ======================== Warning.
+derivs(): Diss. O2 is negative (<anoxic). Reduce CBIOH?
+@ ===================== Continuing.
+  Cogito ergo sum.
+
+Dissolved Oxygen: dox[2] = -4.417098e-02 mol/m3
+@ ======================== Warning.
+derivs(): Diss. O2 is negative (<anoxic). Reduce CBIOH?
+@ ===================== Continuing.
+  Cogito ergo sum.
+
+Dissolved Oxygen: dox[3] = -4.413948e-02 mol/m3
+@ ======================== Warning.
+derivs(): Diss. O2 is negative (<anoxic). Reduce CBIOH?
+@ ===================== Continuing.
+  Cogito ergo sum.
+
+Dissolved Oxygen: dox[4] = -1.671629e-01 mol/m3
+@ ======================== Warning.
+derivs(): Diss. O2 is negative (<anoxic). Reduce CBIOH?
+@ ===================== Continuing.
+  Cogito ergo sum.
+
+Dissolved Oxygen: dox[5] = -1.767195e-01 mol/m3
+@ ======================== Warning.
+derivs(): Diss. O2 is negative (<anoxic). Reduce CBIOH?
+@ ===================== Continuing.
+  Cogito ergo sum.
+
+Dissolved Oxygen: dox[6] = -1.388542e-01 mol/m3
+@ ======================== Warning.
+derivs(): Diss. O2 is negative (<anoxic). Reduce CBIOH?
+@ ===================== Continuing.
+  Cogito ergo sum.
+
+Dissolved Oxygen: dox[7] = -1.558744e-01 mol/m3
+@ ======================== Warning.
+derivs(): Diss. O2 is negative (<anoxic). Reduce CBIOH?
+@ ===================== Continuing.
+  Cogito ergo sum.
+
+Dissolved Oxygen: dox[8] = -1.640665e-01 mol/m3
+@ ======================== Warning.
+derivs(): Diss. O2 is negative (<anoxic). Reduce CBIOH?
+@ ===================== Continuing.
+  Cogito ergo sum.
+
+Dissolved Oxygen: dox[9] = -1.006714e-01 mol/m3
+@ ======================== Warning.
+derivs(): Diss. O2 is negative (<anoxic). Reduce CBIOH?
+@ ===================== Continuing.
+  Cogito ergo sum.
+
+Dissolved Oxygen: dox[10] = -1.252469e-01 mol/m3
+@ ======================== Warning.
+derivs(): Diss. O2 is negative (<anoxic). Reduce CBIOH?
+@ ===================== Continuing.
+  Cogito ergo sum.
+
+Dissolved Oxygen: dox[11] = -8.030830e-02 mol/m3
+@ ======================== Warning.
+derivs(): Diss. O2 is negative (<anoxic). Reduce CBIOH?
+@ ===================== Continuing.
+  Cogito ergo sum.
+
+Dissolved Oxygen: dox[12] = -1.889023e-01 mol/m3
+@ ======================== Warning.
+derivs(): Diss. O2 is negative (<anoxic). Reduce CBIOH?
+@ ===================== Continuing.
+  Cogito ergo sum.
+
+Dissolved Oxygen: dox[13] = -1.656126e-01 mol/m3
+@ ======================== Warning.
+derivs(): Diss. O2 is negative (<anoxic). Reduce CBIOH?
+@ ===================== Continuing.
+  Cogito ergo sum.
+
+[H+] = -3.493576e-09
+[H+] iteration did not converge after 50 steps
+[H+] < 0. Your ALK/DIC ratio may be too high
+@ ======================== Error.
+csys(): check CO2 system input
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -2.251992e-04 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -7.613132e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Warning.
+writedat(): Dissolved O2 was low during this run.
+Check output. Oxygen demand exceeded supply.
+O2 Uptake reduced using Michaelis-Menten kinetics.
+@ ===================== Continuing.
+  Cogito ergo sum.
+┌ Warning: Iteration 19
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:134
+
+LowLat PO4[1] = -2.217815e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -7.784757e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -2.536180e-08 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -8.568174e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+Dissolved Oxygen: dox[4] = -3.252450e-02 mol/m3
+@ ======================== Warning.
+derivs(): Diss. O2 is negative (<anoxic). Reduce CBIOH?
+@ ===================== Continuing.
+  Cogito ergo sum.
+
+Dissolved Oxygen: dox[5] = -3.959014e-02 mol/m3
+@ ======================== Warning.
+derivs(): Diss. O2 is negative (<anoxic). Reduce CBIOH?
+@ ===================== Continuing.
+  Cogito ergo sum.
+
+Dissolved Oxygen: dox[6] = -2.898011e-02 mol/m3
+@ ======================== Warning.
+derivs(): Diss. O2 is negative (<anoxic). Reduce CBIOH?
+@ ===================== Continuing.
+  Cogito ergo sum.
+
+Dissolved Oxygen: dox[7] = -1.144366e-02 mol/m3
+@ ======================== Warning.
+derivs(): Diss. O2 is negative (<anoxic). Reduce CBIOH?
+@ ===================== Continuing.
+  Cogito ergo sum.
+
+Dissolved Oxygen: dox[8] = -2.286845e-02 mol/m3
+@ ======================== Warning.
+derivs(): Diss. O2 is negative (<anoxic). Reduce CBIOH?
+@ ===================== Continuing.
+  Cogito ergo sum.
+
+Dissolved Oxygen: dox[9] = -2.414919e-02 mol/m3
+@ ======================== Warning.
+derivs(): Diss. O2 is negative (<anoxic). Reduce CBIOH?
+@ ===================== Continuing.
+  Cogito ergo sum.
+
+Dissolved Oxygen: dox[12] = -4.050016e-02 mol/m3
+@ ======================== Warning.
+derivs(): Diss. O2 is negative (<anoxic). Reduce CBIOH?
+@ ===================== Continuing.
+  Cogito ergo sum.
+
+Dissolved Oxygen: dox[13] = -1.367241e-02 mol/m3
+@ ======================== Warning.
+derivs(): Diss. O2 is negative (<anoxic). Reduce CBIOH?
+@ ===================== Continuing.
+  Cogito ergo sum.
+
+[H+] = -7.244753e-09
+[H+] iteration did not converge after 50 steps
+[H+] < 0. Your ALK/DIC ratio may be too high
+@ ======================== Error.
+csys(): check CO2 system input
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+
+LowLat PO4[1] = -4.984110e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -1.814409e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Warning.
+writedat(): Dissolved O2 was low during this run.
+Check output. Oxygen demand exceeded supply.
+O2 Uptake reduced using Michaelis-Menten kinetics.
+@ ===================== Continuing.
+  Cogito ergo sum.
+
+LowLat PO4[1] = -9.665701e-08 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -2.129379e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+
+@ ======================== Warning.
+writedat(): Dissolved O2 was low during this run.
+Check output. Oxygen demand exceeded supply.
+O2 Uptake reduced using Michaelis-Menten kinetics.
+@ ===================== Continuing.
+  Cogito ergo sum.
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -2.941865e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+
+@ ======================== Warning.
+writedat(): Dissolved O2 was low during this run.
+Check output. Oxygen demand exceeded supply.
+O2 Uptake reduced using Michaelis-Menten kinetics.
+@ ===================== Continuing.
+  Cogito ergo sum.
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Warning.
+writedat(): Dissolved O2 was low during this run.
+Check output. Oxygen demand exceeded supply.
+O2 Uptake reduced using Michaelis-Menten kinetics.
+@ ===================== Continuing.
+  Cogito ergo sum.
+┌ Warning: Iteration 20
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:134
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -9.940125e-10 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -3.322358e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -5.655072e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+
+LowLat PO4[1] = -4.165601e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+┌ Warning: Iteration 21
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:134
+
+@ ======================== Warning.
+writedat(): Dissolved O2 was low during this run.
+Check output. Oxygen demand exceeded supply.
+O2 Uptake reduced using Michaelis-Menten kinetics.
+@ ===================== Continuing.
+  Cogito ergo sum.
+
+@ ======================== Warning.
+writedat(): Dissolved O2 was low during this run.
+Check output. Oxygen demand exceeded supply.
+O2 Uptake reduced using Michaelis-Menten kinetics.
+@ ===================== Continuing.
+  Cogito ergo sum.
+
+[H+] = 5.003341e-06
+[H+] iteration did not converge after 50 steps
+@ ======================== Error.
+csys(): check CO2 system input
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -3.270313e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -8.036739e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -1.660887e-05 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -2.766013e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -2.470982e-08 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -3.493742e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -3.101709e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -5.356923e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+┌ Warning: Iteration 22
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:134
+
+LowLat PO4[1] = -7.342018e-08 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -4.639794e-06 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+[H+] = -1.253355e-09
+[H+] iteration did not converge after 50 steps
+[H+] < 0. Your ALK/DIC ratio may be too high
+@ ======================== Error.
+csys(): check CO2 system input
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -8.494098e-08 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -2.274158e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -4.500438e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -1.265890e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Warning.
+writedat(): Dissolved O2 was low during this run.
+Check output. Oxygen demand exceeded supply.
+O2 Uptake reduced using Michaelis-Menten kinetics.
+@ ===================== Continuing.
+  Cogito ergo sum.
+
+LowLat PO4[1] = -1.448517e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+[H+] = 1.565304e-05
+[H+] iteration did not converge after 50 steps
+@ ======================== Error.
+csys(): check CO2 system input
+Writing output (.dat) files for error check
+
+LowLat PO4[1] = -2.443900e-05 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -2.543194e-05 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -1.303722e-06 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+┌ Warning: Iteration 23
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:134
+
+@ ======================== Warning.
+writedat(): Dissolved O2 was low during this run.
+Check output. Oxygen demand exceeded supply.
+O2 Uptake reduced using Michaelis-Menten kinetics.
+@ ===================== Continuing.
+  Cogito ergo sum.
+
+@ ======================== Warning.
+writedat(): Dissolved O2 was low during this run.
+Check output. Oxygen demand exceeded supply.
+O2 Uptake reduced using Michaelis-Menten kinetics.
+@ ===================== Continuing.
+  Cogito ergo sum.
+
+[H+] = -1.572891e-09
+[H+] iteration did not converge after 50 steps
+[H+] < 0. Your ALK/DIC ratio may be too high
+@ ======================== Error.
+csys(): check CO2 system input
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -7.040226e-08 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -6.200770e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+
+LowLat PO4[1] = -1.830892e-08 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -2.098613e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -8.881109e-08 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+
+@ ======================== Warning.
+writedat(): Dissolved O2 was low during this run.
+Check output. Oxygen demand exceeded supply.
+O2 Uptake reduced using Michaelis-Menten kinetics.
+@ ===================== Continuing.
+  Cogito ergo sum.
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -6.923731e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+[H+] = -1.390153e-09
+[H+] iteration did not converge after 50 steps
+[H+] < 0. Your ALK/DIC ratio may be too high
+@ ======================== Error.
+csys(): check CO2 system input
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -2.366840e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -1.611662e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+┌ Warning: Iteration 24
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:134
+
+LowLat PO4[1] = -7.702679e-08 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+
+@ ======================== Warning.
+writedat(): Dissolved O2 was low during this run.
+Check output. Oxygen demand exceeded supply.
+O2 Uptake reduced using Michaelis-Menten kinetics.
+@ ===================== Continuing.
+  Cogito ergo sum.
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+[H+] = 1.128170e-05
+[H+] iteration did not converge after 50 steps
+@ ======================== Error.
+csys(): check CO2 system input
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -1.664763e-08 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+
+LowLat PO4[1] = -5.829122e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -8.597699e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -1.914523e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -8.005689e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+┌ Warning: Iteration 25
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:134
+
+LowLat PO4[1] = -6.305886e-08 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -4.846499e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -5.802125e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Warning.
+writedat(): Dissolved O2 was low during this run.
+Check output. Oxygen demand exceeded supply.
+O2 Uptake reduced using Michaelis-Menten kinetics.
+@ ===================== Continuing.
+  Cogito ergo sum.
+
+@ ======================== Warning.
+writedat(): Dissolved O2 was low during this run.
+Check output. Oxygen demand exceeded supply.
+O2 Uptake reduced using Michaelis-Menten kinetics.
+@ ===================== Continuing.
+  Cogito ergo sum.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+@ ======================== Error.
+derivs(): fc < 0.0. Reduce EPSLV? Raise FCSML?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -1.240579e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -6.166825e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -1.621329e-09 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -4.056528e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -5.435119e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+
+@ ======================== Warning.
+writedat(): Dissolved O2 was low during this run.
+Check output. Oxygen demand exceeded supply.
+O2 Uptake reduced using Michaelis-Menten kinetics.
+@ ===================== Continuing.
+  Cogito ergo sum.
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -1.118394e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+
+LowLat PO4[1] = -5.402686e-08 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -7.706221e-09 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -4.580038e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -1.147393e-07 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+
+LowLat PO4[1] = -1.171877e-05 mol/m3
+@ ======================== Error.
+derivs(): LowLat PO4 is negative. Reduce FBIOL?
+Writing output (.dat) files for error check
+@ ====================== Exiting.
+  Errare humanum est.
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155
+┌ Warning: LOSCAR may have failed, or tmv.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:141
+┌ Warning: LOSCAR may have failed, or pco2a.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:147
+┌ Warning: LOSCAR may have failed, or d13c.dat not found
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/runloscarp.jl:155

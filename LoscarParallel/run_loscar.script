@@ -3,11 +3,11 @@
 #SBATCH -J run_loscar
 #SBATCH -o %j.txt
 #SBATCH -e %j.err
-#SBATCH --nodes=1
+#SBATCH --nodes=16
 #SBATCH --ntasks-per-node=16
-#SBATCH --time=12:00:00
+#SBATCH --time=24:00:00
 #SBATCH --mail-type=BEGIN,END,FAIL
 
 module load openmpi/4.0.1-gnu4.8.5
 
-mpirun -n 16 ./runloscarmcmc.bash
+mpirun -n 256 ./runloscarmcmc.bash

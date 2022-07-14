@@ -1,0 +1,9 @@
+┌ Warning: Iteration 1
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:147
+┌ Warning: Iteration 2
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:147
+┌ Warning: Iteration 3
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:147
+┌ Warning: Iteration 4
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:147
+slurmstepd: error: *** JOB 3999548 ON k37 CANCELLED AT 2022-07-14T09:12:10 ***

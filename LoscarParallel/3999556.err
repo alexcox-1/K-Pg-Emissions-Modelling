@@ -1,0 +1,19 @@
+--------------------------------------------------------------------------
+No OpenFabrics connection schemes reported that they were able to be
+used on a specific port.  As such, the openib BTL (OpenFabrics
+support) will be disabled for this port.
+
+  Local host:           q03
+  Local device:         qedr0
+  Local port:           1
+  CPCs attempted:       rdmacm, udcm
+--------------------------------------------------------------------------
+[k39.hpcc.dartmouth.edu:21195] 47 more processes have sent help message help-mpi-btl-openib-cpc-base.txt / no cpcs for port
+[k39.hpcc.dartmouth.edu:21195] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[q03][[16008,1],223][btl_tcp_endpoint.c:626:mca_btl_tcp_endpoint_recv_connect_ack] received unexpected process identifier [[16008,1],214]
+[q04][[16008,1],224][btl_tcp_endpoint.c:626:mca_btl_tcp_endpoint_recv_connect_ack] received unexpected process identifier [[16008,1],232]
+[q04][[16008,1],239][btl_tcp_endpoint.c:626:mca_btl_tcp_endpoint_recv_connect_ack] received unexpected process identifier [[16008,1],238]
+[q05][[16008,1],240][btl_tcp_endpoint.c:626:mca_btl_tcp_endpoint_recv_connect_ack] received unexpected process identifier [[16008,1],249]
+┌ Warning: Iteration 1
+└ @ Main /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:147
+slurmstepd: error: *** JOB 3999556 ON k39 CANCELLED AT 2022-07-14T09:25:39 ***

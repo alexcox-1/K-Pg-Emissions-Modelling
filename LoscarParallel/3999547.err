@@ -1,0 +1,210 @@
+ERROR: ERROR: ERROR: ERROR: ERROR: ERROR: ERROR: ERROR: ERROR: ERROR: ERROR: ERROR: ERROR: ERROR: ERROR: ERROR: LoadError: LoadError: LoadError: LoadError: LoadError: LoadError: LoadError: LoadError: LoadError: LoadError: LoadError: LoadError: LoadError: LoadError: LoadError: LoadError: ArgumentError: indexed assignment with a single value to possibly many locations is not supported; perhaps use broadcasting `.=` instead?
+Stacktrace:
+ [1] ArgumentError: indexed assignment with a single value to possibly many locations is not supported; perhaps use broadcasting `.=` instead?
+Stacktrace:
+ [1] ArgumentError: indexed assignment with a single value to possibly many locations is not supported; perhaps use broadcasting `.=` instead?ArgumentError: 
+Stacktrace:indexed assignment with a single value to possibly many locations is not supported; perhaps use broadcasting `.=` instead?ArgumentError: indexed assignment with a single value to possibly many locations is not supported; perhaps use broadcasting `.=` instead?
+Stacktrace:
+
+
+Stacktrace:
+  [1]  [1] [1] ArgumentError: indexed assignment with a single value to possibly many locations is not supported; perhaps use broadcasting `.=` instead?
+Stacktrace:
+ [1] ArgumentError: indexed assignment with a single value to possibly many locations is not supported; perhaps use broadcasting `.=` instead?
+Stacktrace:
+ [1] ArgumentError: indexed assignment with a single value to possibly many locations is not supported; perhaps use broadcasting `.=` instead?
+Stacktrace:
+ [1] ArgumentError: indexed assignment with a single value to possibly many locations is not supported; perhaps use broadcasting `.=` instead?
+Stacktrace:
+ [1] ArgumentError: indexed assignment with a single value to possibly many locations is not supported; perhaps use broadcasting `.=` instead?
+Stacktrace:
+ [1] ArgumentError: indexed assignment with a single value to possibly many locations is not supported; perhaps use broadcasting `.=` instead?
+Stacktrace:
+ [1] ArgumentError: indexed assignment with a single value to possibly many locations is not supported; perhaps use broadcasting `.=` instead?ArgumentError: 
+Stacktrace:indexed assignment with a single value to possibly many locations is not supported; perhaps use broadcasting `.=` instead?
+
+Stacktrace:
+  [1] [1] ArgumentError: indexed assignment with a single value to possibly many locations is not supported; perhaps use broadcasting `.=` instead?
+Stacktrace:
+ [1] ArgumentError: indexed assignment with a single value to possibly many locations is not supported; perhaps use broadcasting `.=` instead?
+Stacktrace:
+ [1] ArgumentError: indexed assignment with a single value to possibly many locations is not supported; perhaps use broadcasting `.=` instead?
+Stacktrace:
+ [1] setindex_shape_checksetindex_shape_check(::(::setindex_shape_check(::setindex_shape_check(::setindex_shape_check(::setindex_shape_check(::setindex_shape_checksetindex_shape_check(::(::setindex_shape_check(::setindex_shape_check(::setindex_shape_checksetindex_shape_check((::::setindex_shape_check(::setindex_shape_check(::setindex_shape_check(::setindex_shape_check(::Float64, ::Float64Int64)Float64
+   @ Float64, ::, ::Int64)Int64)
+
+   @    @ , ::Int64)
+   @ Float64, ::Int64)
+   @ Float64, ::Int64)
+   @ Float64Float64, ::Int64)
+   @ , ::Int64)
+   @ Float64Float64, ::Int64)
+   @ , ::Int64)
+   @ Float64, ::Int64)Float64
+   @ , ::Int64)
+   @ Float64, ::Int64)
+   @ Float64, ::Int64)
+   @ Float64, ::Int64)
+   @ Float64, ::Int64)
+   @ Base ./Base BaseBase ././ ./Base ./Base ./Base ./Base ./Base ./BaseBaseBase  ./ ././Base ./Base ./Base ./Base ./indices.jl:261
+ [2] _unsafe_setindex!(indices.jl:261
+ [2] _unsafe_setindex!(indices.jl:261indices.jl:261indices.jl:261
+
+
+  [2]  [2] _unsafe_setindex!(_unsafe_setindex!([2] _unsafe_setindex!(indices.jl:261
+ [2] _unsafe_setindex!(indices.jl:261indices.jl:261
+ [2] _unsafe_setindex!
+( [2] _unsafe_setindex!(indices.jl:261
+ [2] _unsafe_setindex!(indices.jl:261
+ [2] _unsafe_setindex!indices.jl:261(
+indices.jl:261 [2] 
+_unsafe_setindex! ([2] _unsafe_setindex!(indices.jl:261
+ [2] _unsafe_setindex!(indices.jl:261
+ [2] _unsafe_setindex!(indices.jl:261
+ [2] _unsafe_setindex!(#unused#::#unused##unused#IndexLinear, A::::#unused#IndexLinear, A::::IndexLinear::IndexLinear, A::, A::indices.jl:261
+ [2] _unsafe_setindex!Vector{Float64}, x::Float64, I::(Vector#unused#Vector{Float64}, ::x::Float64, IndexLinear, I::A::{Float64}, x::Vector{Float64}, x::Float64, I::Float64, I::UnitRange{Int64})UnitRange{Int64}
+)
+   @ Base    @ Base ././multidimensional.jl:903
+ multidimensional.jl:903
+[3] [3] _setindex!UnitRange{Int64}
+   @ )
+./   @ Basemultidimensional.jl:894 [inlined]
+ ./ [4] multidimensional.jl:903
+setindex!(A::  _setindex!
+   @ ./multidimensional.jl:894 [inlined]
+[3] _setindex! 
+   @ ./multidimensional.jl:894 [inlined]UnitRange{Int64}
+)
+   @  [4] Base ./setindex!(Amultidimensional.jl:903::
+[4]  setindex!(A::[3] _setindex!
+   @ ./multidimensional.jl:894Vector{Float64}, x::Float64, I:: [inlined]
+ [4]Vector setindex!(A::{Float64}, v::Float64, Vector{Float64}, v::VectorFloat64, {Float64}, v::I::Float64, I::UnitRange{Int64})
+   @ Base I::./multidimensional.jl:903
+ [3] _setindex!
+   @ ./UnitRangemultidimensional.jl:894 [inlined]
+Vector{Float64}, v::UnitRange{Int64})
+ [4] Float64, I::   @ Base ./abstractarray.jl:1315
+setindex!(A::UnitRange{Int64} [5] )
+   @ top-level scope
+   @ Base ./abstractarray.jl:1315/dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:64
+
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+ [5] top-level scope
+   @ {Int64})
+/dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/   @ Base ./abstractarray.jl:1315
+ [5] top-level scope
+   @ /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:64
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+loscarmcmcp.jl:64
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+UnitRange{Int64})
+   @ Base ./abstractarray.jl:1315Vector{Float64}, v::Float64, I::
+ [5] top-level scope
+   @ /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/#unused#loscarmcmcp.jl:64
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+::UnitRange{Int64})
+   @ Base ./abstractarray.jl:1315
+ [5] top-level scope
+   @ /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/IndexLinear, A::loscarmcmcp.jl:64
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+Vector{Float64}, x::Float64, I::UnitRange{Int64})
+   @ Base ./multidimensional.jl:903
+ [3] _setindex!
+   @ ./multidimensional.jl:894 [inlined]
+ [4] setindex!(A::Vector{Float64}, v::Float64, I::UnitRange{Int64})
+   @ Base ./abstractarray.jl:1315
+ [5] top-level scope
+   @ /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:64
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+#unused#::IndexLinear, A#unused#::::IndexLinear, A::Vector{Float64}, x::Float64, IVector::{Float64}, x::Float64, I::UnitRange{Int64})
+   @ Base UnitRange{Int64}./)
+multidimensional.jl:903   @ 
+Base ./ [3] multidimensional.jl:903
+_setindex!
+   @ ./multidimensional.jl:894 [inlined]
+ [3] _setindex!
+   @  [4] ./multidimensional.jl:894 [inlined]
+setindex!(A:: [4] setindex!(A::Vector{Float64}, v::Float64, I::Vector{Float64}, v::Float64, I::UnitRange{Int64})
+   @ Base ./abstractarray.jl:1315UnitRange{Int64}
+)
+   @ Base [5]  ./top-level scope
+abstractarray.jl:1315
+   @  [5] /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:64top-level scope
+
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+   @ /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:64
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+#unused#::IndexLinear, A::Vector{Float64}, x::Float64, I::#unused#::#unused#IndexLinear, A::::IndexLinear, A::#unused#::IndexLinear, UnitRangeA::{Int64})
+   @ Base ./multidimensional.jl:903
+ [3] _setindex!
+   @ ./multidimensional.jl:894 [inlined]
+ [4] setindex!(A::Vector{Float64}, v::Float64, I::Vector{Float64}Vector, {Float64}, xx::Float64::, IFloat64, I::::Vector{Float64}, x::Float64, I::UnitRange{Int64})
+   @ Base ./abstractarray.jl:1315
+ [5] top-level scope
+   @ /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:64
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+UnitRange{Int64}UnitRange{Int64}))
+
+   @ Base   @  Base ././multidimensional.jl:903multidimensional.jl:903
+
+ [3]  [3]_setindex! UnitRange{Int64}
+   @ ./_setindex!
+   @ multidimensional.jl:894)
+./multidimensional.jl:894   @ Base  [inlined]
+  [inlined]
+[4]./ [4]  multidimensional.jl:903
+setindex!setindex!(A(A:::: [3] _setindex!
+   @ ./multidimensional.jl:894 [inlined]
+ [4] setindex!(A::VectorVector{Float64}{Float64}, , vv::Float64::Float64, , I::I::Vector{Float64}, v::Float64, I::UnitRange{Int64})UnitRange
+   @ {Int64})Base 
+   @ ./abstractarray.jl:1315Base 
+./abstractarray.jl:1315 [5]
+ top-level scope
+   @  [5] UnitRange{Int64}top-level scope/dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/)
+
+   @ loscarmcmcp.jl:64
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8   @ Base 
+./abstractarray.jl:1315/dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/
+loscarmcmcp.jl:64
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8 [5] 
+top-level scope
+   @ /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:64
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+#unused#::IndexLinear, A::Vector{Float64}, x::Float64, I::#unused#::IndexLinear, A::UnitRange{Int64})
+   @ Base ./multidimensional.jl:903
+ [3] _setindex!
+   @ ./multidimensional.jl:894 [inlined]
+ [4] setindex!(A::Vector{Float64}, x::Float64, I::Vector{Float64}, UnitRange{Int64})
+   @ Base ./v::multidimensional.jl:903Float64, I::
+ [3] _setindex!
+   @ ./multidimensional.jl:894 [inlined]
+ UnitRange{Int64})
+   @ Base ./abstractarray.jl:1315
+ [5] top-level scope
+   @ [4] /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/setindex!(A::loscarmcmcp.jl:64
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+#unused#::IndexLinear, AVector::{Float64}, v::Float64, I::UnitRange{Int64})
+   @ Base ./abstractarray.jl:1315Vector
+ [5] top-level scope
+   @ {Float64}, x::/dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/Float64, I::loscarmcmcp.jl:64
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+UnitRange{Int64})
+   @ Base ./multidimensional.jl:903
+ [3] _setindex!
+   @ ./multidimensional.jl:894 [inlined]
+ [4] setindex!(A::Vector{Float64}, v::Float64, I::UnitRange{Int64})
+   @ Base ./abstractarray.jl:1315
+ [5] top-level scope
+   @ /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:64
+in expression starting at /dartfs-hpc/scratch/alex/K-Pg-Emissions-Modelling/LoscarParallel/loscarmcmcp.jl:8
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[35306,1],0]
+  Exit code:    1
+--------------------------------------------------------------------------
