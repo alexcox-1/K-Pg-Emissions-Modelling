@@ -94,9 +94,11 @@ void derivs(double t,double *y, double *yp)
  /*DP: flux of H2SO4 from volcanic degassing*/
  double fso4;
 
- /*AC: export reduction factor*/
- double ExpReduction=1;
-    
+ /*AC: export increase factor*/
+ double ExpFactor=1;
+ /*AC: multiplicative factor that increases all remineralization (1 is 'normal', 1.5 is 'more remineralization') 
+  1.0025 is good postextinction 0.9995 pre-extinction */
+ double ReminFactor=0.9995;
  double *eplvcc,*ealvcc,*eclvcc,*exlvcc,ephcc,eahcc,echcc,exhcc,
 	    *rccb,pcco2a,ccatmp;
  char mssg[BUFSIZ];	
@@ -203,7 +205,7 @@ void derivs(double t,double *y, double *yp)
  }
 
  if(expflag == 1){
-      ExpReduction = finterp(t,tExp,yExp,ltExp,0);
+      ExpFactor = finterp(t,tExp,yExp,ltExp,0);
  }
  
 
@@ -240,11 +242,12 @@ void derivs(double t,double *y, double *yp)
    fwarn("derivs(): HighLat PO4 is negative. Increase initial PO4?");
  }
 
- /* error if low-lat PO4 < 0 */
+ /* error if low-lat PO4 < 0 MODIFIED by AC*/
  for(k=1;k<=NLS;k++){	
   if(po4[k] < 0.0){
-    fprintf(stderr,"\nLowLat PO4[%d] = %e mol/m3",k,po4[k]);
-    ferrwrt("derivs(): LowLat PO4 is negative. Reduce FBIOL?");
+    /* fprintf(stderr,"\nLowLat PO4[%d] = %e mol/m3",k,po4[k]);
+    fwarn("derivs(): LowLat PO4 is negative. Reduce FBIOL?"); */
+    po4[k] = 0.0;
   }
  }	
 
@@ -591,12 +594,20 @@ if(NCCATM == 1){
  /*=========== Biological Pump ==================*/
  /* Low Lat Export Corg                          */
    
-    eplv[1]=ExpReduction*0.8*8.0956926743874953125e13; /*Atlantic*/
-    eplv[2]=ExpReduction*0.8*8.2702707475210890625e13; /*Indian*/
-    eplv[3]=ExpReduction*0.8*1.39160302612395453125e14; /*Pacific*/
-    eplv[4]=ExpReduction*0.8*6.4594032486555375e13; /*Tethys*/
+    eplv[1]=ExpFactor*0.8*8.0956926743874953125e13; /*Atlantic*/
+    eplv[2]=ExpFactor*0.8*8.2702707475210890625e13; /*Indian*/
+    eplv[3]=ExpFactor*0.8*1.39160302612395453125e14; /*Pacific*/
+    eplv[4]=ExpFactor*0.8*6.4594032486555375e13; /*Tethys*/
     
-    rrain = 7.0*(1-0.85*(1-ExpReduction));
+    if(t < 500001)
+    {
+    rrain=7.7*ExpFactor;
+    } else 
+    {  
+    rrain = 6.3*ExpFactor;
+    }
+    
+
     
     
     /* Low Lat Export Other */
@@ -654,11 +665,20 @@ if(NCCATM == 1){
     }
     
 
-    frei=0.85;
+    frei=0.80;
     
     
  /* fraction EPL, remineralized in I boxes */
  oi = 1.-frei;
+  
+  if(t < 500001)
+  {
+    ReminFactor=0.9995;
+  } else 
+  {
+    ReminFactor=1.002;
+  }
+
 
 #ifdef FSED
  /* CaCO3 export AIP (Atl, Ind, Pac) mol/y */
@@ -1103,8 +1123,8 @@ if(NCATM == 1){
 /* bio pump Corg */
  for(k=1;k<=NOC;k++){
      dicp[m1[k]]   +=         -eclv[k]/vb[m1[k]]  ; /* L                 */
-     dicp[m2[k]+3] +=     frei*exlv[k]/vb[m2[k]+3]; /* I #!  EC or EP    */
-     dicp[m3[k]+6] +=       oi*exlv[k]/vb[m3[k]+6]; /* D #!(tot or Corg) */
+     dicp[m2[k]+3] +=     ReminFactor*frei*exlv[k]/vb[m2[k]+3]; /* I #!  EC or EP    */
+     dicp[m3[k]+6] +=       ReminFactor*oi*exlv[k]/vb[m3[k]+6]; /* D #!(tot or Corg) */
      dicp[m3[k]+6] += 0.5*nuwd*ealv[k]/vb[m3[k]+6]; /* D ClmnDiss        */
  }	
  dicp[10] -=  ech/vb[10];                   /* H            */
@@ -1130,8 +1150,8 @@ if(NCATM == 1){
  /* bio pump CaCO3, Aorg */
  for(k=1;k<=NOC;k++){
    alkp[m1[k]]   +=          -ealv[k]/vb[m1[k]]  +enlv[k]/vb[m1[k]]   ; 
-   alkp[m2[k]+3] += frei*(sdn*ealv[k]/vb[m2[k]+3]-enlv[k]/vb[m2[k]+3]); 
-   alkp[m3[k]+6] +=   oi*(sdn*ealv[k]/vb[m3[k]+6]-enlv[k]/vb[m3[k]+6]);
+   alkp[m2[k]+3] += ReminFactor*frei*(sdn*ealv[k]/vb[m2[k]+3]-enlv[k]/vb[m2[k]+3]); 
+   alkp[m3[k]+6] +=   ReminFactor*oi*(sdn*ealv[k]/vb[m3[k]+6]-enlv[k]/vb[m3[k]+6]);
    alkp[m3[k]+6] +=	     nuwd*ealv[k]/vb[m3[k]+6]  ; /* D ClmnDiss */
  }
  alkp[10] += -eah/vb[10] + enh/vb[10];
@@ -1157,8 +1177,8 @@ if(NCATM == 1){
  /* bio pump Porg */
  for(k=1;k<=NOC;k++){
      po4p[m1[k]]   -=      pplv[k]/vb[m1[k]]  ;
-     po4p[m2[k]+3] += frei*pplv[k]/vb[m2[k]+3];
-     po4p[m3[k]+6] +=   oi*pplv[k]/vb[m3[k]+6];
+     po4p[m2[k]+3] += (ReminFactor>1 ? ReminFactor : 1)*frei*pplv[k]/vb[m2[k]+3];
+     po4p[m3[k]+6] += (ReminFactor>1 ? ReminFactor : 1)*oi*pplv[k]/vb[m3[k]+6];
  }
  po4p[10] -= pph/vb[10];
  for(k=7;k<=9;k++)
@@ -1194,8 +1214,8 @@ if(NOCT >= 5){
  /* bio pump O2 */
  for(k=1;k<=NOC;k++){
    doxp[m1[k]]   +=                    eplv[k]*REDO2C/vb[m1[k]]  ; /* L */
-   doxp[m2[k]+3] -= frei*fmmo[m2[k]+3]*eplv[k]*REDO2C/vb[m2[k]+3]; /* I */
-   doxp[m3[k]+6] -=   oi*fmmo[m3[k]+6]*eplv[k]*REDO2C/vb[m3[k]+6]; /* D */
+   doxp[m2[k]+3] -= ReminFactor*frei*fmmo[m2[k]+3]*eplv[k]*REDO2C/vb[m2[k]+3]; /* I */
+   doxp[m3[k]+6] -=   ReminFactor*oi*fmmo[m3[k]+6]*eplv[k]*REDO2C/vb[m3[k]+6]; /* D */
  }	
  doxp[10] +=  eph*REDO2C/vb[10];               /* H */
  for(k=7;k<=9;k++){                            /* DA,DI,DP */
@@ -1219,8 +1239,8 @@ if(NCCATM == 1){
  /* bio pump Corg */
  for(k=1;k<=NOC;k++){
      diccp[m1[k]]   +=         -eclvcc[k]/vb[m1[k]]  ; /* L                 */
-     diccp[m2[k]+3] +=     frei*exlvcc[k]/vb[m2[k]+3]; /* I #!  EC or EP    */
-     diccp[m3[k]+6] +=       oi*exlvcc[k]/vb[m3[k]+6]; /* D #!(tot or Corg) */
+     diccp[m2[k]+3] +=     ReminFactor*frei*exlvcc[k]/vb[m2[k]+3]; /* I #!  EC or EP    */
+     diccp[m3[k]+6] +=       ReminFactor*oi*exlvcc[k]/vb[m3[k]+6]; /* D #!(tot or Corg) */
      diccp[m3[k]+6] += 0.5*nuwd*ealvcc[k]/vb[m3[k]+6]; /* D ClmnDiss        */
  }	
  diccp[10] -=  echcc/vb[10];                   /* H            */
