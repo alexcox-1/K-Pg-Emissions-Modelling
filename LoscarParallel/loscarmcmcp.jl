@@ -149,7 +149,7 @@ let
             MPI.Allgather!(logsvals, all_log_s, comm)
             MPI.Allgather!(logexpvals, all_log_exp, comm)
             MPI.Allgather!(lldist[i:i], all_lls, comm)
-            MPI.Allgather!(co2doublingrate,all_co2doublingrate,comm)
+            MPI.Allgather!(co2doublingrate[i:i],all_co2doublingrate,comm)
             # Choose which proposal we want to adopt
             all_lls .-= maximum(all_lls) # rescale
             all_lls .= exp.(all_lls) # Convert to plain (relative) likelihoods
@@ -265,7 +265,7 @@ let
         lldist[i] = ll;
         co2dist[:,i] = logco2vals;
         sdist[:,i] = logsvals;
-        doubledist[:,i] = co2doublingrate;
+        doubledist[i] = co2doublingrate;
         expdist[:,i] = logexpvals;
         tempwsulfarray[:,i] = mu;
         d13carray[:,i] = d13cmu;
