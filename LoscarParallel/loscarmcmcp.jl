@@ -142,7 +142,6 @@ let
         copyto!(logsvalsᵣ,logsvals);
         copyto!(logexpvalsᵣ,logexpvals);
         co2doublingrateᵣ = co2doublingrate;
-        @warn "co2 doubling rate is $co2doublingrateᵣ"
         # Exchange proposals, sometimes
         if i % num_per_exchange == 0 && i > 1
             # Exchange current proposals across all MPI tasks
@@ -166,7 +165,6 @@ let
             logsvalsᵣ .= view(all_log_s, :, chosen)
             logexpvalsᵣ .= view(all_log_exp, :, chosen)
             co2doublingrateᵣ = all_co2doublingrate[chosen]
-            @warn "co2 rate is $co2doublingrateᵣ"
         end
         # choose which indices to perturb
         randhalfwidth = halfwidthc * rand()*length(co2vals)
