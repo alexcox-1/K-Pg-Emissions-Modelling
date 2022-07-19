@@ -96,7 +96,7 @@ let
         end
         ll = normpdf_ll(temp,temperror,mu) + normpdf_ll(d13cvals,d13cerror,d13cmu) + normpdf_ll(d13cbvals,d13cberror,d13cbmu) + normpdf_ll(3,0.1,co2doublingrate);
     end
-    numiter = 10;
+    numiter = 5;
     num_per_exchange = 1;
     ## monte carlo loop
     # perturb one of the co2 vals and one of the svals
@@ -149,7 +149,7 @@ let
             MPI.Allgather!(logsvals, all_log_s, comm)
             MPI.Allgather!(logexpvals, all_log_exp, comm)
             MPI.Allgather!(lldist[i:i], all_lls, comm)
-            MPI.Allgather!(co2doublingrate[i:i],all_co2doublingrate,comm)
+            MPI.Allgather!(doubledist[i:i],all_co2doublingrate,comm)
             # Choose which proposal we want to adopt
             all_lls .-= maximum(all_lls) # rescale
             all_lls .= exp.(all_lls) # Convert to plain (relative) likelihoods
