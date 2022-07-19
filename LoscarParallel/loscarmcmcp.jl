@@ -145,13 +145,13 @@ let
         co2doublingrateᵣ = co2doublingrate;
         @warn "co2 doubling rate is $co2doublingrateᵣ"
         # Exchange proposals, sometimes
-        if i % num_per_exchange == 0
+        if i % num_per_exchange == 0 && i > 1
             # Exchange current proposals across all MPI tasks
             MPI.Allgather!(logco2vals, all_log_co2, comm)
             MPI.Allgather!(logsvals, all_log_s, comm)
             MPI.Allgather!(logexpvals, all_log_exp, comm)
-            MPI.Allgather!(lldist[i:i], all_lls, comm)
-            MPI.Allgather!(co2doublingrate,all_co2doublingrate,comm)
+            MPI.Allgather!(lldist[i-1:i-1], all_lls, comm)
+            MPI.Allgather!(doubledist[i-1:i-1],all_co2doublingrate,comm)
             # Choose which proposal we want to adopt
             all_lls .-= maximum(all_lls) # rescale
             all_lls .= exp.(all_lls) # Convert to plain (relative) likelihoods
