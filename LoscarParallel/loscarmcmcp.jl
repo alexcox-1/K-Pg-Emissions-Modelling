@@ -110,7 +110,6 @@ let
     co2doublingrateᵣ = copy(co2doublingrate);
     lldist = Array{Float64,1}(undef,numiter);
     doubledist = Array{Float64,1}(undef,numiter);
-    doubledist .= 3.0;
     co2dist = Array{Float64,2}(undef,length(logco2vals),numiter);
     sdist = Array{Float64,2}(undef,length(logsvals),numiter);
     tempwsulfarray = Array{Float64,2}(undef,length(mu),numiter);
@@ -201,7 +200,7 @@ let
 
         end
         # perturb the co2doubling rate normally 
-        co2doublingrateᵣ += (randn() / 2)
+        co2doublingrateᵣ += (randn() / 5)
         # run loscar with the new values
         tmv,pco2,loscartemp, d13csa, d13cba = runloscarp(timev,exp.(logco2valsᵣ),exp.(logsvalsᵣ),exp.(logexpvalsᵣ),co2doublingrateᵣ);
         if all(isnan.(tmv))
