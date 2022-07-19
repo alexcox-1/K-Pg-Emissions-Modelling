@@ -141,7 +141,7 @@ let
         copyto!(logco2valsᵣ,logco2vals);
         copyto!(logsvalsᵣ,logsvals);
         copyto!(logexpvalsᵣ,logexpvals);
-        copyto!(co2doublingrateᵣ,co2doublingrate);
+        co2doublingrateᵣ = co2doublingrate;
         # Exchange proposals, sometimes
         if i % num_per_exchange == 0
             # Exchange current proposals across all MPI tasks
