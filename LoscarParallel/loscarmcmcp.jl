@@ -165,6 +165,7 @@ let
             logsvalsᵣ .= view(all_log_s, :, chosen)
             logexpvalsᵣ .= view(all_log_exp, :, chosen)
             co2doublingrateᵣ = view(all_co2doublingrate, chosen)
+            @warn "co2 rate is $co2doublingrateᵣ"
         end
         # choose which indices to perturb
         randhalfwidth = halfwidthc * rand()*length(co2vals)
