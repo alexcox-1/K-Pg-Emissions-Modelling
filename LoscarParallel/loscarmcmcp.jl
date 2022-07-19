@@ -42,14 +42,14 @@ let
     # the kpg boundary is at 500 kyr.
 
 
-    # we now have a length 300 time array. let's fill it with
+    # we now have a length 400 time array. let's fill it with
     # co2 and so2 emissions.
     # characteristic Pg/y will be 0.01 - 0.1
     # change these to log
-    co2vals = zeros(300) .+ 0.02;
-    svals = zeros(300) .+ 0.01;
+    co2vals = zeros(400) .+ 0.02;
+    svals = zeros(400) .+ 0.01;
     # add the export reduction factor solved earlier
-    expvals = ones(300);
+    expvals = ones(400);
     logco2vals = log.(co2vals);
     logsvals = log.(svals);
     logexpvals = log.(expvals);
@@ -73,30 +73,30 @@ let
         # put the output temp into bins 
 
         # discard the last time val which is outside the range
-        loscartempwsulf = loscartempwsulf[loscartimebin .<= 300];
+        loscartempwsulf = loscartempwsulf[loscartimebin .<= 400];
         mu = Array{Float64,1}(undef,length(temp));
         nanbinmean!(mu,vec(tmv),loscartempwsulf,first(timev),last(timev),length(timev));
         # get rid of the internal NaNs
         mu = fillnans(mu,150);
         # get rid of the NaNs at the end
-        if isnan(mu[300])
-            mu[first(findall(x->isnan(x),mu)):300] .= mu[first(findall(x->isnan(x),mu))-1]
+        if isnan(mu[400])
+            mu[first(findall(x->isnan(x),mu)):400] .= mu[first(findall(x->isnan(x),mu))-1]
         end
         d13cmu = Array{Float64,1}(undef,length(temp));
         nanbinmean!(d13cmu,vec(tmv),d13csa,first(timev),last(timev),length(timev));
         d13cmu = fillnans(d13cmu,150);
-        if isnan(d13cmu[300])
-            d13cmu[first(findall(x->isnan(x),d13cmu)):300] .= d13cmu[first(findall(x->isnan(x),d13cmu))-1]
+        if isnan(d13cmu[400])
+            d13cmu[first(findall(x->isnan(x),d13cmu)):400] .= d13cmu[first(findall(x->isnan(x),d13cmu))-1]
         end
         d13cbmu = Array{Float64,1}(undef,length(temp));
         nanbinmean!(d13cbmu,vec(tmv),d13cba,first(timev),last(timev),length(timev));
         d13cbmu = fillnans(d13cbmu,150);
-        if isnan(d13cbmu[300])
-            d13cbmu[first(findall(x->isnan(x),d13cbmu)):300] .= d13cbmu[first(findall(x->isnan(x),d13cbmu))-1]
+        if isnan(d13cbmu[400])
+            d13cbmu[first(findall(x->isnan(x),d13cbmu)):400] .= d13cbmu[first(findall(x->isnan(x),d13cbmu))-1]
         end
-        ll = normpdf_ll(temp,temperror,mu) + normpdf_ll(d13cvals,d13cerror,d13cmu) + normpdf_ll(d13cbvals,d13cberror,d13cbmu);
+        ll = normpdf_ll(temp,temperror,mu) + normpdf_ll(d13cvals,d13cerror,d13cmu) + normpdf_ll(d13cbvals,d13cberror,d13cbmu) + normpdf_ll(3,0.1,co2doublingrate);
     end
-    numiter = 200;
+    numiter = 10;
     num_per_exchange = 1;
     ## monte carlo loop
     # perturb one of the co2 vals and one of the svals
@@ -107,7 +107,9 @@ let
     logco2valsᵣ = copy(logco2vals);
     logsvalsᵣ = copy(logsvals);
     logexpvalsᵣ = copy(logexpvals);
+    co2doublingrateᵣ = copy(co2doublingrate);
     lldist = Array{Float64,1}(undef,numiter);
+    doubledist = Array{Float64,1}(undef,numiter);
     co2dist = Array{Float64,2}(undef,length(logco2vals),numiter);
     sdist = Array{Float64,2}(undef,length(logsvals),numiter);
     tempwsulfarray = Array{Float64,2}(undef,length(mu),numiter);
@@ -118,7 +120,9 @@ let
     all_log_co2 = Array{Float64}(undef, length(logco2vals), ntasks);
     all_log_s = Array{Float64}(undef, length(logsvals), ntasks);
     all_log_exp = Array{Float64}(undef, length(logexpvals), ntasks);
+    all_co2doublingrate = Array{Float64}(undef,ntasks);
     all_lls = Array{Float64}(undef,ntasks);
+    all_doubledist = Array{Float64}(undef,ntasks);
     step_sigma_co2_array = Array{Float64,1}(undef,numiter);
     step_sigma_so2_array = Array{Float64,1}(undef,numiter);
     # do the mcmc
@@ -137,6 +141,7 @@ let
         copyto!(logco2valsᵣ,logco2vals);
         copyto!(logsvalsᵣ,logsvals);
         copyto!(logexpvalsᵣ,logexpvals);
+        copyto!(co2doublingrateᵣ,co2doublingrate);
         # Exchange proposals, sometimes
         if i % num_per_exchange == 0
             # Exchange current proposals across all MPI tasks
@@ -144,6 +149,7 @@ let
             MPI.Allgather!(logsvals, all_log_s, comm)
             MPI.Allgather!(logexpvals, all_log_exp, comm)
             MPI.Allgather!(lldist[i:i], all_lls, comm)
+            MPI.Allgather!(co2doublingrate,all_co2doublingrate,comm)
             # Choose which proposal we want to adopt
             all_lls .-= maximum(all_lls) # rescale
             all_lls .= exp.(all_lls) # Convert to plain (relative) likelihoods
@@ -158,6 +164,7 @@ let
             logco2valsᵣ .= view(all_log_co2, :, chosen)
             logsvalsᵣ .= view(all_log_s, :, chosen)
             logexpvalsᵣ .= view(all_log_exp, :, chosen)
+            co2doublingrateᵣ .= view(all_co2doublingrate, :, chosen)
         end
         # choose which indices to perturb
         randhalfwidth = halfwidthc * rand()*length(co2vals)
@@ -190,9 +197,10 @@ let
             logexpvalsᵣ[j] += randamplitudeexp * ((randmuexp-randhalfwidthexp)<j<(randmuexp+randhalfwidthexp))
 
         end
-
+        # perturb the co2doubling rate normally 
+        co2doublingrateᵣ += (randn() / 2)
         # run loscar with the new values
-        tmv,pco2,loscartemp, d13csa, d13cba = runloscarp(timev,exp.(logco2valsᵣ),exp.(logsvalsᵣ),exp.(logexpvalsᵣ),co2doublingrate);
+        tmv,pco2,loscartemp, d13csa, d13cba = runloscarp(timev,exp.(logco2valsᵣ),exp.(logsvalsᵣ),exp.(logexpvalsᵣ),co2doublingrateᵣ);
         if all(isnan.(tmv))
             llᵣ = NaN
         else
@@ -207,28 +215,28 @@ let
             # put the output temp into bins 
 
             # discard the last time val which is outside the range
-            loscartempwsulf = loscartempwsulf[loscartimebin .<= 300];
+            loscartempwsulf = loscartempwsulf[loscartimebin .<= 400];
             muᵣ = Array{Float64,1}(undef,length(temp));
             nanbinmean!(muᵣ,vec(tmv),loscartempwsulf,first(timev),last(timev),length(timev));
             # get rid of the internal NaNs
             muᵣ = fillnans(muᵣ,150);
             # get rid of the NaNs at the end
-            if isnan(muᵣ[300])
-                muᵣ[first(findall(x->isnan(x),muᵣ)):300] .= muᵣ[first(findall(x->isnan(x),muᵣ))-1]
+            if isnan(muᵣ[400])
+                muᵣ[first(findall(x->isnan(x),muᵣ)):400] .= muᵣ[first(findall(x->isnan(x),muᵣ))-1]
             end
             d13cmuᵣ = Array{Float64,1}(undef,length(temp));
             nanbinmean!(d13cmuᵣ,vec(tmv),d13csa,first(timev),last(timev),length(timev));
             d13cmuᵣ = fillnans(d13cmuᵣ,150);
-            if isnan(d13cmuᵣ[300])
-                d13cmuᵣ[first(findall(x->isnan(x),d13cmuᵣ)):300] .= d13cmuᵣ[first(findall(x->isnan(x),d13cmuᵣ))-1]
+            if isnan(d13cmuᵣ[400])
+                d13cmuᵣ[first(findall(x->isnan(x),d13cmuᵣ)):400] .= d13cmuᵣ[first(findall(x->isnan(x),d13cmuᵣ))-1]
             end
             d13cbmuᵣ = Array{Float64,1}(undef,length(temp));
             nanbinmean!(d13cbmuᵣ,vec(tmv),d13cba,first(timev),last(timev),length(timev));
             d13cbmuᵣ = fillnans(d13cbmuᵣ,150);
-            if isnan(d13cbmuᵣ[300])
-                d13cbmuᵣ[first(findall(x->isnan(x),d13cbmuᵣ)):300] .= d13cbmuᵣ[first(findall(x->isnan(x),d13cbmuᵣ))-1]
+            if isnan(d13cbmuᵣ[400])
+                d13cbmuᵣ[first(findall(x->isnan(x),d13cbmuᵣ)):400] .= d13cbmuᵣ[first(findall(x->isnan(x),d13cbmuᵣ))-1]
             end
-            llᵣ = normpdf_ll(temp,temperror,muᵣ) + normpdf_ll(d13cvals,d13cerror,d13cmuᵣ) + normpdf_ll(d13cbvals,d13cberror,d13cbmuᵣ);
+            llᵣ = normpdf_ll(temp,temperror,muᵣ) + normpdf_ll(d13cvals,d13cerror,d13cmuᵣ) + normpdf_ll(d13cbvals,d13cberror,d13cbmuᵣ) + normpdf_ll(3,0.1,co2doublingrateᵣ);
         end
 
         # is this allowed?
@@ -238,6 +246,7 @@ let
             logco2vals .= logco2valsᵣ  
             logsvals .= logsvalsᵣ  
             logexpvals .= logexpvalsᵣ
+            co2doublingrate = co2doublingrateᵣ
             co2_step_sigma = min(abs(randamplitude),1);
             so2_step_sigma = min(abs(randamplitudes),1)
             exp_step_sigma = min(abs(randamplitudeexp),0.1)
@@ -256,6 +265,7 @@ let
         lldist[i] = ll;
         co2dist[:,i] = logco2vals;
         sdist[:,i] = logsvals;
+        doubledist[:,i] = co2doublingrate;
         expdist[:,i] = logexpvals;
         tempwsulfarray[:,i] = mu;
         d13carray[:,i] = d13cmu;
@@ -269,6 +279,7 @@ let
     all_co2_dist = MPI.Gather(co2dist, 0, comm)
     all_s_dist = MPI.Gather(sdist, 0, comm)
     all_exp_dist = MPI.Gather(expdist,0,comm)
+    all_doubledist = MPI.Gather(doubledist,0,comm)
     all_temps = MPI.Gather(tempwsulfarray, 0, comm)
     all_d13c = MPI.Gather(d13carray,0,comm)
     all_d13cb = MPI.Gather(d13cbarray,0,comm)
@@ -279,6 +290,7 @@ let
         writedlm("$loscdir/all_ll_dist.csv",all_ll_dist,',')
         writedlm("$loscdir/all_co2_dist.csv",all_co2_dist,',')
         writedlm("$loscdir/all_s_dist.csv",all_s_dist,',')
+        writedlm("$loscdir/all_doubledist.csv",all_doubledist,',')
         writedlm("$loscdir/all_exp_dist.csv",all_exp_dist,',')
         writedlm("$loscdir/all_temps.csv",all_temps,',')
         # writedlm("$loscdir/all_co2_step.csv",all_co2_step,',')

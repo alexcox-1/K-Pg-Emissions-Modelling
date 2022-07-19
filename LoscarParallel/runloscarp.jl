@@ -129,7 +129,7 @@ function runloscarp(timevals,CO2vals,Svals,Expvals,co2doubling)
     #system(loscarmake)
     
     
-    	loscarrun = "./LoscarParallel/doalarm 420 ./LoscarParallel/loscar.x deccan.inp"
+    	loscarrun = "./LoscarParallel/doalarm 900 ./LoscarParallel/loscar.x deccan.inp"
     	loscarstatus = system(loscarrun)
     
 	

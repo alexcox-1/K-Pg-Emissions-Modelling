@@ -1,11 +1,10 @@
 
     RESTART dat/deccanrestart.dat
-    SVSTART dat/deccanrestart.dat
     EMSFILE dat/Emss/deccan_CO2emss.dat
     SEMSFILE dat/Emss/deccan_Semss.dat
     EXPFILE dat/Emss/deccan_Exp.dat
     TSTART  0
-    TFINAL  1.495e6
+    TFINAL  1.995e6
     CINP    0
     D13CIN  -55
     TCIN0   0

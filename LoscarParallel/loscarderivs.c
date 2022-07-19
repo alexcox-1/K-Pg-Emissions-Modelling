@@ -599,7 +599,7 @@ if(NCCATM == 1){
     eplv[3]=ExpFactor*0.8*1.39160302612395453125e14; /*Pacific*/
     eplv[4]=ExpFactor*0.8*6.4594032486555375e13; /*Tethys*/
     
-    if(t < 500001)
+    if(t < 1000001)
     {
     rrain=7.7*ExpFactor;
     } else 
@@ -671,7 +671,7 @@ if(NCCATM == 1){
  /* fraction EPL, remineralized in I boxes */
  oi = 1.-frei;
   
-  if(t < 500001)
+  if(t < 1000001)
   {
     ReminFactor=0.9995;
   } else 

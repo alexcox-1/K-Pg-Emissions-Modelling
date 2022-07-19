@@ -10,8 +10,8 @@ using StatGeochem
     d13cvals = bsrd13c["d13cval"];
     d13cerror = bsrd13c["d13cerror"]
     bsrd13cb = importdataset("d13cdatabenthicbsr.csv",',')
-    d13cbvals = bsrd13cb["d13cval"];
-    d13cberror = bsrd13cb["d13cerror"]
+    d13cbvals = bsrd13cb["d13cbval"];
+    d13cberror = bsrd13cb["d13cberror"]
     d13cberror = sqrt.((d13cberror.^2) .+ 0.3^2)
     # add an error in quadrature given LOSCAR uncertainties (assumed 0.5)
     d13cerror .= sqrt.((d13cerror.^2) .+ 0.3^2)
@@ -29,9 +29,9 @@ using StatGeochem
     # co2 and so2 emissions.
     # characteristic Pg/y will be 0.01 - 0.1
     # change these to log
-    co2vals = zeros(300);
-    svals = zeros(300);
-    Expvals = ones(300);
+    co2vals = zeros(400) .+ 0.02;
+    svals = zeros(400) .+ 0.01;
+    Expvals = ones(400);
     logexpvals = log.(Expvals)
     logco2vals = log.(co2vals);
     logsvals = log.(svals);
@@ -54,35 +54,35 @@ using StatGeochem
     # put the output temp into bins 
 
     # discard the last time val which is outside the range
-    loscartempwsulf = loscartempwsulf[loscartimebin .<= 300];
+    loscartempwsulf = loscartempwsulf[loscartimebin .<= 400];
     muᵣ = Array{Float64,1}(undef,length(temp));
-    nanmean!(muᵣ,vec(tmv),loscartempwsulf,first(timev),last(timev),length(timev));
+    nanbinmean!(muᵣ,vec(tmv),loscartempwsulf,first(timev),last(timev),length(timev));
     # get rid of the internal NaNs
     muᵣ = fillnans(muᵣ,150);
     
     # get rid of the NaNs at the end
-    if isnan(muᵣ[300])
-        muᵣ[first(findall(x->isnan(x),muᵣ)):300] .= muᵣ[first(findall(x->isnan(x),muᵣ))-1]
+    if isnan(muᵣ[400])
+        muᵣ[first(findall(x->isnan(x),muᵣ)):400] .= muᵣ[first(findall(x->isnan(x),muᵣ))-1]
     end
     mu = muᵣ
     d13cmuᵣ = Array{Float64,1}(undef,length(temp));
-    nanmean!(d13cmuᵣ,vec(tmv),d13csa,first(timev),last(timev),length(timev));
+    nanbinmean!(d13cmuᵣ,vec(tmv),d13csa,first(timev),last(timev),length(timev));
     d13cmuᵣ = fillnans(d13cmuᵣ,150);
     
-    if isnan(d13cmuᵣ[300])
-        d13cmuᵣ[first(findall(x->isnan(x),d13cmuᵣ)):300] .= d13cmuᵣ[first(findall(x->isnan(x),d13cmuᵣ))-1]
+    if isnan(d13cmuᵣ[400])
+        d13cmuᵣ[first(findall(x->isnan(x),d13cmuᵣ)):400] .= d13cmuᵣ[first(findall(x->isnan(x),d13cmuᵣ))-1]
     end
     d13cmu = d13cmuᵣ
     d13cbmuᵣ = Array{Float64,1}(undef,length(temp));
-    nanmean!(d13cbmuᵣ,vec(tmv),d13cba,first(timev),last(timev),length(timev));
+    nanbinmean!(d13cbmuᵣ,vec(tmv),d13cba,first(timev),last(timev),length(timev));
     d13cbmuᵣ = fillnans(d13cbmuᵣ,150);
-    if isnan(d13cbmuᵣ[300])
-        d13cbmuᵣ[first(findall(x->isnan(x),d13cbmuᵣ)):300] .= d13cbmuᵣ[first(findall(x->isnan(x),d13cbmuᵣ))-1]
+    if isnan(d13cbmuᵣ[400])
+        d13cbmuᵣ[first(findall(x->isnan(x),d13cbmuᵣ)):400] .= d13cbmuᵣ[first(findall(x->isnan(x),d13cbmuᵣ))-1]
     end
     d13cbmu = d13cbmuᵣ
     ll = normpdf_ll(temp,temperror,muᵣ) + normpdf_ll(d13cvals,d13cerror,d13cmuᵣ) + normpdf_ll(d13cbvals,d13cberror,d13cbmuᵣ);
 
-    numiter = 5;
+    numiter = 3;
 
     ## monte carlo loop
     # perturb one of the co2 vals and one of the svals
@@ -155,26 +155,26 @@ using StatGeochem
         # put the output temp into bins 
 
         # discard the last time val which is outside the range
-        loscartempwsulf = loscartempwsulf[loscartimebin .<= 300];
+        loscartempwsulf = loscartempwsulf[loscartimebin .<= 400];
         muᵣ = Array{Float64,1}(undef,length(temp));
-        nanmean!(muᵣ,vec(tmv),loscartempwsulf,first(timev),last(timev),length(timev));
+        nanbinmean!(muᵣ,vec(tmv),loscartempwsulf,first(timev),last(timev),length(timev));
         # get rid of the internal NaNs
         muᵣ = fillnans(muᵣ,150);
         # get rid of the NaNs at the end
-        if isnan(muᵣ[300])
-            muᵣ[first(findall(x->isnan(x),muᵣ)):300] .= muᵣ[first(findall(x->isnan(x),muᵣ))-1]
+        if isnan(muᵣ[400])
+            muᵣ[first(findall(x->isnan(x),muᵣ)):400] .= muᵣ[first(findall(x->isnan(x),muᵣ))-1]
         end
         d13cmuᵣ = Array{Float64,1}(undef,length(temp));
-        nanmean!(d13cmuᵣ,vec(tmv),d13csa,first(timev),last(timev),length(timev));
+        nanbinmean!(d13cmuᵣ,vec(tmv),d13csa,first(timev),last(timev),length(timev));
         d13cmuᵣ = fillnans(d13cmuᵣ,150);
-        if isnan(d13cmuᵣ[300])
-            d13cmuᵣ[first(findall(x->isnan(x),d13cmuᵣ)):300] .= d13cmuᵣ[first(findall(x->isnan(x),d13cmuᵣ))-1]
+        if isnan(d13cmuᵣ[400])
+            d13cmuᵣ[first(findall(x->isnan(x),d13cmuᵣ)):400] .= d13cmuᵣ[first(findall(x->isnan(x),d13cmuᵣ))-1]
         end
         d13cbmuᵣ = Array{Float64,1}(undef,length(temp));
-        nanmean!(d13cbmuᵣ,vec(tmv),d13cba,first(timev),last(timev),length(timev));
+        nanbinmean!(d13cbmuᵣ,vec(tmv),d13cba,first(timev),last(timev),length(timev));
         d13cbmuᵣ = fillnans(d13cbmuᵣ,150);
-        if isnan(d13cbmuᵣ[300])
-            d13cbmuᵣ[first(findall(x->isnan(x),d13cbmuᵣ)):300] .= d13cbmuᵣ[first(findall(x->isnan(x),d13cbmuᵣ))-1]
+        if isnan(d13cbmuᵣ[400])
+            d13cbmuᵣ[first(findall(x->isnan(x),d13cbmuᵣ)):400] .= d13cbmuᵣ[first(findall(x->isnan(x),d13cbmuᵣ))-1]
         end
         llᵣ = normpdf_ll(temp,temperror,muᵣ) + normpdf_ll(d13cvals,d13cerror,d13cmuᵣ) + normpdf_ll(d13cbvals,d13cberror,d13cbmuᵣ);
 
