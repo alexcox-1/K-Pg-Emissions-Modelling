@@ -3,10 +3,9 @@
 using StatGeochem, Statistics
     include("runloscar.jl")
     co2vals = zeros(400);
-    co2vals[101:200] .= 0.01;
     co2vals[201:300] .= 0.04;
     co2vals[301:400] .= 0.0;
-    svals = zeros(400) .+ 0.01;
+    svals = zeros(400);
     Expvals = ones(400);
     co2doublingrate = 3;
     bsrtemps = importdataset("tempdatabsr.csv",',');

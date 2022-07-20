@@ -34,7 +34,7 @@ function runloscar(timevals,CO2vals,Svals,Expvals,co2doubling)
     SEMSFILE = "dat/Emss/deccan_Semss.dat";
     EXPFILE = "dat/Emss/deccan_Exp.dat"
     TSTART  = 0;
-    TFINAL  = last(timevals);
+    TFINAL  = 500000;
     CINP    = 0;
     D13CIN  = -55;
     TCIN0   = 0;
@@ -64,6 +64,7 @@ function runloscar(timevals,CO2vals,Svals,Expvals,co2doubling)
 
     inputstring = "
     RESTART $RESTART
+    SVSTART $SVSTART
     EMSFILE $EMSFILE
     SEMSFILE $SEMSFILE
     EXPFILE $EXPFILE
