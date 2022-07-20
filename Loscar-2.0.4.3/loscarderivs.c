@@ -673,10 +673,10 @@ if(NCCATM == 1){
   
   if(t < 1000001)
   {
-    ReminFactor=0.9995;
+    ReminFactor=0.9994;
   } else 
   {
-    ReminFactor=1.002;
+    ReminFactor=1.00275;
   }
 
 

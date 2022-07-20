@@ -47,7 +47,9 @@ let
     # characteristic Pg/y will be 0.01 - 0.1
     # change these to log
     co2vals = zeros(400) .+ 0.02;
+    co2vals[301:400] .= 0.000001
     svals = zeros(400) .+ 0.01;
+    svals[301:400] .= 0.000001
     # add the export reduction factor solved earlier
     expvals = ones(400);
     logco2vals = log.(co2vals);
@@ -96,7 +98,7 @@ let
         end
         ll = normpdf_ll(temp,temperror,mu) + normpdf_ll(d13cvals,d13cerror,d13cmu) + normpdf_ll(d13cbvals,d13cberror,d13cbmu) + normpdf_ll(3,0.1,co2doublingrate);
     end
-    numiter = 75;
+    numiter = 5;
     num_per_exchange = 1;
     ## monte carlo loop
     # perturb one of the co2 vals and one of the svals
@@ -176,6 +178,7 @@ let
             logco2valsᵣ[j] += randamplitude * ((randmu-randhalfwidth)<j<(randmu+randhalfwidth))
 
         end
+        logco2valsᵣ[301:400] .= -20;
         randhalfwidths = halfwidths * rand()*length(co2vals)
 
         randmus = rand()*length(svals)
@@ -186,6 +189,7 @@ let
             logsvalsᵣ[j] += randamplitudes * ((randmus-randhalfwidths)<j<(randmus+randhalfwidths))
 
         end
+        logsvalsᵣ[301:400] .= -20;
 
         randhalfwidthexp = halfwidthexp * rand()*length(expvals)
 
