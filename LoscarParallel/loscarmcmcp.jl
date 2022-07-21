@@ -116,7 +116,7 @@ let
     co2doublingrateᵣ = copy(co2doublingrate);
     lldist = Array{Float64,1}(undef,numiter);
     doubledist = Array{Float64,1}(undef,numiter);
-    remindist = Array{Float64,2}{undef,length(Reminvals),numiter}
+    remindist = Array{Float64,2}(undef,length(Reminvals),numiter);
     co2dist = Array{Float64,2}(undef,length(logco2vals),numiter);
     sdist = Array{Float64,2}(undef,length(logsvals),numiter);
     tempwsulfarray = Array{Float64,2}(undef,length(mu),numiter);
