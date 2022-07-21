@@ -12,8 +12,6 @@ using StatGeochem, Statistics
     temperror = bsrtemps["temperror"];
     timev .= (timev .- minimum(timev)) .* 1000000;
     Reminvals = ones(400);
-    Reminvals[1:200] .= 0.9995
-    Reminvals[201:400] .= 1.002
 
     tmv,pco2,loscartemp, d13csa, d13cba = runloscar(timev,co2vals,svals,Expvals,co2doublingrate,Reminvals);
 
