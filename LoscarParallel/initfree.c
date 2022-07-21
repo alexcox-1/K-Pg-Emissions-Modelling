@@ -480,7 +480,7 @@ void initfree(int flag)
 #endif
 	 
  fepl  = 0.80;      /* 0.80 LL utilization   */
- frei  = 0.95;      /* 0.78 fraction EPL, remineralized in I boxes */
+ frei  = 0.78;      /* 0.78 fraction EPL, remineralized in I boxes */
 
 
  /* fraction EPH, remineralized in deep A,I,P boxes */

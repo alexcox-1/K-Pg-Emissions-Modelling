@@ -55,11 +55,14 @@ let
     logco2vals = log.(co2vals);
     logsvals = log.(svals);
     logexpvals = log.(expvals);
+    Reminvals = ones(400);
+    Reminvals[1:200] .= 0.9995;
+    Reminvals[201:400] .= 1.002;
     co2doublingrate = 3.0;
 
     # do a loscar run!
 
-    tmv,pco2,loscartemp, d13csa, d13cba = runloscarp(timev,co2vals,svals,expvals,co2doublingrate);
+    tmv,pco2,loscartemp, d13csa, d13cba = runloscarp(timev,co2vals,svals,expvals,co2doublingrate,Reminvals);
     if isnan(tmv[1])
         ll = NaN
     else
@@ -96,9 +99,9 @@ let
         if isnan(d13cbmu[400])
             d13cbmu[first(findall(x->isnan(x),d13cbmu)):400] .= d13cbmu[first(findall(x->isnan(x),d13cbmu))-1]
         end
-        ll = normpdf_ll(temp,temperror,mu) + normpdf_ll(d13cvals,d13cerror,d13cmu) + normpdf_ll(d13cbvals,d13cberror,d13cbmu) + normpdf_ll(3,0.1,co2doublingrate);
+        ll = normpdf_ll(temp,temperror,mu) + normpdf_ll(d13cvals,d13cerror,d13cmu) + normpdf_ll(d13cbvals,d13cberror,d13cbmu) + normpdf_ll(3,0.1,co2doublingrate) + normpdf_ll(1,0.004,Reminvals);
     end
-    numiter = 5;
+    numiter = 3;
     num_per_exchange = 1;
     ## monte carlo loop
     # perturb one of the co2 vals and one of the svals
@@ -109,9 +112,11 @@ let
     logco2valsᵣ = copy(logco2vals);
     logsvalsᵣ = copy(logsvals);
     logexpvalsᵣ = copy(logexpvals);
+    Reminvalsᵣ = copy(Reminvals);
     co2doublingrateᵣ = copy(co2doublingrate);
     lldist = Array{Float64,1}(undef,numiter);
     doubledist = Array{Float64,1}(undef,numiter);
+    remindist = Array{Float64,2}{undef,length(Reminvals),numiter}
     co2dist = Array{Float64,2}(undef,length(logco2vals),numiter);
     sdist = Array{Float64,2}(undef,length(logsvals),numiter);
     tempwsulfarray = Array{Float64,2}(undef,length(mu),numiter);
@@ -122,6 +127,7 @@ let
     all_log_co2 = Array{Float64}(undef, length(logco2vals), ntasks);
     all_log_s = Array{Float64}(undef, length(logsvals), ntasks);
     all_log_exp = Array{Float64}(undef, length(logexpvals), ntasks);
+    all_remin = Array{Float64}(undef,length(Reminvals),ntasks)
     all_co2doublingrate = Array{Float64}(undef,ntasks);
     all_lls = Array{Float64}(undef,ntasks);
     all_doubledist = Array{Float64}(undef,ntasks);
@@ -132,9 +138,11 @@ let
     co2_step_sigma = 0.1;
     so2_step_sigma = 0.1;
     exp_step_sigma = 0.01;
+    remin_step_sigma = 0.0005;
     halfwidthc = 0.5;
     halfwidths = 0.5;
     halfwidthexp = 0.25;
+    halfwidthremin = 0.25;
     counter = 0;
     @inbounds for i = 1:numiter
         (rank == 0) && @warn "Iteration $i"
@@ -143,6 +151,7 @@ let
         copyto!(logco2valsᵣ,logco2vals);
         copyto!(logsvalsᵣ,logsvals);
         copyto!(logexpvalsᵣ,logexpvals);
+        copyto!(Reminvalsᵣ,Reminvals)
         co2doublingrateᵣ = co2doublingrate;
         # Exchange proposals, sometimes
         if i % num_per_exchange == 0 && i > 1
@@ -150,6 +159,7 @@ let
             MPI.Allgather!(logco2vals, all_log_co2, comm)
             MPI.Allgather!(logsvals, all_log_s, comm)
             MPI.Allgather!(logexpvals, all_log_exp, comm)
+            MPI.Allgather!(Reminvals,all_remin,comm)
             MPI.Allgather!(lldist[i-1:i-1], all_lls, comm)
             MPI.Allgather!(doubledist[i-1:i-1],all_co2doublingrate,comm)
             # Choose which proposal we want to adopt
@@ -166,6 +176,7 @@ let
             logco2valsᵣ .= view(all_log_co2, :, chosen)
             logsvalsᵣ .= view(all_log_s, :, chosen)
             logexpvalsᵣ .= view(all_log_exp, :, chosen)
+            Reminvalsᵣ .= view(all_remin,:,chosen)
             co2doublingrateᵣ = all_co2doublingrate[chosen]
         end
         # choose which indices to perturb
@@ -201,10 +212,21 @@ let
             logexpvalsᵣ[j] += randamplitudeexp * ((randmuexp-randhalfwidthexp)<j<(randmuexp+randhalfwidthexp))
 
         end
+
+        randhalfwidthremin = halfwidthremin * rand()*length(Reminvals)
+
+        randmuremin = rand()*length(Reminvals)
+
+        randamplituderemin = randn()*remin_step_sigma
+
+        for j=1:length(Reminvals)
+            Reminvalsᵣ[j] += randamplituderemin * ((randmuremin-randhalfwidthremin)<j<(randmuremin+randhalfwidthremin))
+
+        end
         # perturb the co2doubling rate normally 
         co2doublingrateᵣ += (randn() / 5)
         # run loscar with the new values
-        tmv,pco2,loscartemp, d13csa, d13cba = runloscarp(timev,exp.(logco2valsᵣ),exp.(logsvalsᵣ),exp.(logexpvalsᵣ),co2doublingrateᵣ);
+        tmv,pco2,loscartemp, d13csa, d13cba = runloscarp(timev,exp.(logco2valsᵣ),exp.(logsvalsᵣ),exp.(logexpvalsᵣ),co2doublingrateᵣ,Reminvalsᵣ);
         if all(isnan.(tmv))
             llᵣ = NaN
         else
@@ -240,7 +262,7 @@ let
             if isnan(d13cbmuᵣ[400])
                 d13cbmuᵣ[first(findall(x->isnan(x),d13cbmuᵣ)):400] .= d13cbmuᵣ[first(findall(x->isnan(x),d13cbmuᵣ))-1]
             end
-            llᵣ = normpdf_ll(temp,temperror,muᵣ) + normpdf_ll(d13cvals,d13cerror,d13cmuᵣ) + normpdf_ll(d13cbvals,d13cberror,d13cbmuᵣ) + normpdf_ll(3,0.1,co2doublingrateᵣ);
+            llᵣ = normpdf_ll(temp,temperror,muᵣ) + normpdf_ll(d13cvals,d13cerror,d13cmuᵣ) + normpdf_ll(d13cbvals,d13cberror,d13cbmuᵣ) + normpdf_ll(3,0.1,co2doublingrateᵣ) + normpdf_ll(1,0.004,Reminvalsᵣ);
         end
 
         # is this allowed?
@@ -251,9 +273,11 @@ let
             logsvals .= logsvalsᵣ  
             logexpvals .= logexpvalsᵣ
             co2doublingrate = co2doublingrateᵣ
+            Reminvals = Reminvalsᵣ
             co2_step_sigma = min(abs(randamplitude),1);
             so2_step_sigma = min(abs(randamplitudes),1)
             exp_step_sigma = min(abs(randamplitudeexp),0.1)
+            remin_step_sigma = min(abs(randamplituderemin),0.005)
             mu = muᵣ
             d13cmu = d13cmuᵣ
             d13cbmu = d13cbmuᵣ
@@ -264,12 +288,14 @@ let
             halfwidthc = max(halfwidthc*0.90,0.01);
             halfwidths = max(halfwidths*0.90,0.01);
             halfwidthexp = max(halfwidthexp*0.90,0.01);
+            halfwidthremin = max(halfwidthremin*0.90,0.01);
         end
         # update the latest values
         lldist[i] = ll;
         co2dist[:,i] = logco2vals;
         sdist[:,i] = logsvals;
         doubledist[i] = co2doublingrate;
+        remindist[:,i] = Reminvals;
         expdist[:,i] = logexpvals;
         tempwsulfarray[:,i] = mu;
         d13carray[:,i] = d13cmu;
@@ -284,6 +310,7 @@ let
     all_s_dist = MPI.Gather(sdist, 0, comm)
     all_exp_dist = MPI.Gather(expdist,0,comm)
     all_doubledist = MPI.Gather(doubledist,0,comm)
+    all_remin_dist = MPI.Gather(remindist,0,comm)
     all_temps = MPI.Gather(tempwsulfarray, 0, comm)
     all_d13c = MPI.Gather(d13carray,0,comm)
     all_d13cb = MPI.Gather(d13cbarray,0,comm)
@@ -295,6 +322,7 @@ let
         writedlm("$loscdir/all_co2_dist.csv",all_co2_dist,',')
         writedlm("$loscdir/all_s_dist.csv",all_s_dist,',')
         writedlm("$loscdir/all_doubledist.csv",all_doubledist,',')
+        writedlm("$loscdir/all_remin_dist.csv",all_remin_dist,',')
         writedlm("$loscdir/all_exp_dist.csv",all_exp_dist,',')
         writedlm("$loscdir/all_temps.csv",all_temps,',')
         # writedlm("$loscdir/all_co2_step.csv",all_co2_step,',')

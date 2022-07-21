@@ -267,6 +267,14 @@ int main(int argc, char **argv)
    printf("\n@ Export Factor loaded: none\n");
  }
 
+ if(reminflag == 1){
+   printf("\n@ Loading Remin. Factor: '%s'\n",reminldstr);
+   readRemin();
+ }
+ else{
+   printf("\n@ Remin. Factor loaded: none\n");
+ }
+
  /* initialize y-start values (default or load) */
  initstart();
 	

@@ -1,6 +1,6 @@
 ## run loscar ac.gr@ 11/12
 using DelimitedFiles
-function runloscar(timevals,CO2vals,Svals,Expvals,co2doubling)
+function runloscar(timevals,CO2vals,Svals,Expvals,co2doubling,Reminvals)
     # takes an array of timevals with associated CO2 and SO2 emissions,
     # runs loscar, and return the output times, pC02, and temperature 
     # given a user-specified CO2 doubling rate.
@@ -16,6 +16,9 @@ function runloscar(timevals,CO2vals,Svals,Expvals,co2doubling)
     if isfile("dat/Emss/deccan_Exp.dat")
         rm("dat/Emss/deccan_Exp.dat");
     end
+    if isfile("dat/Emss/deccan_Remin.dat")
+        rm("dat/Emss/deccan_Remin.dat");
+    end
     if isfile("deccan.inp")
         rm("deccan.inp")
     end
@@ -24,7 +27,8 @@ function runloscar(timevals,CO2vals,Svals,Expvals,co2doubling)
     CO2vals = CO2vals;
     Svals = Svals;
     timevals = timevals;
-    Expvals = Expvals
+    Expvals = Expvals;
+    Reminvals = Reminvals;
     # the values for the input file ("deccan.inp")
 
     RESTART = "dat/deccanrestart.dat";
@@ -33,8 +37,9 @@ function runloscar(timevals,CO2vals,Svals,Expvals,co2doubling)
     EMSFILE = "dat/Emss/deccan_CO2emss.dat";
     SEMSFILE = "dat/Emss/deccan_Semss.dat";
     EXPFILE = "dat/Emss/deccan_Exp.dat"
+    REMINFILE = "dat/Emss/deccan_Remin.dat"
     TSTART  = 0;
-    TFINAL  = 500000;
+    TFINAL  = 1500000;
     CINP    = 0;
     D13CIN  = -55;
     TCIN0   = 0;
@@ -55,7 +60,7 @@ function runloscar(timevals,CO2vals,Svals,Expvals,co2doubling)
     FBIOL   = 0.80;
     CBIOH   = 1.5;
     RRAIN   = 6.7;
-    FSHLF   = 4.5;
+    FSHLF   = 1.5;
     FINC    = 15.83409493e12;
     CALC    = 21.0e-3;
     MAGN    = 42.0e-3;
@@ -64,10 +69,10 @@ function runloscar(timevals,CO2vals,Svals,Expvals,co2doubling)
 
     inputstring = "
     RESTART $RESTART
-    SVSTART $SVSTART
     EMSFILE $EMSFILE
     SEMSFILE $SEMSFILE
     EXPFILE $EXPFILE
+    REMINFILE $REMINFILE
     TSTART  $TSTART
     TFINAL  $TFINAL
     CINP    $CINP
@@ -115,6 +120,12 @@ function runloscar(timevals,CO2vals,Svals,Expvals,co2doubling)
     open("dat/Emss/deccan_Exp.dat", "a+") do io
         for i in 1:length(Expvals)
         write(io, string(timevals[i])*" "*string(Expvals[i])*'\n')
+        end
+    end;
+
+    open("dat/Emss/deccan_Remin.dat", "a+") do io
+        for i in 1:length(Reminvals)
+        write(io, string(timevals[i])*" "*string(Reminvals[i])*'\n')
         end
     end;
     

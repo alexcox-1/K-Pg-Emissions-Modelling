@@ -207,6 +207,10 @@ void derivs(double t,double *y, double *yp)
  if(expflag == 1){
       ExpFactor = finterp(t,tExp,yExp,ltExp,0);
  }
+
+ if(reminflag==1){
+      ReminFactor = finterp(t,tRemin,yRemin,ltRemin,0);
+ }
  
 
  /* rename variable: y => dic,alk,po4,tcb ... 
@@ -671,14 +675,14 @@ if(NCCATM == 1){
  /* fraction EPL, remineralized in I boxes */
  oi = 1.-frei;
   
-  if(t < 1000001)
+ /* if(t < 1000001)
   {
-    ReminFactor=0.9994;
+    ReminFactor=1.;
   } else 
   {
-    ReminFactor=1.00275;
-  }
-
+    ReminFactor=1.;
+  } 
+  */
 
 #ifdef FSED
  /* CaCO3 export AIP (Atl, Ind, Pac) mol/y */

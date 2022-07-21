@@ -1,11 +1,11 @@
 
     RESTART dat/deccanrestart.dat
-    SVSTART dat/deccanrestart.dat
     EMSFILE dat/Emss/deccan_CO2emss.dat
     SEMSFILE dat/Emss/deccan_Semss.dat
     EXPFILE dat/Emss/deccan_Exp.dat
+    REMINFILE dat/Emss/deccan_Remin.dat
     TSTART  0
-    TFINAL  500000
+    TFINAL  1500000
     CINP    0
     D13CIN  -55
     TCIN0   0
@@ -25,7 +25,7 @@
     FBIOL   0.8
     CBIOH   1.5
     RRAIN   6.7
-    FSHLF   4.5
+    FSHLF   1.5
     FINC    1.583409493e13
     CALC    0.021
     MAGN    0.042

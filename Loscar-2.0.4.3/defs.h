@@ -225,6 +225,7 @@ void falpha(double *alpdb,double *alpdg,double *alpcb,
 void reademiss();
 void readSemiss();
 void readExp();
+void readRemin();
 /* initfree.c */
 void initfree(int flag);
 /* initstart.c */

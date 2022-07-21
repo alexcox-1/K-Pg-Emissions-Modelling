@@ -1,6 +1,6 @@
 ## run loscar ac.gr@ 11/12
 using DelimitedFiles
-function runloscarp(timevals,CO2vals,Svals,Expvals,co2doubling)
+function runloscarp(timevals,CO2vals,Svals,Expvals,co2doubling,Reminvals)
     # takes an array of timevals with associated CO2 and SO2 emissions,
     # runs loscar, and return the output times, pC02, and temperature 
     # given a user-specified CO2 doubling rate.
@@ -14,6 +14,9 @@ function runloscarp(timevals,CO2vals,Svals,Expvals,co2doubling)
     end
     if isfile("LoscarParallel/deccan_Exp.dat")
         rm("LoscarParallel/deccan_Exp.dat");
+    end
+    if isfile("LoscarParallel/deccan_Remin.dat")
+        rm("LoscarParallel/deccan_Remin.dat");
     end
     if isfile("deccan.inp")
         rm("deccan.inp")
@@ -32,6 +35,7 @@ function runloscarp(timevals,CO2vals,Svals,Expvals,co2doubling)
     Svals = Svals;
     timevals = timevals;
     Expvals = Expvals;
+    Reminvals = Reminvals;
     # the values for the input file ("deccan.inp")
 
     RESTART = "LoscarParallel/dat/deccanrestart.dat";
@@ -40,6 +44,7 @@ function runloscarp(timevals,CO2vals,Svals,Expvals,co2doubling)
     EMSFILE = "LoscarParallel/deccan_CO2emss.dat";
     SEMSFILE = "LoscarParallel/deccan_Semss.dat";
     EXPFILE = "LoscarParallel/deccan_Exp.dat"
+    REMINFILE = "LoscarParallel/deccan_Remin.dat"
     TSTART  = 0;
     TFINAL  = last(timevals);
     CINP    = 0;
@@ -74,6 +79,7 @@ function runloscarp(timevals,CO2vals,Svals,Expvals,co2doubling)
     EMSFILE $EMSFILE
     SEMSFILE $SEMSFILE
     EXPFILE $EXPFILE
+    REMINFILE $REMINFILE
     TSTART  $TSTART
     TFINAL  $TFINAL
     CINP    $CINP
@@ -123,6 +129,13 @@ function runloscarp(timevals,CO2vals,Svals,Expvals,co2doubling)
         write(io, string(timevals[i])*" "*string(Expvals[i])*'\n')
         end
     end;
+
+    open("LoscarParallel/deccan_Remin.dat", "a+") do io
+        for i in 1:length(Reminvals)
+        write(io, string(timevals[i])*" "*string(Reminvals[i])*'\n')
+        end
+    end;
+
     #do the make and run ***CHANGE THIS
     #loscarmake = `make loscar PALEO=1`
 

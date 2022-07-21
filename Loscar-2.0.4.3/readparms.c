@@ -129,6 +129,14 @@ void readparms(char *fparmstr)
  getparms(fparm,varstr,&ffound,&np,pval,pstr);
  /*setpstr: set arguments 1 and 2 */	
  setpstr(&expflag,expldstr,varstr,ffound,np,npok,pstr,ntxt);
+
+  /*========== load remin. factor file ==================*/
+ varstr = "REMINFILE";
+ npok = 1;
+ ntxt = "none.";
+ getparms(fparm,varstr,&ffound,&np,pval,pstr);
+ /*setpstr: set arguments 1 and 2 */	
+ setpstr(&reminflag,reminldstr,varstr,ffound,np,npok,pstr,ntxt);
 	
  /*===================== time start =======================*/	
  varstr = "TSTART";	    /* name of parameter     */
