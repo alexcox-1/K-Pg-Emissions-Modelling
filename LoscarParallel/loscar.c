@@ -275,6 +275,15 @@ int main(int argc, char **argv)
    printf("\n@ Remin. Factor loaded: none\n");
  }
 
+  if(carbflag == 1){
+   printf("\n@ Loading Carb. Factor: '%s'\n",carbldstr);
+   readCarb();
+ }
+ else{
+   printf("\n@ Carb. Factor loaded: none\n");
+ }
+
+
  /* initialize y-start values (default or load) */
  initstart();
 	

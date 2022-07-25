@@ -281,6 +281,67 @@ void readRemin()
  free_dvector(tRemin2,1,NEMSMAX);
 	
 }
+
+void readCarb()
+{
+ double *tCarb1,*tCarb2;
+ int i=1,rdflag=0;
+ char mssg[BUFSIZ];	
+
+ FILE *Carbpems;
+
+ ltCarb = 0;
+ tCarb1 = dvector(1,NEMSMAX);
+ tCarb2 = dvector(1,NEMSMAX);
+	 
+ /* open emission file */
+ Carbpems = fopen(carbldstr,"r");
+ if(Carbpems == NULL){ 
+    sprintf(mssg,"reademiss(): Can't open emission file '%s'",carbldstr);
+	ferrx(mssg);
+ } 
+
+ /* read emissions */
+ while(rdflag != EOF){
+    rdflag = fscanf(Carbpems,"%le %le",&tCarb1[i],&tCarb2[i]);
+    if(rdflag == 1)
+         ferrx("reademiss(): Export Reduction file: #values/line read = 1. need 2.");		 
+    if(rdflag  > 2)
+         ferrx("reademiss(): Export Reduction file: #values/line read > 2. need 2.");		 
+    if(rdflag == 2){
+	  ltCarb = i;
+      /*printf("%d %e %e\n",ltem,tmp1[i],tmp2[i]);*/
+	  if(ltCarb > NEMSMAX)
+         ferrx("reademiss(): Too many emission values. Increase NEMSMAX?");
+      i += 1;
+	} else { /* EOF */ 
+		 /* printf("%d %d",rdflag,EOF); */
+	     break;
+	}
+ }
+	 
+ /* close emission file */
+ fclose(Carbpems);
+
+ if(ltCarb == 0)
+    ferrx("reademiss(): No. of emission values = 0?");
+
+ /* allocate time and emission vectors */	 
+ tCarb  = dvector(1,ltCarb);
+ yCarb  = dvector(1,ltCarb);
+ /* free: see initfree() */
+
+ /* copy numbers read from file to time and emission vectors */	 
+ for(i=1;i<=ltCarb;i++){
+	 tCarb[i] = tCarb1[i];
+	 yCarb[i] = tCarb2[i];
+     /*printf("%e %e\n",tems[i],yems[i]);*/
+ }
+	
+ free_dvector(tCarb1,1,NEMSMAX);
+ free_dvector(tCarb2,1,NEMSMAX);
+	
+}
 /*============================================================*/
 /*==================== reademiss() END =======================*/
 /*============================================================*/

@@ -1,6 +1,6 @@
 ## run loscar ac.gr@ 11/12
 using DelimitedFiles
-function runloscar(timevals,CO2vals,Svals,Expvals,co2doubling,Reminvals)
+function runloscar(timevals,CO2vals,Svals,Expvals,co2doubling,Reminvals,Carbvals)
     # takes an array of timevals with associated CO2 and SO2 emissions,
     # runs loscar, and return the output times, pC02, and temperature 
     # given a user-specified CO2 doubling rate.
@@ -29,6 +29,7 @@ function runloscar(timevals,CO2vals,Svals,Expvals,co2doubling,Reminvals)
     timevals = timevals;
     Expvals = Expvals;
     Reminvals = Reminvals;
+    Carbvals = Carbvals;
     # the values for the input file ("deccan.inp")
 
     RESTART = "dat/deccanrestart.dat";
@@ -38,8 +39,9 @@ function runloscar(timevals,CO2vals,Svals,Expvals,co2doubling,Reminvals)
     SEMSFILE = "dat/Emss/deccan_Semss.dat";
     EXPFILE = "dat/Emss/deccan_Exp.dat"
     REMINFILE = "dat/Emss/deccan_Remin.dat"
+    CARBFILE = "dat/Emss/deccan_Carb.dat"
     TSTART  = 0;
-    TFINAL  = 500000;
+    TFINAL  = last(timevals);
     CINP    = 0;
     D13CIN  = -55;
     TCIN0   = 0;
@@ -69,11 +71,11 @@ function runloscar(timevals,CO2vals,Svals,Expvals,co2doubling,Reminvals)
 
     inputstring = "
     RESTART $RESTART
-    SVSTART $SVSTART
     EMSFILE $EMSFILE
     SEMSFILE $SEMSFILE
     EXPFILE $EXPFILE
     REMINFILE $REMINFILE
+    CARBFILE $CARBFILE
     TSTART  $TSTART
     TFINAL  $TFINAL
     CINP    $CINP
@@ -130,12 +132,18 @@ function runloscar(timevals,CO2vals,Svals,Expvals,co2doubling,Reminvals)
         end
     end;
     
+    open("dat/Emss/deccan_Carb.dat", "a+") do io
+        for i in 1:length(Carbvals)
+        write(io, string(timevals[i])*" "*string(Carbvals[i])*'\n')
+        end
+    end;
+
     #do the make and run ***CHANGE THIS
     #loscarmake = `make loscar PALEO=1`
 
     #run(loscarmake)
 
-    loscarrun = `./doalarm 300 command ./loscar.x deccan.inp`;
+    loscarrun = `./loscar.x deccan.inp`;
 
     run(loscarrun);
 
@@ -148,6 +156,9 @@ function runloscar(timevals,CO2vals,Svals,Expvals,co2doubling,Reminvals)
     if isfile("d13c.dat")
         d13c = readdlm("d13c.dat")
         d13csa = d13c[:,1];
+        d13csi = d13c[:,2];
+        d13csp = d13c[:,3];
+        d13cst = d13c[:,11];
         d13cba = d13c[:,7]
     else
         @warn "LOSCAR may have failed, or d13c.dat not found"
@@ -159,6 +170,6 @@ function runloscar(timevals,CO2vals,Svals,Expvals,co2doubling,Reminvals)
     #loscarcleanup = `./cleanup`;
     #run(loscarcleanup);
 
-    return time_vals, pco2, temp, d13csa, d13cba
+    return time_vals, pco2, temp, d13csa, d13cba, d13csi, d13csp, d13cst
 
 end

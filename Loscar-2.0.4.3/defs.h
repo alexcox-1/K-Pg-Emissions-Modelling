@@ -226,6 +226,7 @@ void reademiss();
 void readSemiss();
 void readExp();
 void readRemin();
+void readCarb();
 /* initfree.c */
 void initfree(int flag);
 /* initstart.c */

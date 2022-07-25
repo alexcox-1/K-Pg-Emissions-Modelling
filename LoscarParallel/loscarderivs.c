@@ -99,6 +99,7 @@ void derivs(double t,double *y, double *yp)
  /*AC: multiplicative factor that increases all remineralization (1 is 'normal', 1.5 is 'more remineralization') 
   1.0025 is good postextinction 0.9995 pre-extinction */
  double ReminFactor=0.9995;
+ double CarbFactor=1.;
  double *eplvcc,*ealvcc,*eclvcc,*exlvcc,ephcc,eahcc,echcc,exhcc,
 	    *rccb,pcco2a,ccatmp;
  char mssg[BUFSIZ];	
@@ -210,6 +211,10 @@ void derivs(double t,double *y, double *yp)
 
  if(reminflag==1){
       ReminFactor = finterp(t,tRemin,yRemin,ltRemin,0);
+ }
+
+ if(carbflag==1){
+      CarbFactor = finterp(t,tCarb,yCarb,ltCarb,0);
  }
  
 
@@ -605,10 +610,10 @@ if(NCCATM == 1){
     
     if(t < 1000001)
     {
-    rrain=7.7*ExpFactor;
+    rrain=7.7*ExpFactor*CarbFactor;
     } else 
     {  
-    rrain = 6.3*ExpFactor;
+    rrain = 6.3*ExpFactor*CarbFactor;
     }
     
 

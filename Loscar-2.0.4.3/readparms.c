@@ -137,6 +137,14 @@ void readparms(char *fparmstr)
  getparms(fparm,varstr,&ffound,&np,pval,pstr);
  /*setpstr: set arguments 1 and 2 */	
  setpstr(&reminflag,reminldstr,varstr,ffound,np,npok,pstr,ntxt);
+
+   /*========== load carb. factor file ==================*/
+ varstr = "CARBFILE";
+ npok = 1;
+ ntxt = "none.";
+ getparms(fparm,varstr,&ffound,&np,pval,pstr);
+ /*setpstr: set arguments 1 and 2 */	
+ setpstr(&carbflag,carbldstr,varstr,ffound,np,npok,pstr,ntxt);
 	
  /*===================== time start =======================*/	
  varstr = "TSTART";	    /* name of parameter     */

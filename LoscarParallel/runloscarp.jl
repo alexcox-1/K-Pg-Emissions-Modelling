@@ -1,6 +1,6 @@
 ## run loscar ac.gr@ 11/12
 using DelimitedFiles
-function runloscarp(timevals,CO2vals,Svals,Expvals,co2doubling,Reminvals)
+function runloscarp(timevals,CO2vals,Svals,Expvals,co2doubling,Reminvals,Carbvals)
     # takes an array of timevals with associated CO2 and SO2 emissions,
     # runs loscar, and return the output times, pC02, and temperature 
     # given a user-specified CO2 doubling rate.
@@ -17,6 +17,9 @@ function runloscarp(timevals,CO2vals,Svals,Expvals,co2doubling,Reminvals)
     end
     if isfile("LoscarParallel/deccan_Remin.dat")
         rm("LoscarParallel/deccan_Remin.dat");
+    end
+    if isfile("LoscarParallel/deccan_Carb.dat")
+        rm("LoscarParallel/deccan_Carb.dat");
     end
     if isfile("deccan.inp")
         rm("deccan.inp")
@@ -36,6 +39,7 @@ function runloscarp(timevals,CO2vals,Svals,Expvals,co2doubling,Reminvals)
     timevals = timevals;
     Expvals = Expvals;
     Reminvals = Reminvals;
+    Carbvals = Carbvals;
     # the values for the input file ("deccan.inp")
 
     RESTART = "LoscarParallel/dat/deccanrestart.dat";
@@ -45,6 +49,7 @@ function runloscarp(timevals,CO2vals,Svals,Expvals,co2doubling,Reminvals)
     SEMSFILE = "LoscarParallel/deccan_Semss.dat";
     EXPFILE = "LoscarParallel/deccan_Exp.dat"
     REMINFILE = "LoscarParallel/deccan_Remin.dat"
+    CARBFILE = "LoscarParallel/deccan_Carb.dat"
     TSTART  = 0;
     TFINAL  = last(timevals);
     CINP    = 0;
@@ -80,6 +85,7 @@ function runloscarp(timevals,CO2vals,Svals,Expvals,co2doubling,Reminvals)
     SEMSFILE $SEMSFILE
     EXPFILE $EXPFILE
     REMINFILE $REMINFILE
+    CARBFILE $CARBFILE
     TSTART  $TSTART
     TFINAL  $TFINAL
     CINP    $CINP
@@ -133,6 +139,12 @@ function runloscarp(timevals,CO2vals,Svals,Expvals,co2doubling,Reminvals)
     open("LoscarParallel/deccan_Remin.dat", "a+") do io
         for i in 1:length(Reminvals)
         write(io, string(timevals[i])*" "*string(Reminvals[i])*'\n')
+        end
+    end;
+
+    open("LoscarParallel/deccan_Carb.dat", "a+") do io
+        for i in 1:length(Carbvals)
+        write(io, string(timevals[i])*" "*string(Carbvals[i])*'\n')
         end
     end;
 
