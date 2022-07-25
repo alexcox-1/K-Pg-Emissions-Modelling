@@ -295,6 +295,7 @@ let
             logexpvals .= logexpvalsᵣ
             co2doublingrate = co2doublingrateᵣ
             Reminvals = Reminvalsᵣ
+            logcarbvals .= logcarbvalsᵣ
             co2_step_sigma = min(abs(randamplitude),1);
             so2_step_sigma = min(abs(randamplitudes),1)
             exp_step_sigma = min(abs(randamplitudeexp),0.1)
