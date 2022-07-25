@@ -64,7 +64,7 @@ let
 
     # do a loscar run!
 
-    tmv,pco2,loscartemp, d13csa, d13cba = runloscarp(timev,co2vals,svals,expvals,co2doublingrate,Reminvals);
+    tmv,pco2,loscartemp, d13csa, d13cba = runloscarp(timev,co2vals,svals,expvals,co2doublingrate,Reminval,Carbvals);
     if isnan(tmv[1])
         ll = NaN
     else
@@ -241,7 +241,7 @@ let
         randamplitudecarb = randn()*carb_step_sigma
 
         for j=1:length(Carbvals)
-            Carbvalsᵣ[j] += randamplitudecarb * ((randmucarb-randhalfwidthcarb)<j<(randmucarb+randhalfwidthcarb))
+            logCarbvalsᵣ[j] += randamplitudecarb * ((randmucarb-randhalfwidthcarb)<j<(randmucarb+randhalfwidthcarb))
 
         end
         # perturb the co2doubling rate normally 
