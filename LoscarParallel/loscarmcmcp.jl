@@ -103,8 +103,8 @@ let
         end
         ll = normpdf_ll(temp,temperror,mu) + normpdf_ll(d13cvals,d13cerror,d13cmu) + normpdf_ll(d13cbvals,d13cberror,d13cbmu) + normpdf_ll(3,0.1,co2doublingrate) + normpdf_ll(1,0.004,Reminvals) + normpdf_ll(1,0.25,exp.(logCarbvals));
     end
-    numiter = 100;
-    num_per_exchange = 2;
+    numiter = 3;
+    num_per_exchange = 1;
     ## monte carlo loop
     # perturb one of the co2 vals and one of the svals
     # work with co2 vals and svals in logspace
@@ -283,7 +283,7 @@ let
             if isnan(d13cbmuᵣ[400])
                 d13cbmuᵣ[first(findall(x->isnan(x),d13cbmuᵣ)):400] .= d13cbmuᵣ[first(findall(x->isnan(x),d13cbmuᵣ))-1]
             end
-            llᵣ = normpdf_ll(temp,temperror,muᵣ) + normpdf_ll(d13cvals,d13cerror,d13cmuᵣ) + normpdf_ll(d13cbvals,d13cberror,d13cbmuᵣ) + normpdf_ll(3,0.1,co2doublingrateᵣ) + normpdf_ll(1,0.004,Reminvalsᵣ) + normpdf_ll(1,0.25,exp.(logCarbvals));
+            llᵣ = normpdf_ll(temp,temperror,muᵣ) + normpdf_ll(d13cvals,d13cerror,d13cmuᵣ) + normpdf_ll(d13cbvals,d13cberror,d13cbmuᵣ) + normpdf_ll(3,0.1,co2doublingrateᵣ) + normpdf_ll(1,0.004,Reminvalsᵣ) + normpdf_ll(1,0.25,exp.(logCarbvalsᵣ));
         end
 
         # is this allowed?
@@ -295,7 +295,7 @@ let
             logexpvals .= logexpvalsᵣ
             co2doublingrate = co2doublingrateᵣ
             Reminvals = Reminvalsᵣ
-            logcarbvals .= logcarbvalsᵣ
+            logCarbvals .= logCarbvalsᵣ
             co2_step_sigma = min(abs(randamplitude),1);
             so2_step_sigma = min(abs(randamplitudes),1)
             exp_step_sigma = min(abs(randamplitudeexp),0.1)
@@ -320,7 +320,7 @@ let
         sdist[:,i] = logsvals;
         doubledist[i] = co2doublingrate;
         remindist[:,i] = Reminvals;
-        carbdist[:,i] = Carbvals;
+        carbdist[:,i] = logCarbvals;
         expdist[:,i] = logexpvals;
         tempwsulfarray[:,i] = mu;
         d13carray[:,i] = d13cmu;
