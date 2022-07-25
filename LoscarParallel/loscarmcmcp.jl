@@ -64,7 +64,7 @@ let
 
     # do a loscar run!
 
-    tmv,pco2,loscartemp, d13csa, d13cba = runloscarp(timev,co2vals,svals,expvals,co2doublingrate,Reminval,Carbvals);
+    tmv,pco2,loscartemp, d13csa, d13cba = runloscarp(timev,co2vals,svals,expvals,co2doublingrate,Reminvals,Carbvals);
     if isnan(tmv[1])
         ll = NaN
     else
