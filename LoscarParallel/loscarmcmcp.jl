@@ -56,7 +56,7 @@ let
     logsvals = log.(svals);
     logexpvals = log.(expvals);
     Reminvals = ones(400);
-    Reminvals[1:200] .= 0.9995;
+    Reminvals[1:200] .= 0.999;
     Reminvals[201:400] .= 1.002;
     co2doublingrate = 3.0;
     Carbvals = ones(400);
@@ -103,7 +103,7 @@ let
         end
         ll = normpdf_ll(temp,temperror,mu) + normpdf_ll(d13cvals,d13cerror,d13cmu) + normpdf_ll(d13cbvals,d13cberror,d13cbmu) + normpdf_ll(3,0.1,co2doublingrate) + normpdf_ll(1,0.004,Reminvals) + normpdf_ll(1,1,exp.(logCarbvals));
     end
-    numiter = 5;
+    numiter = 75;
     num_per_exchange = 1;
     ## monte carlo loop
     # perturb one of the co2 vals and one of the svals
