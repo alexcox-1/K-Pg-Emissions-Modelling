@@ -168,7 +168,7 @@ let
             MPI.Allgather!(logsvals, all_log_s, comm)
             MPI.Allgather!(logexpvals, all_log_exp, comm)
             MPI.Allgather!(Reminvals,all_remin,comm)
-            MPI.Allgather!(Carbvals,all_carb,comm)
+            MPI.Allgather!(logCarbvals,all_carb,comm)
             MPI.Allgather!(lldist[i-1:i-1], all_lls, comm)
             MPI.Allgather!(doubledist[i-1:i-1],all_co2doublingrate,comm)
             # Choose which proposal we want to adopt

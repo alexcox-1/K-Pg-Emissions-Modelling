@@ -19,6 +19,9 @@ function runloscar(timevals,CO2vals,Svals,Expvals,co2doubling,Reminvals,Carbvals
     if isfile("dat/Emss/deccan_Remin.dat")
         rm("dat/Emss/deccan_Remin.dat");
     end
+    if isfile("dat/Emss/deccan_Carb.dat")
+        rm("dat/Emss/deccan_Carb.dat");
+    end
     if isfile("deccan.inp")
         rm("deccan.inp")
     end
@@ -152,7 +155,7 @@ function runloscar(timevals,CO2vals,Svals,Expvals,co2doubling,Reminvals,Carbvals
 
     time_vals = readdlm("tmv.dat", '\t', Float64, '\n')  
     pco2 = readdlm("pco2a.dat", '\t', Float64, '\n')
-    temp = log.(2,(pco2 ./ 600)) .* 2
+    temp = log.(2,(pco2 ./ 600)) .* co2doubling
     if isfile("d13c.dat")
         d13c = readdlm("d13c.dat")
         d13csa = d13c[:,1];
