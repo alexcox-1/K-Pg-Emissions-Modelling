@@ -12,7 +12,7 @@
     TCIN0   0
     TCSPAN  0
     EPSLV   0.0001
-    FCSML   0.05
+    FCSML   0.08
     KMAX    5000
     TSNS    1
     SCLIM   3.0

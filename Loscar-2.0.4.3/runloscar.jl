@@ -47,7 +47,7 @@ function runloscar(timevals,CO2vals,Svals,Expvals,co2doubling,Reminvals,Carbvals
     TCIN0   = 0;
     TCSPAN  = 0;
     EPSLV   = 1.e-4;
-    FCSML   = 0.05;
+    FCSML   = 0.08;
     KMAX    = 5000;
     TSNS    = 1;
     SCLIM   = 3.0;
