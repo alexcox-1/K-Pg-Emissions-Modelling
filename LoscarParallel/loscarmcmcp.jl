@@ -103,7 +103,7 @@ let
         end
         ll = normpdf_ll(temp,temperror,mu) + normpdf_ll(d13cvals,d13cerror,d13cmu) + normpdf_ll(d13cbvals,d13cberror,d13cbmu) + normpdf_ll(3,0.1,co2doublingrate) + normpdf_ll(1,0.004,Reminvals) + normpdf_ll(1,1,exp.(logCarbvals));
     end
-    numiter = 75;
+    numiter = 250;
     num_per_exchange = 1;
     ## monte carlo loop
     # perturb one of the co2 vals and one of the svals
@@ -144,7 +144,7 @@ let
     so2_step_sigma = 0.1;
     exp_step_sigma = 0.01;
     remin_step_sigma = 0.0008;
-    carb_step_sigma = 0.01;
+    carb_step_sigma = 0.02;
     halfwidthc = 0.5;
     halfwidths = 0.5;
     halfwidthexp = 0.25;
@@ -189,6 +189,19 @@ let
             logCarbvalsᵣ .= view(all_carb,:,chosen)
             co2doublingrateᵣ = all_co2doublingrate[chosen]
         end
+        # reset the amplitude of perturbations every 50 iterations
+        if i % 50 == 0 && i > 1
+            co2_step_sigma = 0.1;
+            so2_step_sigma = 0.1;
+            exp_step_sigma = 0.01;
+            remin_step_sigma = 0.0008;
+            carb_step_sigma = 0.02;
+            halfwidthc = 0.5;
+            halfwidths = 0.5;
+            halfwidthexp = 0.25;
+            halfwidthcarb = 0.25;
+            halfwidthremin = 0.25;
+        end
         # choose which indices to perturb
         randhalfwidth = halfwidthc * rand()*length(co2vals)
 
@@ -199,7 +212,8 @@ let
             logco2valsᵣ[j] += randamplitude * ((randmu-randhalfwidth)<j<(randmu+randhalfwidth))
 
         end
-        logco2valsᵣ[301:400] .= -20;
+        logco2valsᵣ[341:400] .= -20;
+        logco2valsᵣ[1:40] .= -20;
         randhalfwidths = halfwidths * rand()*length(co2vals)
 
         randmus = rand()*length(svals)
@@ -210,8 +224,8 @@ let
             logsvalsᵣ[j] += randamplitudes * ((randmus-randhalfwidths)<j<(randmus+randhalfwidths))
 
         end
-        logsvalsᵣ[301:400] .= -20;
-
+        logsvalsᵣ[341:400] .= -20;
+        logsvalsᵣ[1:40] .= -20;
         randhalfwidthexp = halfwidthexp * rand()*length(expvals)
 
         randmuexp = rand()*length(expvals)
