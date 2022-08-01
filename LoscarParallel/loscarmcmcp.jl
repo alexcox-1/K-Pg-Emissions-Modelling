@@ -47,9 +47,11 @@ let
     # characteristic Pg/y will be 0.01 - 0.1
     # change these to log
     co2vals = zeros(400) .+ 0.02;
-    co2vals[301:400] .= 0.000001
+    co2vals[341:400] .= 0.000001
+    co2vals[1:40] .= 0.000001
     svals = zeros(400) .+ 0.01;
-    svals[301:400] .= 0.000001
+    svals[341:400] .= 0.000001
+    svals[1:40] .= 0.000001
     # add the export reduction factor solved earlier
     expvals = ones(400);
     logco2vals = log.(co2vals);
@@ -103,7 +105,7 @@ let
         end
         ll = normpdf_ll(temp,temperror,mu) + normpdf_ll(d13cvals,d13cerror,d13cmu) + normpdf_ll(d13cbvals,d13cberror,d13cbmu) + normpdf_ll(3,0.1,co2doublingrate) + normpdf_ll(1,0.004,Reminvals) + normpdf_ll(1,1,exp.(logCarbvals));
     end
-    numiter = 250;
+    numiter = 150;
     num_per_exchange = 1;
     ## monte carlo loop
     # perturb one of the co2 vals and one of the svals
