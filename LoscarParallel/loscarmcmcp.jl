@@ -47,10 +47,10 @@ let
     # characteristic Pg/y will be 0.01 - 0.1
     # change these to log
     co2vals = zeros(400) .+ 0.02;
-    co2vals[341:400] .= 0.000001
+    co2vals[361:400] .= 0.000001
     co2vals[1:40] .= 0.000001
     svals = zeros(400) .+ 0.01;
-    svals[341:400] .= 0.000001
+    svals[361:400] .= 0.000001
     svals[1:40] .= 0.000001
     # add the export reduction factor solved earlier
     expvals = ones(400);
@@ -58,8 +58,8 @@ let
     logsvals = log.(svals);
     logexpvals = log.(expvals);
     Reminvals = ones(400);
-    Reminvals[1:200] .= 0.999;
-    Reminvals[201:400] .= 1.002;
+    # Reminvals[1:200] .= 1.0;
+    # Reminvals[201:400] .= 1.0;
     co2doublingrate = 3.0;
     Carbvals = ones(400);
     logCarbvals = log.(Carbvals);
@@ -105,7 +105,7 @@ let
         end
         ll = normpdf_ll(temp,temperror,mu) + normpdf_ll(d13cvals,d13cerror,d13cmu) + normpdf_ll(d13cbvals,d13cberror,d13cbmu) + normpdf_ll(3,0.1,co2doublingrate) + normpdf_ll(1,0.004,Reminvals) + normpdf_ll(1,1,exp.(logCarbvals));
     end
-    numiter = 150;
+    numiter = 200;
     num_per_exchange = 1;
     ## monte carlo loop
     # perturb one of the co2 vals and one of the svals
@@ -145,7 +145,7 @@ let
     co2_step_sigma = 0.1;
     so2_step_sigma = 0.1;
     exp_step_sigma = 0.01;
-    remin_step_sigma = 0.0008;
+    remin_step_sigma = 0.001;
     carb_step_sigma = 0.02;
     halfwidthc = 0.5;
     halfwidths = 0.5;
@@ -154,7 +154,7 @@ let
     halfwidthremin = 0.25;
     counter = 0;
     @inbounds for i = 1:numiter
-        (rank == 0) && @warn "Iteration $i"
+        (rank == 0) && @warn "Iteration $i, LL=$ll"
         print("Iteration $i")
         # update current prediction
         copyto!(logco2valsᵣ,logco2vals);
@@ -174,6 +174,8 @@ let
             MPI.Allgather!(lldist[i-1:i-1], all_lls, comm)
             MPI.Allgather!(doubledist[i-1:i-1],all_co2doublingrate,comm)
             # Choose which proposal we want to adopt
+            # ll_sigma = nanstd(all_lls)
+            # all_lls .+= 0.5.*randn.() # Add noise to avoid local minima
             all_lls .-= maximum(all_lls) # rescale
             all_lls .= exp.(all_lls) # Convert to plain (relative) likelihoods
             lsum = sum(all_lls)
@@ -195,8 +197,9 @@ let
         if i % 50 == 0 && i > 1
             co2_step_sigma = 0.1;
             so2_step_sigma = 0.1;
+
             exp_step_sigma = 0.01;
-            remin_step_sigma = 0.0008;
+            remin_step_sigma = 0.001;
             carb_step_sigma = 0.02;
             halfwidthc = 0.5;
             halfwidths = 0.5;
@@ -214,7 +217,7 @@ let
             logco2valsᵣ[j] += randamplitude * ((randmu-randhalfwidth)<j<(randmu+randhalfwidth))
 
         end
-        logco2valsᵣ[341:400] .= -20;
+        logco2valsᵣ[361:400] .= -20;
         logco2valsᵣ[1:40] .= -20;
         randhalfwidths = halfwidths * rand()*length(co2vals)
 
@@ -226,7 +229,7 @@ let
             logsvalsᵣ[j] += randamplitudes * ((randmus-randhalfwidths)<j<(randmus+randhalfwidths))
 
         end
-        logsvalsᵣ[341:400] .= -20;
+        logsvalsᵣ[361:400] .= -20;
         logsvalsᵣ[1:40] .= -20;
         randhalfwidthexp = halfwidthexp * rand()*length(expvals)
 
