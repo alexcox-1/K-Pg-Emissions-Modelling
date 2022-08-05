@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#SBATCH -J run_strong
+#SBATCH -o %j.txt
+#SBATCH -e %j.err
+#SBATCH --nodes=16
+#SBATCH --ntasks-per-node=16
+#SBATCH --time=1:00:00
+#SBATCH --mail-type=BEGIN,END,FAIL
+
+module load openmpi/4.0.1-gnu4.8.5
+
+mpirun -n 256 ./runstrongscaling.bash

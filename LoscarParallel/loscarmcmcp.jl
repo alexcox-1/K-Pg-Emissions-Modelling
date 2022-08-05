@@ -104,9 +104,9 @@ let
             d13cbmu[first(findall(x->isnan(x),d13cbmu)):400] .= d13cbmu[first(findall(x->isnan(x),d13cbmu))-1]
         end
         ll = normpdf_ll(temp,temperror,mu) + normpdf_ll(d13cvals,d13cerror,d13cmu) + normpdf_ll(d13cbvals,d13cberror,d13cbmu) + normpdf_ll(3,0.1,co2doublingrate) + normpdf_ll(1,0.004,Reminvals) + 
-        normpdf_ll(1,1,exp.(logCarbvals)) + normpdf_ll(0.02,0.02,exp.(logco2vals[41:360])) + normpdf_ll(0.01,0.02,exp.(logsvals[41:360]));
+        normpdf_ll(1,1,exp.(logCarbvals)) #+ normpdf_ll(0.02,0.02,exp.(logco2vals[41:360])) + normpdf_ll(0.01,0.02,exp.(logsvals[41:360]));
     end
-    numiter = 175;
+    numiter = 250;
     num_per_exchange = 1;
     ## monte carlo loop
     # perturb one of the co2 vals and one of the svals
@@ -143,8 +143,8 @@ let
     step_sigma_so2_array = Array{Float64,1}(undef,numiter);
     # do the mcmc
     # set the std of the proposal amplitude distribution
-    co2_step_sigma = 0.1;
-    so2_step_sigma = 0.1;
+    co2_step_sigma = 0.05;
+    so2_step_sigma = 0.05;
     exp_step_sigma = 0.01;
     remin_step_sigma = 0.001;
     carb_step_sigma = 0.02;
@@ -304,7 +304,7 @@ let
                 d13cbmuᵣ[first(findall(x->isnan(x),d13cbmuᵣ)):400] .= d13cbmuᵣ[first(findall(x->isnan(x),d13cbmuᵣ))-1]
             end
             llᵣ = normpdf_ll(temp,temperror,muᵣ) + normpdf_ll(d13cvals,d13cerror,d13cmuᵣ) + normpdf_ll(d13cbvals,d13cberror,d13cbmuᵣ) + normpdf_ll(3,0.1,co2doublingrateᵣ) + 
-            normpdf_ll(1,0.004,Reminvalsᵣ) + normpdf_ll(1,1,exp.(logCarbvalsᵣ)) + normpdf_ll(0.02,0.02,exp.(logco2valsᵣ[41:360])) + normpdf_ll(0.01,0.02,exp.(logsvalsᵣ[41:360]));
+            normpdf_ll(1,0.004,Reminvalsᵣ) + normpdf_ll(1,1,exp.(logCarbvalsᵣ)) #+ normpdf_ll(0.02,0.02,exp.(logco2valsᵣ[41:360])) + normpdf_ll(0.01,0.02,exp.(logsvalsᵣ[41:360]));
         end
 
         # is this allowed?
