@@ -41,12 +41,12 @@ let
     timev .= (timev .- minimum(timev)) .* 1000000;    
     
     # give each of the 256 cores one of the solved proposals
-    co2vals = readdlm("co2dist.csv",',');
-    so2vals = readdlm("so2dist.csv",',');
-    expvals = readdlm("expdist.csv",',');
-    carbvals = readdlm("carbdist.csv",',');
-    reminvals = readdlm("remindist.csv",',');
-    doublevals = readdlm("doubledist.csv",',');
+    co2vals = readdlm("LoscarParallel/co2dist.csv",',');
+    so2vals = readdlm("LoscarParallel/so2dist.csv",',');
+    expvals = readdlm("LoscarParallel/expdist.csv",',');
+    carbvals = readdlm("LoscarParallel/carbdist.csv",',');
+    reminvals = readdlm("LoscarParallel/remindist.csv",',');
+    doublevals = readdlm("LoscarParallel/doubledist.csv",',');
 
     co2vals = co2vals[:,rank];
     svals = so2vals[:,rank];
