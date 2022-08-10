@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#SBATCH -J run_loscar
+#SBATCH -o %j.txt
+#SBATCH -e %j.err
+#SBATCH --nodes=16
+#SBATCH --ntasks-per-node=16
+#SBATCH --time=2:00:00
+#SBATCH --mail-type=BEGIN,END,FAIL
+
+module load openmpi/4.0.1-gnu4.8.5
+
+mpirun -n 256 ./runloscarstationary.bash
