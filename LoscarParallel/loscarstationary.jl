@@ -48,12 +48,12 @@ let
     reminvals = readdlm("LoscarParallel/remindist.csv",',');
     doublevals = readdlm("LoscarParallel/doubledist.csv",',');
 
-    co2vals = co2vals[:,rank];
-    svals = so2vals[:,rank];
-    expvals = expvals[:,rank];
-    Carbvals = carbvals[:,rank];
-    Reminvals = reminvals[:,rank];
-    co2doublingrate = doublevals[rank];
+    co2vals = co2vals[:,rank+1];
+    svals = so2vals[:,rank+1];
+    expvals = expvals[:,rank+1];
+    Carbvals = carbvals[:,rank+1];
+    Reminvals = reminvals[:,rank+1];
+    co2doublingrate = doublevals[rank+1];
 
     logco2vals = log.(co2vals);
     logsvals = log.(svals);
