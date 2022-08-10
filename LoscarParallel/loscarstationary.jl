@@ -53,7 +53,7 @@ let
     expvals = expvals[:,rank];
     Carbvals = carbvals[:,rank];
     Reminvals = reminvals[:,rank];
-    co2doublingrate = doublevals[:,rank];
+    co2doublingrate = doublevals[rank];
 
     logco2vals = log.(co2vals);
     logsvals = log.(svals);
