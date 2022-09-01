@@ -146,7 +146,7 @@ let
     co2_step_sigma = 0.05;
     so2_step_sigma = 0.05;
     exp_step_sigma = 0.01;
-    remin_step_sigma = 0.001;
+    remin_step_sigma = 0.0005;
     carb_step_sigma = 0.02;
     halfwidthc = 0.5;
     halfwidths = 0.5;
@@ -165,7 +165,7 @@ let
         copyto!(logCarbvalsᵣ,logCarbvals);
         co2doublingrateᵣ = co2doublingrate;
         # Exchange proposals, sometimes
-        if i % num_per_exchange == 0 && i > 1
+        if i % num_per_exchange == 0 && i > 1 && i < 121
             # Exchange current proposals across all MPI tasks
             MPI.Allgather!(logco2vals, all_log_co2, comm)
             MPI.Allgather!(logsvals, all_log_s, comm)
@@ -200,7 +200,7 @@ let
             so2_step_sigma = 0.1;
 
             exp_step_sigma = 0.01;
-            remin_step_sigma = 0.001;
+            remin_step_sigma = 0.0005;
             carb_step_sigma = 0.02;
             halfwidthc = 0.5;
             halfwidths = 0.5;
@@ -209,63 +209,81 @@ let
             halfwidthremin = 0.25;
         end
         # choose which indices to perturb
-        randhalfwidth = halfwidthc * rand()*length(co2vals)
+        # first 100 iterations to find the solution
+        if i < 121
+            randhalfwidth = halfwidthc * rand()*length(co2vals)
 
-        randmu = rand()*length(co2vals)
-        randamplitude = randn()*co2_step_sigma*2.9
+            randmu = rand()*length(co2vals)
+            randamplitude = randn()*co2_step_sigma*2.9
 
-        for j=1:length(co2vals)
-            logco2valsᵣ[j] += randamplitude * ((randmu-randhalfwidth)<j<(randmu+randhalfwidth))
+            for j=1:length(co2vals)
+                logco2valsᵣ[j] += randamplitude * ((randmu-randhalfwidth)<j<(randmu+randhalfwidth))
 
+            end
+            logco2valsᵣ[361:400] .= -20;
+            logco2valsᵣ[1:40] .= -20;
+            randhalfwidths = halfwidths * rand()*length(co2vals)
+
+            randmus = rand()*length(svals)
+
+            randamplitudes = randn()*so2_step_sigma*2.9
+
+            for j=1:length(svals)
+                logsvalsᵣ[j] += randamplitudes * ((randmus-randhalfwidths)<j<(randmus+randhalfwidths))
+
+            end
+            logsvalsᵣ[361:400] .= -20;
+            logsvalsᵣ[1:40] .= -20;
+            randhalfwidthexp = halfwidthexp * rand()*length(expvals)
+
+            randmuexp = rand()*length(expvals)
+
+            randamplitudeexp = randn()*exp_step_sigma*2.9
+
+            for j=1:length(expvals)
+                logexpvalsᵣ[j] += randamplitudeexp * ((randmuexp-randhalfwidthexp)<j<(randmuexp+randhalfwidthexp))
+
+            end
+
+            randhalfwidthremin = halfwidthremin * rand()*length(Reminvals)
+
+            randmuremin = rand()*length(Reminvals)
+
+            randamplituderemin = randn()*remin_step_sigma
+
+            for j=1:length(Reminvals)
+                Reminvalsᵣ[j] += randamplituderemin * ((randmuremin-randhalfwidthremin)<j<(randmuremin+randhalfwidthremin))
+
+            end
+            Reminvalsᵣ[Reminvalsᵣ .> 1.005] .= 1.005;
+            Reminvalsᵣ[Reminvalsᵣ .< 0.998] .= 0.998;
+            randhalfwidthcarb = halfwidthcarb * rand()*length(Carbvals)
+
+            randmucarb = rand()*length(Carbvals)
+
+            randamplitudecarb = randn()*carb_step_sigma
+
+            for j=1:length(Carbvals)
+                logCarbvalsᵣ[j] += randamplitudecarb * ((randmucarb-randhalfwidthcarb)<j<(randmucarb+randhalfwidthcarb))
+
+            end
+            # perturb the co2doubling rate normally 
+            if i < 50
+                co2doublingrateᵣ += (randn() / 10)
+            end
+            if i >= 50
+                co2doublingrateᵣ += (randn() / 20)
+            end
         end
-        logco2valsᵣ[361:400] .= -20;
-        logco2valsᵣ[1:40] .= -20;
-        randhalfwidths = halfwidths * rand()*length(co2vals)
-
-        randmus = rand()*length(svals)
-
-        randamplitudes = randn()*so2_step_sigma*2.9
-
-        for j=1:length(svals)
-            logsvalsᵣ[j] += randamplitudes * ((randmus-randhalfwidths)<j<(randmus+randhalfwidths))
-
+        # now see the allowed values
+        if i >= 121
+            logco2valsᵣ[rand(41:360,2)] += (randn(2) .* 0.005);
+            logsvalsᵣ[rand(41:360,2)] += (randn(2) .* 0.005);
+            logexpvalsᵣ[rand(1:400,2)] += (randn(2) .* 0.005);
+            Reminvalsᵣ[rand(1:400,2)] += (randn(2) .* 0.00001);
+            logCarbvalsᵣ[rand(1:400,2)] += (randn(2) .* 0.005);
+            co2doublingrateᵣ += (randn() / 100);
         end
-        logsvalsᵣ[361:400] .= -20;
-        logsvalsᵣ[1:40] .= -20;
-        randhalfwidthexp = halfwidthexp * rand()*length(expvals)
-
-        randmuexp = rand()*length(expvals)
-
-        randamplitudeexp = randn()*exp_step_sigma*2.9
-
-        for j=1:length(expvals)
-            logexpvalsᵣ[j] += randamplitudeexp * ((randmuexp-randhalfwidthexp)<j<(randmuexp+randhalfwidthexp))
-
-        end
-
-        randhalfwidthremin = halfwidthremin * rand()*length(Reminvals)
-
-        randmuremin = rand()*length(Reminvals)
-
-        randamplituderemin = randn()*remin_step_sigma
-
-        for j=1:length(Reminvals)
-            Reminvalsᵣ[j] += randamplituderemin * ((randmuremin-randhalfwidthremin)<j<(randmuremin+randhalfwidthremin))
-
-        end
-
-        randhalfwidthcarb = halfwidthcarb * rand()*length(Carbvals)
-
-        randmucarb = rand()*length(Carbvals)
-
-        randamplitudecarb = randn()*carb_step_sigma
-
-        for j=1:length(Carbvals)
-            logCarbvalsᵣ[j] += randamplitudecarb * ((randmucarb-randhalfwidthcarb)<j<(randmucarb+randhalfwidthcarb))
-
-        end
-        # perturb the co2doubling rate normally 
-        co2doublingrateᵣ += (randn() / 5)
         # run loscar with the new values
         tmv,pco2,loscartemp, d13csa, d13cba = runloscarp(timev,exp.(logco2valsᵣ),exp.(logsvalsᵣ),exp.(logexpvalsᵣ),co2doublingrateᵣ,Reminvalsᵣ,exp.(logCarbvalsᵣ));
         if all(isnan.(tmv))

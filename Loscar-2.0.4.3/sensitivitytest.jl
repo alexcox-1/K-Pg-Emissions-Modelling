@@ -1,23 +1,32 @@
 ## do a loscar sensitivity test - ac.gr@ July 2022
 
-using StatGeochem, Statistics
+using StatGeochem, Statistics, DelimitedFiles
     include("runloscar.jl")
-    co2vals = zeros(400) .+ 0.01;
-    co2vals[100:170] .= 0.03;
-    co2vals[200:300] .= 0.005
-    svals = zeros(400) .+ 0.01;
-    Expvals = ones(400);
-    Carbvals = ones(400);
-    co2doublingrate = 3;
+    co2vals = readdlm("co2dist.csv",',');
+    so2vals = readdlm("so2dist.csv",',');
+    Expvals = readdlm("expdist.csv",',');
+    carbvals = readdlm("carbdist.csv",',');
+    Reminvals = readdlm("remindist.csv",',');
+    doublevals = readdlm("doubledist.csv",',');
+
+    rank = 2
+    co2vals = co2vals[:,rank+1];
+    svals = so2vals[:,rank+1];
+    Expvals = Expvals[:,rank+1];
+    Carbvals = carbvals[:,rank+1];
+    Reminvals = Reminvals[:,rank+1];
+    co2doublingrate = doublevals[rank+1];
+
+    logco2vals = log.(co2vals);
+    logsvals = log.(svals);
+    logexpvals = log.(Expvals);
+    logCarbvals = log.(Carbvals);
     bsrtemps = importdataset("tempdatabsr.csv",',');
     timev = bsrtemps["time"];
     temp = bsrtemps["temp"];
     temperror = bsrtemps["temperror"];
     timev .= (timev .- minimum(timev)) .* 1000000;
-    Reminvals = ones(400);
-    Reminvals[1:200] .= 0.999;
-    Reminvals[100:170] .= 0.9985;
-    Reminvals[201:400] .= 1.002;
+
     tmv,pco2,loscartemp, d13csa, d13cba, d13csi, d13csp, d13cst = runloscar(timev,co2vals,svals,Expvals,co2doublingrate,Reminvals,Carbvals);
 
     plot(tmv,d13csa)
